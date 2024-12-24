@@ -1,0 +1,778 @@
+body {
+  overflow-x: hidden;
+  direction: rtl;
+  unicode-bidi: embed;
+}
+
+@font-face {
+  font-family: "Cairo Regular";
+  src: url("../webfonts/Cairo-Regular.ttf");
+  font-display: swap;
+}
+
+.wrapper-accessibilty {
+  left: -93px;
+  right: auto;
+}
+
+.list-social-sticky li {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 27px;
+  border-top-right-radius: 27px;
+}
+
+.list-social-sticky ul li a i {
+  right: 5px;
+  left: auto;
+}
+
+.img--mohammed_vi {
+  right: 0;
+  left: auto;
+}
+
+.img--mohammed_vi .border {
+  right: 100px;
+  left: -22px;
+}
+
+.wrapper-info-mohammed_vi {
+  padding: 40px 22% 40px 40px;
+}
+
+.wrapper-accessibilty {
+  left: -93px;
+  right: auto;
+}
+
+.list-social-sticky li {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 27px;
+  border-top-right-radius: 27px;
+}
+
+.list-social-sticky ul li a i {
+  right: 5px;
+  left: auto;
+}
+
+.img--mohammed_vi {
+  right: 0;
+  left: auto;
+}
+
+.img--mohammed_vi .border {
+  right: 100px;
+  left: -32px;
+}
+
+.wrapper-info-mohammed_vi {
+  padding: 40px 22% 40px 40px;
+}
+
+.owl-stage-outer {
+  direction: ltr;
+}
+
+div.slider-element-maps .item {
+  flex-direction: row-reverse;
+
+}
+
+
+
+.info----slider {
+  text-align: right;
+}
+
+.wrapper-accessibilty {
+  left: -93px;
+  right: auto;
+}
+
+.list-social-sticky li {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 27px;
+  border-top-right-radius: 27px;
+}
+
+.list-social-sticky ul li a i {
+  right: 5px;
+  left: auto;
+}
+
+.img--mohammed_vi {
+  right: 0;
+  left: auto;
+}
+
+.img--mohammed_vi .border {
+  right: 30px;
+  left: -22px;
+}
+
+.wrapper-info-mohammed_vi {
+  padding: 40px 22% 40px 40px;
+}
+
+.owl-stage-outer {
+  direction: ltr;
+}
+
+div.slider-element-maps .item {
+  flex-direction: row-reverse;
+  padding: 0 2px;
+}
+
+.slider-element-maps .owl-dots {
+  left: 48%;
+  right: auto;
+}
+
+.info----slider {
+  text-align: right;
+}
+
+.title--publication {
+  left: auto;
+  right: 0;
+  align-items: normal;
+}
+
+div#bottom-footer-copyright ul a {
+  padding-left: 10px;
+  padding-right: 0;
+  border-left: 1px solid #8EA0DF;
+  border-right: 0;
+}
+
+div#bottom-footer a {
+  text-align: right;
+}
+
+div#bottom-footer a[target=_blank]:before {
+  left: 20px;
+  right: auto;
+}
+
+div#chatbot-setting {
+  left: auto;
+  right: 15px;
+}
+
+ol.breadcrumb li:first-child:after {
+  right: 0;
+  left: auto;
+}
+
+.banner--breadcrumbs .breadcrumb {
+  padding-right: 30px;
+  padding-left: initial;
+}
+
+.breadcrumb-item+.breadcrumb-item {
+  padding-left: initial;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  padding-right: initial;
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+  float: right;
+}
+
+.share--icon h3 {
+  text-align: right;
+  margin-right: inherit;
+}
+
+li.pager__item.pager__item--next i,
+li.pager__item.pager__item--previous i {
+  transform: scaleX(-1);
+}
+
+section.wrapper--all-items a:after {
+  left: -20px;
+  right: auto;
+}
+
+.historique-des-chefs>div:last-child {
+  justify-content: left;
+}
+
+.filter-wp .filter-champs select {
+  background-position: 4%;
+}
+
+.slider--podcast .item--video button {
+  left: 10px;
+  right: auto;
+}
+
+#odd-even-card-maroc .sc-item .body--card-maroc {
+  left: 0;
+  right: auto;
+}
+
+button.back-to-top.show {
+  left: 54px;
+  right: auto;
+}
+
+#odd-even-card-maroc .row .sc-item:nth-child(1) .btn--chambre-representants {
+  margin-right: 0;
+  margin-left: initial;
+}
+
+#odd-even-card-maroc .btn--chambre-representants {
+  margin-right: 0;
+  margin-left: initial;
+}
+
+#odd-even-card-maroc .container>div:nth-child(2)>div:nth-child(even) a .body--card-maroc {
+  right: 0;
+  left: auto;
+}
+
+div#les--secteurs .info--bottom-date-more .btn--chambre-representants {
+  flex-direction: row-reverse;
+}
+
+/* div#les--secteurs .info--bottom-date-more .btn--chambre-representants i {
+  transform: scaleX(-1);
+} */
+
+.info--visitez_morocco a {
+  flex-direction: row-reverse;
+}
+
+.info--visitez_morocco h3 {
+  text-align: left;
+}
+
+#odd-even-card-maroc .sc-item .body--card-maroc {
+  left: 0;
+  right: auto;
+}
+
+button.back-to-top.show {
+  left: 54px;
+  right: auto;
+}
+
+#odd-even-card-maroc .row .sc-item:nth-child(1) .btn--chambre-representants {
+  margin-right: 0;
+  margin-left: initial;
+}
+
+#odd-even-card-maroc .btn--chambre-representants {
+  margin-right: 0;
+  margin-left: initial;
+}
+
+#odd-even-card-maroc .container>div:nth-child(2)>div:nth-child(even) a .body--card-maroc {
+  right: 0;
+  left: auto;
+}
+
+div#les--secteurs .info--bottom-date-more .btn--chambre-representants {
+  flex-direction: row-reverse;
+}
+
+/* div#les--secteurs .info--bottom-date-more .btn--chambre-representants i {
+  transform: scaleX(-1);
+} */
+
+.info--visitez_morocco a {
+  flex-direction: row-reverse;
+}
+
+.info--visitez_morocco h3 {
+  text-align: left;
+}
+
+.card-body {}
+
+div#les--secteurs .card-body {
+  text-align: right;
+}
+
+div#les--secteurs h3:after {
+  left: 18px;
+  right: auto;
+  transform: scaleX(-1);
+}
+
+#odd-even-card-maroc .btn--chambre-representants {
+  padding: 20px 25px 20px 48px;
+}
+
+#odd-even-card-maroc .btn--chambre-representants:after {
+  left: 18px;
+  right: auto;
+  transform: scaleX(-1);
+}
+
+.main-menu.is-sticky .search-btn>i {
+  transform: scaleX(-1);
+}
+
+.timeline-container ul li:nth-child(odd) .item-text .item-time {
+  justify-content: left;
+}
+
+.filter_date select {
+  background-position: 2%;
+}
+
+.timeline-container ul li:nth-child(even) .item-text .item-time {
+  justify-content: right;
+}
+
+.timeline-container ul li:nth-child(odd) .item-text .item-time {
+  justify-content: left;
+}
+
+.filter_date select {
+  background-position: 2%;
+}
+
+.timeline-container ul li:nth-child(even) .item-text .item-time {
+  justify-content: right;
+}
+
+.list-social-sticky ul li:hover {
+  transform: translateX(92px);
+}
+
+.item--syndicats .img--wrapper-organisations_tabs {
+  align-items: normal;
+}
+
+.item--syndicats .img--wrapper-ht {
+  text-align: right;
+}
+
+.album--img {
+  left: 10px;
+  right: auto;
+}
+
+.a-filter-selection {
+  direction: ltr;
+  text-align: right;
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+span.a-filter-attr {
+  margin-left: 15px;
+  margin-right: initial;
+}
+
+.btn--main i {
+  transform: scaleX(-1);
+}
+
+#card---tabs-scroll .card img {
+  margin-right: initial;
+  margin-left: 10px;
+}
+
+#owl--slider-v2 .sc-item a {
+  flex-direction: row-reverse;
+}
+
+#owl--slider-v2 .sc-item a>div {
+  text-align: right;
+}
+
+#owl--slider-v2 .btn--chambre-representants {
+  margin-left: auto;
+  justify-content: right;
+  align-items: normal;
+  padding: 15px 15px 15px 40px;
+}
+
+#owl--slider-v2 .btn--chambre-representants:after {
+  left: 18px;
+  right: auto;
+  transform: scaleX(-1);
+}
+
+.info--visitez_morocco h3 {
+  text-align: right;
+}
+
+.visitez_morocco .info--visitez_morocco a {
+  flex-direction: row;
+}
+
+div#chatbot-setting {
+  left: auto !important;
+}
+
+.timeline>div:nth-child(odd) .timeline-content-wrapper {
+  left: 0;
+  right: auto;
+}
+
+.timeline>div:nth-child(even) .timeline-content-wrapper {
+  right: 0;
+  left: auto;
+}
+
+.timeline-content-wrapper {
+  text-align: right;
+}
+
+.listig----list ul {
+  padding-left: 0;
+  padding-right: 25px;
+}
+
+.timeline>div:nth-child(even) .timeline-content-wrapper {
+  text-align: left;
+}
+
+.dates--cle .timeline-container ul li:nth-child(odd) .item-text .item-wrapper::after {
+  left: AUTO;
+  right: -9px;
+  border-right: initial;
+  border-left: 10px solid #ffffff;
+}
+
+.dates--cle .timeline-container ul li:nth-child(odd) .item-text .item-wrapper::before {
+  right: -12px;
+  left: auto;
+  border-left: 12px solid #335AB7;
+  border-right: initial;
+}
+
+.dates--cle .item-wrapper::after {
+  border-right: 10px solid #ffffff;
+  border-left: initial;
+  left: -9px;
+  right: auto;
+}
+
+.dates--cle .item-wrapper::before {
+  left: -12px;
+  border-left: initial;
+  border-right: 12px solid #335AB7;
+  right: auto;
+}
+
+.slider__verticale .sc-item a {
+  flex-direction: row-reverse;
+}
+
+.slider__verticale #actualites-internes .sc-item a .body--card-maroc {
+  right: auto !important;
+  left: 2px;
+}
+
+#actualites-internes .row>.owl-stage-outer {
+  direction: rtl;
+}
+
+.slider__verticale .sc-item a {
+  flex-direction: row;
+}
+
+.slider__verticale .owl-carousel .owl-nav {
+  align-items: end;
+
+}
+
+.slider__verticale #actualites-internes .sc-item a .body--card-maroc,
+.slider__verticale #actualites-internes .sc-item a .body--card-maroc p {
+  text-align: right;
+}
+
+.timeline-container ul li:nth-child(odd) .item-text .item-time {
+  justify-content: right;
+}
+
+.timeline-container ul li:nth-child(even) .item-text .item-time {
+  justify-content: left;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+span,
+p,
+li,
+button,
+div,
+select,
+option,
+h5,
+h6,
+div,
+strong,
+td,
+tr,
+table {
+  font-family: "Cairo Regular" !important;
+}
+
+.menu-level-1 .menu-subs-col ul {
+  text-align: right;
+  justify-content: right;
+}
+
+.menu-level-1 .menu-subs-col ul .sub-menu-item-title a {
+  text-align: right;
+}
+
+.a-filter-selection a {
+  height: max-content;
+}
+
+.a-filter-selection {
+  align-items: center;
+}
+
+span.a-filter-attr {
+  top: auto;
+  margin-top: 0 !important;
+}
+
+.info--paragraphs ul {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+.wrapper-table td:first-child {
+  border-right: initial;
+  border-left: 1px solid #0F1B5C;
+}
+
+.menu-level-1 .menu-subs-col ul li {
+  width: 100%;
+}
+
+.wrapper----share .info--bottom-date-more {
+  justify-content: right;
+}
+
+.wrapper----share ul {
+  justify-content: left;
+}
+
+.actualites-c-wysiwyg h1 {
+  text-align: right;
+}
+
+.play--mp3 h4 {
+  text-align: right;
+  width: 100%;
+}
+
+#actualites-internes .row>div .card {
+  direction: rtl;
+}
+
+.item--info-mohammed_vi h2 {
+  padding-bottom: 15px;
+}
+
+.date-right--mohammed_vi .btn--investisseurs {
+  padding-bottom: 30px;
+}
+
+.item--info-mohammed_vi p {
+  margin-bottom: 15px !important;
+}
+
+.item--info-mohammed_vi h2+img {
+  transform: scaleX(-1);
+}
+
+.list-social-sticky ul li a {
+  padding: 0 0 0 13px;
+}
+
+.slider__verticale #actualites-internes .sc-item a .body--card-maroc p {
+  direction: rtl;
+}
+
+.wrapper--info--strategie-politiques h2 {
+  text-align: right;
+}
+
+#nav---owl {
+  left: 17px;
+  right: auto;
+}
+
+
+.wrapper--chambre-representants .btn--chambre-representants {
+  padding: 15px 15px 15px 10px;
+}
+
+.wrapper--chambre-representants .btn--chambre-representants a {
+  font-size: 17px;
+}
+
+.wrapper--chambre-representants .btn--chambre-representants a:after {
+  right: -5px;
+}
+
+.detail-item button:after {
+  transform: scaleX(-1);
+}
+
+.download-btn--img {
+  flex: 1;
+}
+
+.le-maroc .owl-stage-outer {
+  direction: rtl;
+}
+
+.link--icon-wrapper-organisations_tabs {
+  text-align: left;
+}
+
+.btn--chambre-representants a:after {
+  left: 0;
+  right: auto;
+}
+
+.btn--chambre-representants {
+  padding: 15px 10px 15px 30px;
+}
+
+.wrapper--chambre-representants .btn--chambre-representants a:after {
+  left: -5px;
+  right: auto;
+}
+
+.wrapper--chambre-representants .btn--chambre-representants {
+  padding: 15px 10px 15px 15px;
+}
+
+.wrapper--chambre-representants .btn--chambre-representants a {
+  padding: 0 20px;
+}
+
+@media (min-width: 992px) {
+  .slider-element-maps .owl-dots {
+    display: flex;
+    gap: 9px;
+    margin: auto;
+    justify-content: center;
+    position: absolute;
+    bottom: 13px;
+    transform: translateX(-100%);
+    width: auto;
+  }
+
+  .img--mohammed_vi img {
+    height: 100%;
+  }
+
+  .img--mohammed_vi {
+    height: 500px;
+  }
+
+
+}
+
+
+@media (max-width: 991px) {
+  #nav---owl {
+    left: 0;
+  }
+
+  .slider__verticale #actualites-internes .sc-item a .body--card-maroc {
+    right: auto;
+    left: auto;
+  }
+
+  div.slider-element-maps .item h3 {
+    justify-content: right;
+  }
+
+  .slider-element-maps .owl-dots {
+    left: 0;
+    right: 0;
+    justify-content: center;
+  }
+
+  .detail-item .btn:after {
+    transform: scaleX(-1);
+  }
+
+
+  .mobile_remove .owl-stage-outer {
+    direction: rtl;
+  }
+
+  .slider-element-maps .owl-dots {
+    left: 0;
+    right: auto;
+  }
+
+  /* #nav---owl {
+    flex-direction: row-reverse !important;
+  } */
+
+  .wrapper-accessibilty {
+    left: auto;
+    right: auto;
+  }
+
+  .search-btn {
+    text-align: left;
+    padding-left: 15px;
+    justify-content: left;
+    display: flex !important;
+  }
+
+  .mobile-menu .nav-item.active .nav-link::after {
+    left: 0;
+    padding-left: 0;
+    right: auto;
+  }
+
+  div#chatbot-setting {
+    left: auto;
+    right: 0;
+  }
+
+  .showing--menu-mobile .container-fluid nav .container-fluid div#navbarNavDropdown li.nav-item a {
+    flex-direction: column-reverse;
+  }
+
+  .mobile-menu .nav-item .nav-link:after {
+    right: auto;
+    left: 0;
+  }
+
+  button.back-to-top.show {
+    left: 0;
+    right: auto;
+  }
+
+  .multilingue {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+
+  #nav---owl {
+    flex-direction: row;
+  }
+
+  /* .main-menu div#navbarNavDropdown .search-btn {
+    text-align: left;
+  } */
+}

@@ -1,0 +1,1555 @@
+@font-face {
+  font-family: "Averta CY";
+  src: url("../webfonts/AvertaCY-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../webfonts/NunitoSans-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../webfonts/Inter-Regular.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "montserrat Bold";
+  src: url("../webfonts/montserrat/Montserrat-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "nunito italic";
+  src: url("../webfonts/nunito/Nunito-Italic.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "nunito regular";
+  src: url("../webfonts/nunito/Nunito-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "cairo bold";
+  src: url("../webfonts/cairo/cairo-Bold.ttf");
+  font-display: swap;
+}
+
+
+
+a:hover {
+  text-decoration: none;
+  color: #335AB7;
+  transition: all .25s ease-in-out;
+}
+
+span,
+select {
+  font-family: "Averta CY";
+}
+
+a {
+  text-decoration: none;
+  font-family: "Averta CY";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Averta CY";
+}
+
+/*  */
+header .navbar-nav .nav-link .fas {
+  font-size: 1rem;
+}
+
+header .navbar-nav .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slider {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider .slider-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  z-index: 0;
+}
+
+.slider-overlay::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), linear-gradient(285deg, rgba(0, 103, 127, 0.40) 8.4%, rgba(1, 149, 128, 0.80) 52.4%, rgba(0, 0, 0, 0.80) 96.4%);
+  z-index: 1;
+}
+
+.slider-content {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  top: 50%;
+  transform: translateY(-40%);
+  z-index: 2;
+  max-width: 1050px;
+  width: 100%;
+  margin: auto;
+}
+
+.search-filter {
+  margin-top: 2rem;
+}
+
+.search-filter input {
+  width: 60%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-filter p {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.slider .btn {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.slider .btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.slider .d-flex.flex-wrap>.btn {
+  margin: 0.3rem;
+}
+
+.multi--select,
+.multi--select li {
+  text-decoration: none;
+}
+
+ul.multi--select a {
+  text-decoration: none;
+}
+
+.multi--select li::marker {
+  text-decoration: none;
+}
+
+.multi--select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  gap: 0 16px;
+  list-style: none;
+  padding: 0;
+}
+
+.header--menu .navbar-brand img {
+  width: 217px;
+}
+
+.header--menu ul:first-child {
+  margin: auto;
+  padding: 0;
+  /* padding: 0; */
+  /* margin: 0; */
+}
+
+.header--menu ul:first-child li a {
+  color: #000;
+  -webkit-text-stroke-color: #000;
+  font-family: "Averta CY";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  -webkit-text-stroke-width: 0.30000001192092896px;
+}
+ul.multi--select li:last-child a {
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #007565;
+}
+.multi--select a {
+  color: #000;
+  -webkit-text-stroke-color: #009681;
+  font-family: "Averta CY";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  -webkit-text-stroke-width: 0.5px;
+}
+
+.search-filter form input {
+  border-radius: 100px;
+  background: #FFF;
+  box-shadow: 0px 4px 32.8px 0px rgba(255, 255, 255, 0.15);
+}
+
+.search-filter form .btn {
+  position: absolute;
+  right: 40px;
+  z-index: 9;
+  border: 0;
+  font-size: 25px;
+}
+
+.search-filter form {
+  width: 580px;
+  height: 62px;
+  position: relative;
+  margin: auto;
+  justify-content: center;
+}
+
+.search-filter form input {
+  width: 100%;
+  margin: 0;
+}
+
+.search-filter form i {
+  color: #000000;
+}
+
+.search-filter form .btn:hover {
+  background-color: transparent;
+}
+
+.sugg--btn {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.sugg--btn p {
+  color: #FFF;
+  font-family: "Averta CY";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 133.333% */
+}
+
+.sugg--btn .btn {
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.40);
+  box-shadow: 0px 4px 32.8px 0px rgba(255, 255, 255, 0.15);
+  border: 0;
+  color: #FFF;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 133.333% */
+}
+
+
+
+.sugg--btn>div:first-child {
+  width: 0%;
+}
+
+.sugg--btn>div:last-child {
+  width: 80%;
+}
+
+.sugg--btn>div:last-child>div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px 15px;
+}
+
+footer .container>.row>.text-center p {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.2px;
+  /* 160% */
+}
+
+button.form--news {
+  background-color: transparent;
+  color: #fff;
+  border: 0;
+  -webkit-text-stroke-width: 0.5px;
+}
+
+footer h5 {
+  color: #FFF;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  padding-bottom: 10px;
+  -webkit-text-stroke-width: 0.5px;
+}
+
+footer .mb-4 p {
+  color: #F3F3F3;
+  font-family: "Averta CY";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.92px;
+  /* 108% */
+}
+
+footer .row>div:last-child h5 {
+  position: relative;
+}
+
+footer .row>div:last-child h5:after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  bottom: 4px;
+}
+
+footer .row>div:nth-child(2) a {
+  font-size: 28px;
+}
+
+footer .row>div:nth-child(2) a i {
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin: 0px 0px 0 15px;
+}
+
+footer form input {
+  display: flex;
+  padding: 13px 24.12px 13px 24.13px;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 100px;
+  border: 1px solid #E5E7EB;
+  background: #F9FAFB;
+}
+
+footer form input::placeholder {
+  color: #545353;
+  font-family: "Averta CY";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 171.429% */
+}
+
+.form--news {
+  display: flex;
+  align-items: center;
+}
+
+
+
+footer .row>div form {
+  display: flex;
+  gap: 0 20px;
+}
+
+.form--news {
+  gap: 11px;
+}
+
+
+footer .row>div:last-child li {
+  width: 150px;
+}
+
+footer .row>div:last-child {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  align-items: end;
+}
+section{
+  padding: 40px 0 40px 0;
+}
+.video--sc-2 {
+  border-radius: 40px;
+  width: 1180px;
+  height: 650px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.video--sc-2 iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+}
+.header--menu {
+  border-radius: 20px;
+  box-shadow: 0px 4px 40px 0px rgba(131, 150, 175, 0.50) !important;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  z-index: 9;
+  display: block;
+  margin: auto;
+  max-width: 95%;
+  left: 0;
+  right: 0;
+}
+:root {
+  --lin: linear-gradient(102deg, #009681 0.97%, #00677F 97.19%);
+}
+
+.stats-container {
+  background: var(--lin);
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 4px 55.2px 0px rgba(114, 170, 255, 0.25);
+}
+
+.stat-item {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.stat-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  gap: 0 10px;
+}
+
+.counter--number h3 {
+  color: #FFF;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0;
+  line-height: 42px; /* 84% */
+  -webkit-text-stroke-width: 1px;
+}
+
+.counter--number p {
+  color: #FFF;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 42px; /* 210% */
+  margin-left: 6px;
+  -webkit-text-stroke-width: 0.10000000149011612px;
+}
+
+.img-counter {
+  height: 85px;
+}
+
+.img-counter img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.counter--number {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.stats-container {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  gap: 50px 0;
+  padding: 70px 0px 70px 90px;
+}
+
+
+.btn--pls {
+  font-family: "Averta CY";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px; /* 144.444% */
+  background: var(--lin, linear-gradient(84deg, #009681 100%, #009681 100%));
+  background-clip: text !important;
+  -webkit-text-fill-color: #007565;
+  margin-top: 30px;
+  -webkit-text-stroke-width: 0.5px;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #007565;
+}
+.title-primary-sc h2 {
+  color: #151515;
+  text-align: center;
+  -webkit-text-stroke-color: #151515;
+  font-family: "Averta CY";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 69px; /* 115% */
+  -webkit-text-stroke-width: 0.800000011920929px;
+}
+/*  */
+:root {
+  --primary-gradient: linear-gradient(102deg, #009681 0.97%, #00677F 97.19%);
+  --white: #ffffff;
+  --box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.investment .container {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+
+
+.investment .investment-box {
+  border-radius: 20px;
+  border: 1px solid #F4F4F4;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  padding: 30px 20px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.investment .investment-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.investment .investment-box p {
+  margin: 0;
+  color: #FFF;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.investment .investment-box .arrow {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.img--wrapper img {
+  width: 100%;
+  height: 100%;
+}
+/* Maps  */
+.container-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 40px;
+}
+
+.accordion-container {
+  flex: 1;
+  max-width: 30%;
+}
+
+.map-container {
+  flex: 1;
+  max-width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-container img {
+  width: 100%;
+  height: auto;
+
+}
+
+.container-layout .accordion-button {
+  outline: none;
+  color: white !important;
+  border-radius: 12px !important;
+  border: none;
+  box-shadow: initial !important;
+  padding: 30px 20px;
+  margin: 0;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+   /* 185.714% */
+  border: 5px solid #EDF2F8;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  -webkit-text-stroke-width: 0.5px;
+}
+
+.accordion-button:not(.collapsed) {
+  /* background-color: #00677F !important; */
+  /* color: white !important; */
+}
+
+.accordion-body {
+  border-radius: 20px;
+  border: 5px solid #EDF2F8;
+  background: #FFF;
+  color: #000;
+      -webkit-text-stroke-color: #009681;
+  font-family: "Averta CY";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 116.667% */
+}
+
+/* @media (max-width: 768px) {
+  .container-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .accordion-container, .map-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+} */
+.container-layout .accordion-button:after {
+  color: #fff !important;
+  content: "";
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+
+  transform: rotate(0); /* Rotate the element 90 degrees to the right */
+}
+
+.accordion-container>div {
+  border: 0;
+  box-shadow: initial;
+  gap: 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-item {
+  border: 0;
+}
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+section.maps-africa {
+  background: #F5F9FF;
+}
+
+.accordion-item {
+  background-color: transparent;
+}
+
+.container-layout .collapsed:after {
+  transform: rotate(-94deg);
+  content: "";
+}
+.accordion-body li {
+  color: #000;
+      -webkit-text-stroke-color: #009681;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 116.667% */
+  -webkit-text-stroke-width: 0.30000001192092896px;
+}
+
+.accordion-body li {
+  margin-bottom: 5px;
+}
+
+.accordion-body li:last-child {
+  margin-bottom: 0;
+}
+.paragraph--african_insights p {
+  color: var(--WF-Base-800, #2D3648);
+  text-align: center;
+  font-family: Inter;
+  font-size: 28px;
+  font-family: "Averta CY";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: 0.32px;
+}
+
+.african_insights .investment-box {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.african_insights .investment-box .wrapper-insight_icon p {
+  color: #151515;
+  -webkit-text-stroke-color: #151515;
+  font-family: "Averta CY";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; /* 150% */
+  -webkit-text-stroke-width: 1px;
+  height: 87px;
+  display: flex;
+  align-items: center;
+}
+
+.african_insights .investment-box img {
+  height: 52px;
+}
+
+
+.wrapper-insight_icon {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  align-items: center;
+  gap: 0 15px;
+}
+
+.african_insights .container {
+  box-shadow: initial;
+  padding: 0;
+}
+/*  */
+
+
+.african_pioneer .card-body {
+  display: none;            /* Hide card body by default */
+}
+
+.african_pioneer.active .card-body {
+  display: block;           /* Show card body when active */
+}
+
+#acc-card-6-column  .card-header {
+  border-radius: 20px;
+  border: 5px solid #009681;
+  background: #EEFFFD;
+  padding: 30px 0;
+  box-shadow: initial;
+}
+
+#acc-card-6-column .icon-african_pioneericon--card h3 {
+      -webkit-text-stroke-color: #009681;
+  font-family: "Averta CY";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+   /* 173.333% */
+  background: #009681;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #007565;
+  text-align: left;
+  -webkit-text-stroke-width: 0.5px;
+  /* color: #009681; */
+  /* background-clip: text; */!;!i;!;
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: #007565; */
+}
+
+#acc-card-6-column  .icon--african_pioneer {
+  height: 62px;
+  text-align: right;
+  right: 5px;
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+}
+
+#acc-card-6-column  .card-body {
+  border-radius: 20px;
+  border: 5px solid #EDF2F8;
+  background: #FFF;
+  color: #000;
+      -webkit-text-stroke-color: #009681;
+  font-family: "Averta CY";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+}
+
+div#acc-card-6-column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px 0;
+}
+
+div#acc-card-6-column .card {
+  border: 0;
+  width: 32%;
+  gap: 15px 0;
+}
+
+.icon-african_pioneericon--card h3 {
+  -webkit-text-stroke-width: 0.5;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+   /* 173.333% */
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #007565;
+}
+
+.icon-african_pioneericon--card {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 0 11px;
+  justify-content: start;
+  /* width: 90%; */
+}
+
+.icon-african_pioneericon--card img {
+  height: 60px;
+}
+.banner_status_img a {
+  /* fill: #FFF; */
+  /* stroke-width: 0.4px; */
+  color: #FFF;
+  text-align: center;
+  font-family: "Averta CY";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px; /* 144.444% */
+  width: 100%;
+  text-align: left;
+  -webkit-text-stroke-width: 0.5px;
+}
+
+.banner_status_img div {
+  position: absolute;
+  /* top: 0; */
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  align-items: self-end;
+  gap: 15px 0;
+}
+
+.banner_status_img img {
+  width: 100%;
+  height: 100%;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  box-shadow: 0px 4px 44.1px 0px rgba(54, 99, 167, 0.25);
+  border-radius: 20px;
+}
+
+.banner_status_img {
+  position: relative;
+}
+
+.banner_status_img {
+  width: 100%;
+  border-radius: 20px;
+
+    padding: 0;
+}
+
+.banner_status_img h2 {
+  color: #FFF;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 75px; /* 137.143% */
+  -webkit-text-stroke-width: 1.5px;
+  width: 100%;
+}
+/*  */
+.owl .item {
+  height: 10rem;
+  padding: 1rem;
+  opacity: 0.4;
+  transition: .4s ease all;
+  margin: 0 20px;
+  transform: scale(1);
+}
+
+.owl .item {
+  background: #4DC7A0;
+}
+section.banner_status_slider .item {
+  border-radius: 20px;
+  border: 1px solid #F4F4F4;
+  background: #FFF !important;
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  height: auto;
+}
+
+section.banner_status_slider .active + div .item {
+  opacity: 1;
+  margin-top: -21px;
+}
+
+section.banner_status_slider  .sc--mg-slider--wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+}
+
+section.banner_status_slider 
+.wrapper-slider---img {
+  border-radius: 15px;
+  background: var(--WF-Base-200, #EDF0F7);
+  overflow: hidden;
+  height: 299px;
+  width: 30%;
+}
+
+section.banner_status_slider 
+.element--slider-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 70%;
+}
+
+section.banner_status_slider  h2 {
+  color: #151515;
+  -webkit-text-stroke-color: #151515;
+  font-family: "Averta CY";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  -webkit-text-stroke-width: 0.800000011920929px;
+  line-height: 43px; /* 107.5% */
+}
+
+.wrapper-slider---img img { height: 100%; }
+.header--menu nav {max-width: 100%;padding: 0 15px;}
+
+.slider-content h1 {
+  -webkit-text-stroke-width: 2px;
+  color: #FFF;
+  text-align: center;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 70px;
+  font-style: normal;
+  line-height: 77px; /* 110% */
+}
+
+
+
+.slider-content p {
+  color: #FFF;
+  text-align: center;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 116.667% */
+  margin-top: 20px;
+}
+.sugg--btn p {
+  color: #FFF;
+  font-family: "Averta CY";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+}
+ul.multi--select li:last-child a {
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #007565;
+  gap: 0 10px;
+  display: flex;
+}
+
+ul.multi--select li:first-child a {
+  -webkit-text-stroke-color: #000;
+  -webkit-appearance: none;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="13" viewBox="0 0 24 13" fill="none"><g clip-path="url(%23clip0_4795_8400)"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7106 10.8757L18.3676 5.21869L16.9536 3.80469L12.0036 8.75469L7.05365 3.80469L5.63965 5.21869L11.2966 10.8757C11.4842 11.0632 11.7385 11.1685 12.0036 11.1685C12.2688 11.1685 12.5231 11.0632 12.7106 10.8757Z" fill=%22black%22/></g><defs><clipPath id=%22clip0_4795_8400%22><rect width=%2212%22 height=%2224%22 fill=%22white%22 transform=%22matrix(0 1 1 0 0 0.71875)%22/></clipPath></defs></svg>') no-repeat right -5px center;
+  background-color: #fff;
+}
+.btn--pls a {
+  color: #007565;
+}
+#acc-card-6-column .active .icon--african_pioneer {
+  transform: rotate(180deg);
+  display: flex;
+  align-items: end;
+}
+/* Contact */
+/* Parent class */
+.contact---us {
+}
+
+/* Container for form and image */
+.contact-container {
+  display: flex;
+  width: 100%;
+  background: #ffffff;
+  min-width: 1441px;
+  width: 95%;
+}
+
+/* Form section */
+.contact-form {
+  flex: 1;
+  padding: 30px 71px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0px 40px 40px 0px;
+  background: var(--lin, linear-gradient(102deg, #009681 0.97%, #00677F 97.19%));
+  box-shadow: 0px 4px 44.1px 0px rgba(54, 99, 167, 0.25);
+  width: 50%;
+}
+
+.contact-form h3 {
+  color: #FFF;
+  -webkit-text-stroke-width: 0.699999988079071px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 125% */
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px 0;
+}
+
+.contact-form .form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  padding: 18px 20px 18px 20px;
+  align-items: center;
+  outline: none;
+  margin: 0;
+  border-radius: 100px;
+  border: 1px solid var(--Grey-Grey-20, #E5E7EB);
+  background: var(--Grey-Grey-5, #F9FAFB);
+  color: #B7C4DE;
+  font-family: "Averta CY";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+  width: 100%;
+}
+
+.contact-form textarea {
+  height: 146px !important;!i;!;
+  resize: none;
+  border-radius: 30px;
+  border: 1px solid var(--Grey-Grey-20, #E5E7EB);
+  background: var(--Grey-Grey-5, #F9FAFB);
+}
+
+.contact-form button {
+  margin-top: 15px;
+  background: transparent;
+  color: #007bff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px; /* 173.333% */
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  position: relative;
+  right: -12px;
+  display: flex;
+  gap: 0 18px;
+}
+
+.contact-form button:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+/* Image section */
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+}
+
+.contact-image img {
+  max-width: 100%;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.contact-form select {
+  /* Remove default arrow */
+  -webkit-appearance: none;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="13" viewBox="0 0 24 13" fill="none"><g clip-path="url(%23clip0_4795_8400)"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7106 10.8757L18.3676 5.21869L16.9536 3.80469L12.0036 8.75469L7.05365 3.80469L5.63965 5.21869L11.2966 10.8757C11.4842 11.0632 11.7385 11.1685 12.0036 11.1685C12.2688 11.1685 12.5231 11.0632 12.7106 10.8757Z" fill=%22black%22/></g><defs><clipPath id=%22clip0_4795_8400%22><rect width=%2212%22 height=%2224%22 fill=%22white%22 transform=%22matrix(0 1 1 0 0 0.71875)%22/></clipPath></defs></svg>') no-repeat right 10px center;
+  background-color: #fff;
+}
+
+
+
+.header--menu ul .dropdown-toggle::after {
+    opacity: 0;
+}
+
+.header--menu ul .dropdown-toggle {
+    -webkit-appearance: none;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="13" viewBox="0 0 24 13" fill="none"><g clip-path="url(%23clip0_4795_8400)"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7106 10.8757L18.3676 5.21869L16.9536 3.80469L12.0036 8.75469L7.05365 3.80469L5.63965 5.21869L11.2966 10.8757C11.4842 11.0632 11.7385 11.1685 12.0036 11.1685C12.2688 11.1685 12.5231 11.0632 12.7106 10.8757Z" fill=%22black%22/></g><defs><clipPath id=%22clip0_4795_8400%22><rect width=%2212%22 height=%2224%22 fill=%22white%22 transform=%22matrix(0 1 1 0 0 0.71875)%22/></clipPath></defs></svg>') no-repeat right 3px center;
+    background-color: #fff;
+}
+
+.contact-form select { color: #000; font-family: "Averta CY"; font-size: 18px; font-style: normal; font-weight: 400; line-height: 24px; }
+/*  */
+
+        .section---filter-block .filter {
+            display: flex;
+            /* flex-wrap: wrap; */
+            gap: 0px;
+            margin-bottom: 20px;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .section---filter-block .filter button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+            cursor: pointer;
+      
+            color: #000;
+            text-align: center;
+            font-family: Inter;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22.4px; /* 70% */
+            display: flex;
+            padding: 7px 10.75px 7px 10.75px;
+            flex-direction: column;
+            align-items: center;
+            flex: 1 0 0;
+            border-top: 1px solid #CCC;
+            border-right: 1px solid #CCC;
+            border-bottom: 1px solid #CCC;
+            background: #FFF;
+        }
+        .section---filter-block .filter button:hover {
+            background-color: #018B81;
+            color: #fff;
+        }
+        .section---filter-block .filter button.active {
+            color: #018B81;
+            text-align: center;
+            font-family: Inter;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22.4px; /* 70% */
+            border-top: 3px solid #018B81;
+        }
+        .section---filter-block .articles {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            padding: 40px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .section---filter-block .article {
+            border: 0;
+            border-radius: 5px;
+            padding: 15px;
+            width: 264px;
+        }
+        .section---filter-block .article img {
+            max-width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .section---filter-block .article-title {
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        section.section---filter-block {
+          background: #F5F9FF;
+          padding-bottom: 0;
+      }
+      
+      .card---filter {
+          border-left: 2px solid #CDCDCD;
+          border-right: 2px solid #CDCDCD;
+      }
+      
+      .articles {}
+      
+      .articles .article-title {
+          color: var(--WF-Base-800, #2D3648);
+          -webkit-text-stroke-width: 0.20000000298023224;
+          -webkit-text-stroke-color: #151515;
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%; /* 21.6px */
+          letter-spacing: 0.18px;
+      }
+      
+      .articles .article-date {
+          color: #929292;
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 120%; /* 21.6px */
+          letter-spacing: 0.18px;
+          display: flex;
+          align-items: center;
+          gap: 0 10px;
+      }
+      
+      
+      .articles-img {
+          height: 181px;
+      }
+      
+      .section---filter-block .filter button.active:hover {
+          color: #fff;
+      }
+      
+      ul.multi--select .dropdown-toggle::after { opacity: 0; }
+      .header--menu .navbar-nav { display: flex ; width: 74%; justify-content: space-evenly; }
+      .count--inc {
+        gap: 0 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .count--inc span {
+        color: #FFF;
+        -webkit-text-stroke-color: #FFF;
+        font-family: "Averta CY";
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 0;
+        line-height: 42px;
+        -webkit-text-stroke-width: 1px;
+    }
+    
+    .video--sc-2 img {
+      width: 100%;
+      height: 100%;
+  }
+  .filters {
+    width: 30%;
+}
+.filters h3 {
+    margin-bottom: 10px;
+}
+.filters select, .filters input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.members {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px 0;
+}
+.member {
+    border-radius: 5px;
+    text-align: center;
+    width: 32%;
+    border-radius: 20px;
+    box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+    display: flex;
+    width: 31%;
+    height: 327px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.hidden {
+  display: none;
+}
+select#countryFilter {
+  width: 344.782px;
+  color: #000;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+  border-radius: 100px;
+  border: 1px solid var(--Grey-Grey-20, #E5E7EB);
+  /* background: #E1E9F0; */
+  -webkit-appearance: none;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="13" viewBox="0 0 24 13" fill="none"><g clip-path="url(%23clip0_4795_8400)"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7106 10.8757L18.3676 5.21869L16.9536 3.80469L12.0036 8.75469L7.05365 3.80469L5.63965 5.21869L11.2966 10.8757C11.4842 11.0632 11.7385 11.1685 12.0036 11.1685C12.2688 11.1685 12.5231 11.0632 12.7106 10.8757Z" fill=%22black%22/></g><defs><clipPath id=%22clip0_4795_8400%22><rect width=%2212%22 height=%2224%22 fill=%22white%22 transform=%22matrix(0 1 1 0 0 0.71875)%22/></clipPath></defs></svg>') no-repeat right -5px center;
+  -webkit-appearance: none;
+  background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="13" viewBox="0 0 24 13" fill="none"><g clip-path="url(%23clip0_4795_8400)"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7106 10.8757L18.3676 5.21869L16.9536 3.80469L12.0036 8.75469L7.05365 3.80469L5.63965 5.21869L11.2966 10.8757C11.4842 11.0632 11.7385 11.1685 12.0036 11.1685C12.2688 11.1685 12.5231 11.0632 12.7106 10.8757Z" fill=%22black%22/></g><defs><clipPath id=%22clip0_4795_8400%22><rect width=%2212%22 height=%2224%22 fill=%22white%22 transform=%22matrix(0 1 1 0 0 0.71875)%22/></clipPath></defs></svg>') no-repeat right 5px center;
+  background-color: #E1E9F0;
+}
+
+input#searchFilter {
+  color: #95A3C0;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+  border-radius: 100px;
+  border: 1px solid #CBD2E0;
+  background: #FFF;
+}
+
+.filters ul li button {
+  color: #A2B2CB;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #A2B2CB;
+  font-family: "Averta CY";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px; /* 162.5% */
+}
+
+button.categoryFilter.active {
+  color: #019081;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #019081;
+  font-family: "Averta CY";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  border: 0;
+  line-height: 52px; /* 162.5% */
+  background-color: transparent;
+  text-align: left;
+  width: max-content;
+  border-bottom: 3px solid;
+}
+
+.filters ul {
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.filters button {background-color: transparent;border: 0;}
+
+.filters ul li {
+  text-align: left;
+}
+section.filter--pays-elements .container {
+  display: flex;
+}
+.img--pays-el {
+  height: 190px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.parnet--title {
+  height: 144px;
+  display: flex;
+  align-items: center;
+  opacity: 0.93;
+  background: #F9F9F9;
+  width: 100%;
+  align-items: center;
+  justify-content: left;
+  color: #292929;
+  -webkit-text-stroke-width: 0.30000001192092896px;
+  -webkit-text-stroke-color: #292929;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; /* 110% */
+  text-align: left;
+  padding: 0 15px;
+  flex-direction: column;
+  align-items: baseline;
+  margin: auto;
+  justify-content: space-around;
+}
+.filter--pays-elements .title-primary-sc {
+  margin-bottom: 100px !important;
+}
+.link--arrow-ps { text-align: right; width: 100%; }
+/* Target the 1st, 4th, 7th, etc. */
+.members .member:nth-child(3n-2) {
+  /* Your CSS for the 1st in the cycle */
+  background-color: #f0f0f0;
+  position: relative;
+  top: 10px;
+}
+
+/* Target the 2nd, 5th, 8th, etc. */
+.members .member:nth-child(3n-1) {
+  /* Your CSS for the 2nd in the cycle */
+  background-color: #e0e0e0;
+  top: 100px;
+  position: relative;
+}
+
+/* Target the 3rd, 6th, 9th, etc. */
+.members .member:nth-child(3n) {
+  /* Your CSS for the 3rd in the cycle */
+  background-color: #d0d0d0;
+  position: relative;
+  top: -83px;
+}
+
+
+.has-7-items:has(.member:nth-child(7):last-child) .member:last-child {
+  position: relative;
+  left: 34%;
+  top: -8%;
+}
+.hidden_show:has(.member:nth-child(7):last-child) .member:last-child {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.search--bar-1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchFilter svg {
+  position: absolute;
+}
+
+.search--bar-1 svg {
+  position: absolute;
+  right: 12px;
+  top: -8px;
+  bottom: 0;
+  height: 100%;
+}
+/* 
+z */

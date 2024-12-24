@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Members</title>
+      <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="./assets/css/all.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="./assets/css/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+        .filters {
+            width: 20%;
+            padding: 10px;
+            border-right: 1px solid #ccc;
+        }
+        .filters h3 {
+            margin-bottom: 10px;
+        }
+        .filters select, .filters input {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+        .members {
+            width: 80%;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .member {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Discover our community of members</h1>
+    <div class="container">
+        <div class="filters">
+            <h3>Filters</h3>
+            <select id="countryFilter">
+                <option value="">All Countries</option>
+                <option value="United States">United States</option>
+                <option value="France">France</option>
+                <option value="Africa">Africa</option>
+            </select>
+
+            <input type="text" id="searchFilter" placeholder="Search by title">
+
+            <h3>Categories</h3>
+            <ul>
+                <li><button class="categoryFilter" data-category="all">All Members</button></li>
+                <li><button class="categoryFilter" data-category="banks">Banks & Insurance</button></li>
+                <li><button class="categoryFilter" data-category="multinational">Multinationals</button></li>
+                <li><button class="categoryFilter" data-category="asset">Asset Management</button></li>
+                <li><button class="categoryFilter" data-category="law">Law Consulting</button></li>
+                <li><button class="categoryFilter" data-category="services">Other Services</button></li>
+            </ul>
+        </div>
+
+        <div class="members">
+            <div class="member" data-country="United States" data-category="multinational">Orange Middle East & Africa</div>
+            <div class="member" data-country="Africa" data-category="banks">Bank of Africa</div>
+            <div class="member" data-country="United States" data-category="law">Baker & McKenzie</div>
+            <div class="member" data-country="France" data-category="asset">Africa 50</div>
+            <div class="member" data-country="United States" data-category="multinational">The Boston Consulting Group</div>
+            <div class="member" data-country="United States" data-category="services">Mastercard</div>
+            <div class="member" data-country="United States" data-category="services">Deloitte</div>
+        </div>
+    </div>
+
+  <!-- jQuery Library -->
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Owl Carousel JS -->
+  <script src="./assets/js/owl.carousel.min.js"></script>
+  
+  <!-- AOS JS -->
+  <script src="./assets/js/aos.js"></script>
+  
+  <!-- Your custom JS scripts -->
+  <script src="./assets/js/scripts.js"></script>    <script>
+        $(document).ready(function() {
+            function filterMembers() {
+                const searchValue = $('#searchFilter').val().toLowerCase();
+                const selectedCountry = $('#countryFilter').val();
+                const selectedCategory = $('.categoryFilter.active').data('category');
+
+                $('.member').each(function() {
+                    const title = $(this).text().toLowerCase();
+                    const country = $(this).data('country');
+                    const category = $(this).data('category');
+
+                    const matchesSearch = title.includes(searchValue);
+                    const matchesCountry = !selectedCountry || country === selectedCountry;
+                    const matchesCategory = !selectedCategory || selectedCategory === 'all' || category === selectedCategory;
+
+                    if (matchesSearch && matchesCountry && matchesCategory) {
+                        $(this).removeClass('hidden');
+                    } else {
+                        $(this).addClass('hidden');
+                    }
+                });
+            }
+
+            $('#searchFilter').on('input', filterMembers);
+            $('#countryFilter').on('change', filterMembers);
+            $('.categoryFilter').on('click', function() {
+                $('.categoryFilter').removeClass('active');
+                $(this).addClass('active');
+                filterMembers();
+            });
+
+            // Set "All" category active by default
+            $('.categoryFilter[data-category="all"]').addClass('active');
+        });
+    </script>
+</body>
+</html>
