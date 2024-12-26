@@ -636,11 +636,11 @@ section{
   border-radius: 12px !important;
   border: none;
   box-shadow: initial !important;
-  padding: 30px 20px;
+  padding: 30px 15px;
   margin: 0;
   -webkit-text-stroke-color: #FFF;
   font-family: "Averta CY";
-  font-size: 28px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
    /* 185.714% */
@@ -962,8 +962,7 @@ section.banner_status_slider .item {
   height: auto;
 }
 
-section.banner_status_slider .active + div .item {
-  opacity: 1;
+section.banner_status_slider .active  .item {
   margin-top: -21px;
 }
 
@@ -1559,6 +1558,10 @@ section.filter--pays-elements .owl-stage {
   border-radius: 5px;
   display: none;
   z-index: 2;
+  border-radius: 20px;
+  border: 1px solid #F4F4F4;
+  background: #FFF;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25), 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
 }
 
 .item-info .title {
@@ -1567,4 +1570,107 @@ section.filter--pays-elements .owl-stage {
 
 .item-info .country {
   font-size: 14px;
+}
+.wrapper-element-africa div {
+  color: var(--WF-Base-800, #2D3648);
+  font-feature-settings: 'calt' off;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 33px */
+  letter-spacing: -0.22px;
+}
+
+.wrapper-element-africa a {
+  color: #039681;
+  font-feature-settings: 'calt' off;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+  letter-spacing: -0.16px;
+}
+
+.flag--element {
+  width: 43px;
+  height: 43px;
+}
+
+.item-info-content {
+  display: flex;
+  gap: 0 18px;
+}
+
+.flag--element img {
+  width: 100%;
+  height: 100%;
+}
+path.item-wrap:hover {
+  opacity: 0.9;
+}
+.maps-africa li{
+  -webkit-text-stroke-color:#000;
+}
+.btn--pls span:hover:after {
+  content: "";
+  width: 100%;
+  background-color: #007565;
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  left: 0;
+}
+
+.btn--pls span {
+  position: relative;
+}
+
+
+.african_insights .investment-box:hover {
+  background: #EEFFFD;
+}
+
+.african_insights .investment-box {
+  border: 5px solid #ffffff;
+}
+
+.african_insights .investment-box:hover {
+  border: 5px solid #009681;
+}
+.owl .active  .item{
+  opacity: 1;
+}
+section.banner_status_slider .owl-theme .owl-dots .active span {
+  background: rgba(0, 103, 127, 1);
+  height: 28px;
+  width: 28px;
+}
+section.banner_status_slider .owl-theme .owl-dots span {
+  background: rgba(237, 237, 237, 1);
+  height: 20px;
+  width: 20px;
+}
+
+section.banner_status_slider .owl-theme .owl-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.element--slider-item p {
+  color: #000;
+  text-align: justify;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 133.333% */
+}
+
+
+.element--slider-item .btn--pls {
+  line-height: normal;
+  padding-top: 0;
+  margin-top: 0;
 }

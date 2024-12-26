@@ -47,30 +47,42 @@
 
     // Owl Carousel Initialization
     $('.banner_status_slider .owl-carousel').owlCarousel({
-      stagePadding: 400,
-      loop: true,
-      items: 1,
+      // // stagePadding: 400,
+      // // loop: true,
+      // // items: 3,
+      // // center:true,
+      // // lazyLoad: true,
+      // // autoplay: false,
+      // // autoplaySpeed: 2000,
+      // // autoplayTimeout: 5000,
+      // // autoplayHoverPause: true,
+      // // dots: false,
+      // // responsive: {
+      // //   0: {
+      // //     items: 1,
+      // //     stagePadding: null,
+
+      // //   },
+      // //   600: {
+      // //     items: 1,
+      // //     stagePadding: null,
+      // //   },
+      // //   1000: {
+      // //     items: 3,
+
+      // //   }
+      // }
+      stagePadding: 200,
+      loop:true,
+      items:1,
       lazyLoad: true,
       autoplay: false,
+      margin: 30,
       autoplaySpeed: 2000,
       autoplayTimeout: 5000,
       autoplayHoverPause: true,
-      dots: false,
-      responsive: {
-        0: {
-          items: 1,
-          stagePadding: null,
+      autoHeight: true,
 
-        },
-        600: {
-          items: 1,
-          stagePadding: null,
-        },
-        1000: {
-          items: 1,
-
-        }
-      }
     });
 
     // Generate Alphabet Filter Buttons
