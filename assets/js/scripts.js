@@ -233,34 +233,34 @@
     }
   });
   // 
-  var memberCount = $('.members .member').length;
+  // var memberCount = $('.members .member').length;
 
-  // If more than 7 members, initialize Owl Carousel
-  if (memberCount > 7) {
-    $('.members').addClass('owl-carousel').owlCarousel({
-      items: 4, // You can customize the number of items shown here
-      loop: false,
-      margin: 10,
-      nav: true,
-      dots: false,
-      autoWidth: true,
+  // // If more than 7 members, initialize Owl Carousel
+  // if (memberCount > 7) {
+  //   $('.members').addClass('owl-carousel').owlCarousel({
+  //     items: 4, // You can customize the number of items shown here
+  //     loop: false,
+  //     margin: 10,
+  //     nav: true,
+  //     dots: false,
+  //     autoWidth: true,
 
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 2
-        },
-        1000: {
-          items: 4
-        }
-      }
-    });
-  } else {
-    // If there are 7 or fewer members, remove the owl-carousel class (in case it was applied)
-    $('.members').removeClass('owl-carousel');
-  }
+  //     responsive: {
+  //       0: {
+  //         items: 1
+  //       },
+  //       600: {
+  //         items: 2
+  //       },
+  //       1000: {
+  //         items: 4
+  //       }
+  //     }
+  //   });
+  // } else {
+  //   // If there are 7 or fewer members, remove the owl-carousel class (in case it was applied)
+  //   $('.members').removeClass('owl-carousel');
+  // }
   // 
   // const $hoverBox = $("#hover-box");
   // let timeout;
@@ -353,6 +353,15 @@
       }
     });
   });
-  
+  $('.members').slick({
+    dots: true,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 7,
+    slidesToScroll: 7,
+    // centerPadding: '60px',
+    // centerMode: true,
+    variableWidth: true
+  });
 
 })(jQuery);

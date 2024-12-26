@@ -1360,22 +1360,13 @@ ul.multi--select li:first-child a {
     padding: 15px;
     margin-bottom: 15px;
 }
-.members {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* justify-content: space-around; */
-    gap: 20px;
-    height: 1021px;
-    background: red;
-}
+
 .member {
     border-radius: 5px;
     text-align: center;
     width: 32%;
     border-radius: 20px;
-    box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+    box-shadow: 0px 2px 26.1px 0px rgba(114, 170, 255, 0.25);
     display: flex;
     width: 230px;
     height: 327px;
@@ -1384,6 +1375,7 @@ ul.multi--select li:first-child a {
     align-items: center;
     flex-shrink: 0;
     overflow: hidden;
+    margin: 0 5px;
 }
 .hidden {
   display: none;
@@ -1523,9 +1515,7 @@ section.filter--pays-elements .container {
 }
 /* 
 z */
-.member:nth-child(7n+1) {
-  margin-top: 40px;
-}
+
 
 .path-hover {
   transition: all .2s;
@@ -1534,9 +1524,7 @@ z */
   fill: rgb(234, 86, 86);
 }
 
-.member:nth-child(7n+3) {
-  margin-top: 80px;
-}
+
 section.filter--pays-elements .owl-stage {
   align-content: start;
   display: flex;
@@ -1544,7 +1532,7 @@ section.filter--pays-elements .owl-stage {
   flex-wrap: wrap;
   gap: 20px;
   height: 1021px;
-  background: red;
+  /* background: red; */
   justify-items: start;
   align-items: start;
   justify-content: start;
@@ -1674,3 +1662,126 @@ section.banner_status_slider .owl-theme .owl-dots {
   padding-top: 0;
   margin-top: 0;
 }
+.members .slick-slide:nth-child(7n+1) {
+  margin-top: 40px;
+}
+
+.members .slick-slide:nth-child(7n+3) {
+  margin-top: 80px;
+}
+.members {
+  padding: 20px 34px 24px 84px;
+  ^
+  p: 15px;
+  /* position: relative; */
+  /* left: 15px; */
+}
+section.filter--pays-elements .slick-track {
+  align-content: start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  height: 1128px;
+  justify-items: start;
+  align-items: start;
+  justify-content: start;
+  padding: 35px;
+  margin: 5px;
+}
+.members {
+  width: 70%;
+  /*  display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 1021px; */
+  /* padding: 30px; */
+  /* background: red; */
+  }
+  .hidden {
+    display: none !important;
+  }
+  .members .slick-dots {
+    position: relative;
+    bottom: 50px; /* Adjust as needed */
+    text-align: center;
+    width: max-content;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    left: 24px;
+  }
+  
+  .members .slick-prev, 
+  .members .slick-next {
+    position: absolute;
+    bottom: 0; /* Center vertically */
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  
+  .members .slick-prev {
+    left: 30px; /* Adjust as needed */
+  }
+  
+  .members .slick-next {
+    left: 200px; /* Adjust as needed */
+    bottom: 82px;
+  }
+  
+  .members ul.slick-dots li {
+    list-style: none;
+    width: auto;
+  }
+  
+  .members ul.slick-dots button {
+    background: rgba(237, 237, 237, 1);
+    height: 20px;
+    width: 20px;
+    border-radius: 30px;
+    color: rgba(237, 237, 237, 1);
+    font-size: 0;
+    border: 0;
+  }
+  
+  .members li.slick-active button {
+    background: rgba(0, 103, 127, 1);
+  }
+  
+  .members button.slick-arrow {
+    font-size: 0;
+    background: none; /* Remove default background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    bottom: 80px;
+  }
+  
+  .members .slick-arrow::before {
+    content: ''; /* Remove default content */
+    display: inline-block; /* Make it an inline-block element */
+    width: 32px; /* Set width for the SVG */
+    height: 32px; /* Set height for the SVG */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M19.9997 26.6641L9.33301 15.9974L19.9997 5.33073L22.6663 7.9974L14.6663 15.9974L22.6663 23.9974L19.9997 26.6641Z" fill="%2300677F"/></svg>') no-repeat bottom; /* Add SVG as background */
+    background-size: contain; /* Ensure the SVG scales correctly */
+    position: relative; /* Position it absolutely */
+    left: 40px; /* Center horizontally */
+    bottom: -12px; /* Adjust position */
+  }
+  .members .slick-next::before {
+
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.0003 26.6641L22.667 15.9974L12.0003 5.33073L9.33366 7.9974L17.3337 15.9974L9.33366 23.9974L12.0003 26.6641Z" fill="%2300677F"/></svg>') no-repeat center center !important; /* Add SVG as background */
+  }
+  .members .slick-prev span {
+    display: none; /* Hide the default text */
+  }
+  
+  .members button.slick-prev.slick-arrow {
+    position: absolute;
+  }
+  
+  .members button.slick-next.slick-arrow:before {
+    right: 34px;
+    left: auto;
+  }
