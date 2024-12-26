@@ -204,7 +204,7 @@ ul.multi--select li:last-child a {
 }
 .multi--select a {
   color: #000;
-  -webkit-text-stroke-color: #009681;
+  -webkit-text-stroke-color: #000 !important;!i;!;
   font-family: "Averta CY";
   font-size: 22px;
   font-style: normal;
@@ -1044,7 +1044,7 @@ ul.multi--select li:last-child a {
   display: flex;
 }
 
-ul.multi--select li:first-child a {
+ul.multi--select .dropdown > a {
   -webkit-text-stroke-color: #000;
   -webkit-appearance: none;
   background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="13" viewBox="0 0 24 13" fill="none"><g clip-path="url(%23clip0_4795_8400)"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7106 10.8757L18.3676 5.21869L16.9536 3.80469L12.0036 8.75469L7.05365 3.80469L5.63965 5.21869L11.2966 10.8757C11.4842 11.0632 11.7385 11.1685 12.0036 11.1685C12.2688 11.1685 12.5231 11.0632 12.7106 10.8757Z" fill=%22black%22/></g><defs><clipPath id=%22clip0_4795_8400%22><rect width=%2212%22 height=%2224%22 fill=%22white%22 transform=%22matrix(0 1 1 0 0 0.71875)%22/></clipPath></defs></svg>') no-repeat right -5px center;
@@ -1785,3 +1785,32 @@ section.filter--pays-elements .slick-track {
     right: 34px;
     left: auto;
   }
+  ul.multi--select .dropdown  .dropdown-item {
+    width: 88px;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+ul.multi--select .dropdown > ul,ul.multi--select .dropdown > ul li {
+    min-width: max-content;
+}
+
+ul.multi--select .dropdown > ul {
+    top: 100px;
+}
+header .navbar-expand-lg .navbar-nav .dropdown-menu {
+  top: 100px;
+}
+header li.nav-item:hover ul.dropdown-menu {
+  display: block;
+}
+
+
+
+header .nav-item {
+  height: 101px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
