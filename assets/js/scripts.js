@@ -100,139 +100,150 @@
 
     articles.show(); // Show all articles by default
 
-    function filterArticles(letter, button) {
-      $(".filter button").removeClass("active");
-      button.addClass("active");
-      articles.each(function () {
-        const title = $(this).data("title");
-        if (title.startsWith(letter)) {
-          $(this).show();
-        } else {
-          $(this).hide();
-        }
-      });
-    }
-
-    // Filter Members
-    function filterMembers() {
-      const searchValue = $('#searchFilter').val().toLowerCase();
-      const selectedCountry = $('#countryFilter').val();
-      const selectedCategory = $('.categoryFilter.active').data('category');
-
-      $('.member').each(function () {
-        const title = $(this).text().toLowerCase();
-        const country = $(this).data('country');
-        const category = $(this).data('category');
-
-        const matchesSearch = title.includes(searchValue);
-        const matchesCountry = !selectedCountry || country === selectedCountry;
-        const matchesCategory = !selectedCategory || selectedCategory === 'all' || category === selectedCategory;
-
-        if (matchesSearch && matchesCountry && matchesCategory) {
-          $(this).removeClass('hidden');
-        } else {
-          $(this).addClass('hidden');
-        }
-      });
-    }
-
-    // Event Listeners for Member Filters
-    $('#searchFilter').on('input', filterMembers);
-    $('#countryFilter').on('change', filterMembers);
-    $('.categoryFilter').on('click', function () {
-      $('.categoryFilter').removeClass('active');
-      $(this).addClass('active');
-      filterMembers();
-    });
-
-    $('.categoryFilter[data-category="all"]').addClass('active'); // Set "All" category active by default
-  });
-  // 
-  $(".members").each(function () {
-    // Find all visible members in the current .members container
-    var visibleMembers = $(this).find(".member:not(.hidden)");
-
-    // Check if the visible member count is exactly 7
-    if (visibleMembers.length === 7) {
-      $(this).addClass("has-7-items");
-    }
-  })
-
-  // });
-  // Filter buttons click handler
-  $(".categoryFilter").click(function () {
-    // Remove the 'active' class from all buttons and add it to the clicked button
-    $(".categoryFilter").removeClass("active");
-    $(this).addClass("active");
-
-    // Get the selected category
-    var selectedCategory = $(this).data("category");
-
-    // Loop through each member
-    $(".member").each(function () {
-      var memberCategory = $(this).data("category");
-      var memberCountry = $(this).data("country");
-
-      // Check if the member matches the selected category or if 'all' is selected
-      if (selectedCategory === "all" || selectedCategory === memberCategory) {
-        $(this).removeClass("hidden"); // Show the member
-      } else {
-        $(this).addClass("hidden"); // Hide the member
-      }
-    });
-
-    // Check if there are any hidden elements and add the 'hidden_show' class to the container
-    if ($(".member.hidden").length > 0) {
-      $(".members").addClass("hidden_show");
+// ****************
+$('.members').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 7,
+  slidesToScroll: 7,
+  // centerPadding: '60px',
+  // centerMode: true,
+  variableWidth: true
+});
+function filterArticles(letter, button) {
+  $(".filter button").removeClass("active");
+  button.addClass("active");
+  articles.each(function () {
+    const title = $(this).data("title");
+    if (title.startsWith(letter)) {
+      $(this).show();
     } else {
-      $(".members").removeClass("hidden_show");
+      $(this).hide();
     }
   });
+}
 
-  // Search filter functionality
-  $("#searchFilter").on("input", function () {
-    var searchTerm = $(this).val().toLowerCase();
+// Filter Members
+function filterMembers() {
+  const searchValue = $('#searchFilter').val().toLowerCase();
+  const selectedCountry = $('#countryFilter').val();
+  const selectedCategory = $('.categoryFilter.active').data('category');
 
-    $(".member").each(function () {
-      var title = $(this).find(".parnet--title").text().toLowerCase();
-      if (title.includes(searchTerm)) {
-        $(this).removeClass("hidden");
-      } else {
-        $(this).addClass("hidden");
-      }
-    });
+  $('.member').each(function () {
+    const title = $(this).text().toLowerCase();
+    const country = $(this).data('country');
+    const category = $(this).data('category');
 
-    // Check if there are any hidden elements and add the 'hidden_show' class to the container
-    if ($(".member.hidden").length > 0) {
-      $(".members").addClass("hidden_show");
+    const matchesSearch = title.includes(searchValue);
+    const matchesCountry = !selectedCountry || country === selectedCountry;
+    const matchesCategory = !selectedCategory || selectedCategory === 'all' || category === selectedCategory;
+
+    if (matchesSearch && matchesCountry && matchesCategory) {
+      $(this).removeClass('hidden');
     } else {
-      $(".members").removeClass("hidden_show");
+      $(this).addClass('hidden');
     }
   });
+}
 
-  // Country filter functionality
-  $("#countryFilter").change(function () {
-    var selectedCountry = $(this).val();
+// Event Listeners for Member Filters
+$('#searchFilter').on('input', filterMembers);
+$('#countryFilter').on('change', filterMembers);
+$('.categoryFilter').on('click', function () {
+  $('.categoryFilter').removeClass('active');
+  $(this).addClass('active');
+  filterMembers();
+});
 
-    $(".member").each(function () {
-      var memberCountry = $(this).data("country");
+$('.categoryFilter[data-category="all"]').addClass('active'); // Set "All" category active by default
+});
+// 
+$(".members").each(function () {
+// Find all visible members in the current .members container
+var visibleMembers = $(this).find(".member:not(.hidden)");
 
-      // Filter members based on the selected country
-      if (selectedCountry === "" || selectedCountry === memberCountry) {
-        $(this).removeClass("hidden");
-      } else {
-        $(this).addClass("hidden");
-      }
-    });
+// Check if the visible member count is exactly 7
+if (visibleMembers.length === 7) {
+  $(this).addClass("has-7-items");
+}
+})
 
-    // Check if there are any hidden elements and add the 'hidden_show' class to the container
-    if ($(".member.hidden").length > 0) {
-      $(".members").addClass("hidden_show");
-    } else {
-      $(".members").removeClass("hidden_show");
-    }
-  });
-  // 
+// });
+// Filter buttons click handler
+$(".categoryFilter").click(function () {
+// Remove the 'active' class from all buttons and add it to the clicked button
+$(".categoryFilter").removeClass("active");
+$(this).addClass("active");
+
+// Get the selected category
+var selectedCategory = $(this).data("category");
+
+// Loop through each member
+$(".member").each(function () {
+  var memberCategory = $(this).data("category");
+  var memberCountry = $(this).data("country");
+
+  // Check if the member matches the selected category or if 'all' is selected
+  if (selectedCategory === "all" || selectedCategory === memberCategory) {
+    $(this).removeClass("hidden"); // Show the member
+  } else {
+    $(this).addClass("hidden"); // Hide the member
+  }
+});
+
+// Check if there are any hidden elements and add the 'hidden_show' class to the container
+if ($(".member.hidden").length > 0) {
+  $(".members").addClass("hidden_show");
+} else {
+  $(".members").removeClass("hidden_show");
+}
+});
+
+// Search filter functionality
+$("#searchFilter").on("input", function () {
+var searchTerm = $(this).val().toLowerCase();
+
+$(".member").each(function () {
+  var title = $(this).find(".parnet--title").text().toLowerCase();
+  if (title.includes(searchTerm)) {
+    $(this).removeClass("hidden");
+  } else {
+    $(this).addClass("hidden");
+  }
+});
+
+// Check if there are any hidden elements and add the 'hidden_show' class to the container
+if ($(".member.hidden").length > 0) {
+  $(".members").addClass("hidden_show");
+} else {
+  $(".members").removeClass("hidden_show");
+}
+});
+
+// Country filter functionality
+$("#countryFilter").change(function () {
+var selectedCountry = $(this).val();
+
+$(".member").each(function () {
+  var memberCountry = $(this).data("country");
+
+  // Filter members based on the selected country
+  if (selectedCountry === "" || selectedCountry === memberCountry) {
+    $(this).removeClass("hidden");
+  } else {
+    $(this).addClass("hidden");
+  }
+});
+
+// Check if there are any hidden elements and add the 'hidden_show' class to the container
+if ($(".member.hidden").length > 0) {
+  $(".members").addClass("hidden_show");
+} else {
+  $(".members").removeClass("hidden_show");
+}
+});
+  // ****************
   // var memberCount = $('.members .member').length;
 
   // // If more than 7 members, initialize Owl Carousel
@@ -353,15 +364,6 @@
       }
     });
   });
-  $('.members').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 7,
-    slidesToScroll: 7,
-    // centerPadding: '60px',
-    // centerMode: true,
-    variableWidth: true
-  });
+
 
 })(jQuery);

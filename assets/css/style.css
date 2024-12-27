@@ -1711,7 +1711,7 @@ section.filter--pays-elements .slick-track {
     display: flex;
     align-items: center;
     gap: 10px;
-    left: 24px;
+    left: 30px;
   }
   
   .members .slick-prev, 
@@ -1727,7 +1727,7 @@ section.filter--pays-elements .slick-track {
   }
   
   .members .slick-next {
-    left: 200px; /* Adjust as needed */
+    left: 270px; /* Adjust as needed */
     bottom: 82px;
   }
   
@@ -1813,4 +1813,18 @@ header .nav-item {
   display: flex;
   align-items: center;
   position: relative;
+}
+/*  */
+.country-selector {
+  position: relative;
+  display: inline-block;
+}
+
+#flag {
+  position: absolute;
+  left: 120px; /* Adjust based on your layout */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px; /* Adjust size as needed */
+  height: auto;
 }
