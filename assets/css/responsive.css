@@ -409,6 +409,44 @@ header li.nav-item:hover ul.dropdown-menu li {
   ul.multi--select li:last-child a {
     align-items: center;
   }
+  header .navbar-expand-lg .navbar-nav .dropdown-menu {
+    width: 100%;
+    display: none;
+}
+
+header .navbar-expand-lg .navbar-nav ul.dropdown-menu.show {
+    display: block;
+}
+
+header li.nav-item:hover ul.dropdown-menu {
+    display: none;
+}
+
+ul.multi--select .dropdown>ul {
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+.multi--select li {
+    position: relative;
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    justify-content: left;
+    width: 100%;
+    display: flex;
+    align-items: start;
+}
+
+
+.multi--select li:hover ul.dropdown-menu {
+    display: none;
+}
+
+ul.multi--select .dropdown ul.dropdown-menu.show {
+    display: block;
+}
 }
 
 @media (max-width: 767px) {

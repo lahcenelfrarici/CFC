@@ -114,7 +114,18 @@
     });
 
     articles.show(); // Show all articles by default
-
+    function filterArticles(letter, button) {
+      $(".filter button").removeClass("active");
+      button.addClass("active");
+      articles.each(function () {
+        const title = $(this).data("title");
+        if (title.startsWith(letter)) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    }
     // ****************
     $('.members').slick({
       dots: true,
