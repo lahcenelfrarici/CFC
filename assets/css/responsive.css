@@ -148,6 +148,36 @@
 }
 
 @media (max-width: 991px) {
+  .flag--element img {
+    object-fit: contain;
+}
+
+.wrapper-element-africa div {
+    font-size: 18px;
+}
+
+.item-info {
+    padding: 10px;
+}
+
+.wrapper-element-africa a {
+    font-size: 14px;
+}
+
+header .nav-item {
+    flex-direction: column;
+}
+
+header li.nav-item:hover ul.dropdown-menu {
+    width: 100%;
+    border: 0;
+}
+.multi--select li {
+  flex-direction: row;
+}
+header li.nav-item:hover ul.dropdown-menu li {
+    margin-bottom: 7px;
+}
 
   body,
   html {
