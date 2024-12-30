@@ -2035,3 +2035,274 @@ div#country-select {
 .contact-form h3 {
   margin-bottom: 10%;
 }
+section#banner-title {
+  max-width: 95%;
+  border-radius: 40px;
+  height: 612px;
+
+}
+.icon--banner-after {
+  position: absolute;
+  top: -40px;
+  left: -44px;
+  opacity: 0.6;
+}
+
+section#banner-title .slider-content {transform: initial;top: 20%;left: 0;text-align: left;padding: 2rem 0;}
+section#banner-title .slider-overlay:after {
+  background: rgba(0, 0, 0, 0.1);
+}
+body:not(.path-frontpage) header {
+  position: relative;
+}
+
+header {
+  filter: drop-shadow(0px 4px 17.4px rgba(0, 0, 0, 0.20));
+}
+
+section#banner-title {
+  margin-top: 40px;
+}
+.custom-card {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  fill: #FFF;
+  stroke-width: 1px;
+  stroke: #F4F4F4;
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+}
+
+section.global_investment h3 {
+  color: #006d77;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #151515;
+  -webkit-text-stroke-width: 0.800000011920929px;
+  -webkit-text-stroke-color: #151515;
+  font-family: "Averta CY";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 59px; /* 98.333% */
+}
+
+.values-section {
+  background-color: #e8f7f7;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  fill: linear-gradient(93deg, #009681 2.48%, #016F80 95.52%, #007565 350.64%);
+  stroke-width: 1px;
+  stroke: #F4F4F4;
+  filter: drop-shadow(0px 4px 44.1px rgba(114, 170, 255, 0.25));
+  fill: linear-gradient(93deg, #009681 2.48%, #016F80 95.52%, #007565 350.64%);
+  stroke-width: 1px;
+  stroke: #F4F4F4;
+  filter: drop-shadow(0px 4px 44.1px rgba(114, 170, 255, 0.25));
+  border: 1px solid #F4F4F4;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+}
+
+.values-section p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+section.global_investment p {
+  color: #151515;
+  text-align: justify;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 142.857% */
+}
+
+section.global_investment {}
+
+section.global_investment .row {
+  align-items: center;
+}
+
+.custom-card h4 {
+  -webkit-text-stroke-width: 1px;
+  font-family: "Averta CY";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px; /* 108.333% */
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #007565;
+}
+
+
+
+section.global_investment .row:nth-child(2) {
+  align-items: start;
+}
+
+.custom-card ul li {
+  color: #151515;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px; /* 121.429% */
+}
+.values--meteo h4 {
+  color: #FFF;
+  -webkit-text-stroke-width: 1;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 76px; /* 118.75% */
+}
+
+.values-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  margin: auto;
+}
+
+.meteo--value2 p {
+  color: #FFF !important;!i;!;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 30px !important;!i;!;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 76px; /* 118.75% */
+  font-weight: 100 !important;
+  text-align: left !important;
+}
+
+.values-section >div {
+}
+
+.values--meteo h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 0 10px;
+}
+
+.meteo--value2 {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 30% !important;
+}
+
+.values--meteo {
+  width: 70%;
+}
+section.management_team {
+  background: #F5F9FF;
+}
+.team-card h5 {
+  color: #151515;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #151515;
+  font-family: "Averta CY";
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px; /* 200% */
+  padding: 5px 25px 0 25px;
+  margin-bottom: 0;
+}
+
+.team-card p {
+  color: #151515;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #151515;
+  font-family: "Averta CY";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px; /* 230.769% */
+  margin-bottom: 0;
+  padding: 5px 25px;
+}
+
+.team-card {
+  border-radius: 20px;
+  border: 1px solid #F4F4F4;
+  background: #FFF;
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  height: 100%;
+}
+/*  */
+.team_member11 {
+  /* background: linear-gradient(to bottom, #007f5f, #2b9348); */
+  /* padding: 50px 0; */
+  /* border-radius: 10px; */
+  /* color: #fff; */
+  /* filter: drop-shadow(0px 4px 44.1px rgba(114, 170, 255, 0.25)); */
+  /* border: 1px solid #F4F4F4; */
+  /* background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%)); */
+  /* box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25); */
+}
+.contact-card {
+  /* background: rgba(255, 255, 255, 0.1); */
+  /* border-radius: 10px; */
+  padding: 25px 40px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+.contact-card h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #FFF;
+  -webkit-text-stroke-width: 1.2000000476837158px;
+  -webkit-text-stroke-color: #FFF;
+  font-family: "Averta CY";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px; /* 130% */
+  text-align: left;
+  height: 156px;
+}
+.contact-card a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.contact-card a:hover {
+  text-decoration: underline;
+  color: #e0e0e0;
+}
+section.team_member .row {
+  filter: drop-shadow(0px 4px 44.1px rgba(114, 170, 255, 0.25));
+  border: 1px solid #F4F4F4;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  border: 0;
+  border-radius: 20px;
+  border: 1px solid #F4F4F4;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  padding: 10px 40px;
+}
+
+.contact-card p {
+  color: #FFF;
+  font-family: "Averta CY";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px; /* 200% */
+  text-align: left;
+}
+

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAROC</title>
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="./assets/css/all.min.css" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="./assets/css/aos.css" />
+
+  <!-- slick CSS -->
+  <link rel="stylesheet" href="./assets/css/slick.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- responsive CSS -->
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+  <!-- Responsive CSS -->
+  <!-- <link rel="stylesheet" href="./assets/css/responsive.css" /> -->
+
+</head>
+
+<body>
+
+  <!-- Preloader -->
+
+  <!-- <div class="preloader"></div> -->
+
+  <!-- Scrolle Top -->
+  <!-- 
+  <button class="back-to-top" type="button"></button> -->
+
+  <!-- Start.Header -->
+
+  <!-- Header Section -->
+  <header class="bg-white shadow-sm header--menu" data-sticky-class="is-sticky">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/Logo.png" alt="CFC Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About CFC</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="whyCfcDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Why CFC?</a>
+            <ul class="dropdown-menu" aria-labelledby="whyCfcDropdown">
+              <li><a class="dropdown-item" href="#">Benefits</a></li>
+              <li><a class="dropdown-item" href="#">Requirements</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Africa Insights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">What's On?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Become a Member</a>
+          </li>
+          <!-- Multi-language Selector -->
+
+        </ul>
+        <ul class="multi--select">
+          <li class="nav-item dropdown">
+            <!-- <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-globe"></i> EN
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#">EN - English</a></li>
+              <li><a class="dropdown-item" href="#">FR - Français</a></li>
+              <li><a class="dropdown-item" href="#">AR - العربية</a></li>
+            </ul> -->
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="./assets/images/flagpack_gb-ukm.png" alt="English Flag"
+                style="width: 20px; height: 15px; margin-right: 5px;">
+              EN
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="./assets/images/flagpack_gb-ukm.png" alt="English Flag"
+                    style="width: 20px; height: 15px; margin-right: 5px;"> ES
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="./assets/images/flagpack_gb-ukm.png" alt="French Flag"
+                    style="width: 20px; height: 15px; margin-right: 5px;"> FR
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="./assets/images/flagpack_gb-ukm.png" alt="Arabic Flag"
+                    style="width: 20px; height: 15px; margin-right: 5px;"> AR
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Contact Us Button -->
+          <li class="nav-item">
+            <a class="" href="/index.html#contact---us">
+              Contact Us<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <g clip-path="url(#clip0_4948_4128)">
+                  <path
+                    d="M40.7279 22.5873C41.1028 22.9623 41.3135 23.4709 41.3135 24.0013C41.3135 24.5316 41.1028 25.0402 40.7279 25.4153L29.4139 36.7293C29.2294 36.9203 29.0087 37.0727 28.7647 37.1775C28.5207 37.2823 28.2583 37.3375 27.9927 37.3398C27.7271 37.3421 27.4638 37.2915 27.218 37.1909C26.9722 37.0903 26.7489 36.9418 26.5611 36.7541C26.3733 36.5663 26.2248 36.343 26.1243 36.0972C26.0237 35.8514 25.9731 35.588 25.9754 35.3225C25.9777 35.0569 26.0329 34.7945 26.1377 34.5505C26.2425 34.3065 26.3949 34.0858 26.5859 33.9013L34.4859 26.0013H7.9999C7.46947 26.0013 6.96076 25.7906 6.58569 25.4155C6.21062 25.0404 5.9999 24.5317 5.9999 24.0013C5.9999 23.4708 6.21062 22.9621 6.58569 22.5871C6.96076 22.212 7.46947 22.0013 7.9999 22.0013H34.4859L26.5859 14.1013C26.2216 13.7241 26.02 13.2189 26.0246 12.6945C26.0291 12.1701 26.2395 11.6684 26.6103 11.2976C26.9811 10.9268 27.4827 10.7165 28.0071 10.7119C28.5315 10.7074 29.0367 10.9089 29.4139 11.2733L40.7279 22.5873Z"
+                    fill="url(#paint0_linear_4948_4128)" />
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_4948_4128" x1="23.6567" y1="37.3398" x2="25.6881" y2="13.0491"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#009681" />
+                    <stop offset="1" stop-color="#007565" />
+                  </linearGradient>
+                  <clipPath id="clip0_4948_4128">
+                    <rect width="48" height="48" fill="white" transform="matrix(0 -1 -1 0 48 48)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- Slider Section -->
+  <section class="slider container-fluid" id="banner-title">
+    <div class="slider-overlay"></div>
+    <!-- <iframe class="slider-video"
+      src="https://www.youtube.com/embed/f97OGCef0FE?autoplay=1&mute=1&loop=1&playlist=f97OGCef0FE" frameborder="0"
+      allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe> -->
+    <img class="slider-video" src="./assets/images/banner-img.png">
+
+    <div class="slider-content">
+      <h2 class="display-4 fw-bold">Who we are</h2>
+    </div>
+    <div class="icon--banner-after">
+      <img class="slider-img--icon" src="./assets/images/icon--banner.png">
+
+    </div>
+  </section>
+  <section class="global_investment">
+    <div class="container">
+      <!-- Row 1 -->
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <img src="./assets/images/ive.png" alt="CFC Tower" class="img-fluid rounded">
+        </div>
+        <div class="col-lg-6">
+          <h3 class="section-title">A natural magnet for global investment</h3>
+          <p>
+            Since its establishment in 2010 under the leadership of His Majesty King Mohammed VI, CFC has been dedicated
+            to unveiling Africa's business potential, attracting international investors, and building the continent's
+            most dynamic business community.
+          </p>
+          <p>
+            Ideally located at the crossroads of Europe and Africa, CFC has cultivated a stable environment, localized
+            expertise, and a robust support network, enabling access to the African market while mitigating its
+            complexities.
+          </p>
+          <p>
+            For 15 years, Casablanca Finance City Authority (CFCA) has supported its members, facilitating their
+            operations across 80 countries in Africa and beyond. Consistently ranked as Africa's leading financial
+            center since 2016 by the GFCI, CFC serves as a bridge connecting the world's most dynamic economies in
+            Europe, Africa, and the Middle East.
+          </p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="custom-card">
+            <h4 class="section-title">Our missions</h4>
+            <ul>
+              <li>We create a secure, integrated, streamlined, and compelling business environment that attracts and
+                nurtures investors.</li>
+              <li>We drive the growth, global visibility, and international recognition of CFC, positioning it as a
+                leading hub in the region.</li>
+              <li>We provide expert guidance and tailored support to CFC-status companies, empowering them to thrive in
+                Africa's dynamic and evolving business landscape.</li>
+              <li>We foster seamless investment and operational opportunities between Africa, Europe, and the Middle
+                East, strengthening cross-regional business ties.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="custom-card">
+            <h4 class="section-title">Our vision</h4>
+            <p>
+              We aim to become the foremost hub for finance, business, and the green economy in the region, boldly
+              driving innovation to tackle tomorrow's challenges.
+            </p>
+          </div>
+          <!--  -->
+          <div class="values-section">
+            <div class="values--meteo">
+              <h4 class="section-title"><svg xmlns="http://www.w3.org/2000/svg" width="91" height="91"
+                  viewBox="0 0 91 91" fill="none">
+                  <path
+                    d="M45.5 5.6875C46.6313 5.6875 47.7163 6.13691 48.5163 6.93687C49.3162 7.73683 49.7656 8.82181 49.7656 9.95312V18.4844C49.7656 19.6157 49.3162 20.7007 48.5163 21.5006C47.7163 22.3006 46.6313 22.75 45.5 22.75C44.3687 22.75 43.2837 22.3006 42.4837 21.5006C41.6838 20.7007 41.2344 19.6157 41.2344 18.4844V9.95312C41.2344 8.82181 41.6838 7.73683 42.4837 6.93687C43.2837 6.13691 44.3687 5.6875 45.5 5.6875ZM59.7188 45.5C59.7188 49.271 58.2207 52.8876 55.5542 55.5542C52.8876 58.2207 49.271 59.7188 45.5 59.7188C41.729 59.7188 38.1124 58.2207 35.4458 55.5542C32.7793 52.8876 31.2812 49.271 31.2812 45.5C31.2812 41.729 32.7793 38.1124 35.4458 35.4458C38.1124 32.7793 41.729 31.2812 45.5 31.2812C49.271 31.2812 52.8876 32.7793 55.5542 35.4458C58.2207 38.1124 59.7188 41.729 59.7188 45.5ZM73.6531 23.3756C74.0722 22.9851 74.4084 22.5142 74.6415 21.9909C74.8746 21.4677 75 20.9028 75.0101 20.3301C75.0202 19.7573 74.9149 19.1884 74.7003 18.6573C74.4858 18.1261 74.1665 17.6437 73.7614 17.2386C73.3563 16.8335 72.8739 16.5142 72.3427 16.2997C71.8116 16.0851 71.2426 15.9798 70.6699 15.9899C70.0972 16 69.5323 16.1254 69.0091 16.3585C68.4858 16.5916 68.0149 16.9278 67.6244 17.3469L61.5843 23.3756C61.1876 23.7719 60.873 24.2423 60.6582 24.7602C60.4434 25.278 60.3327 25.8331 60.3325 26.3937C60.3319 27.5259 60.7812 28.6119 61.5814 29.4129C62.3816 30.2139 63.4673 30.6642 64.5995 30.6647C65.7317 30.6652 66.8177 30.216 67.6187 29.4158L73.6531 23.3756ZM85.3125 45.5C85.3125 46.6313 84.8631 47.7163 84.0631 48.5163C83.2632 49.3162 82.1782 49.7656 81.0469 49.7656H72.5156C71.3843 49.7656 70.2993 49.3162 69.4994 48.5163C68.6994 47.7163 68.25 46.6313 68.25 45.5C68.25 44.3687 68.6994 43.2837 69.4994 42.4837C70.2993 41.6838 71.3843 41.2344 72.5156 41.2344H81.0469C82.1782 41.2344 83.2632 41.6838 84.0631 42.4837C84.8631 43.2837 85.3125 44.3687 85.3125 45.5ZM67.6244 73.6531C68.433 74.4066 69.5025 74.8168 70.6076 74.7973C71.7127 74.7778 72.7671 74.3301 73.5486 73.5486C74.3301 72.7671 74.7778 71.7127 74.7973 70.6076C74.8168 69.5025 74.4066 68.433 73.6531 67.6244L67.6244 61.5843C67.2281 61.1876 66.7577 60.873 66.2398 60.6582C65.722 60.4434 65.1669 60.3327 64.6063 60.3325C64.0457 60.3322 63.4905 60.4424 62.9725 60.6567C62.4545 60.8709 61.9837 61.1852 61.5871 61.5814C61.1905 61.9776 60.8758 62.4481 60.661 62.9659C60.4463 63.4838 60.3356 64.0388 60.3353 64.5995C60.3348 65.7317 60.784 66.8177 61.5843 67.6187L67.6244 73.6531ZM45.5 68.25C46.6313 68.25 47.7163 68.6994 48.5163 69.4994C49.3162 70.2993 49.7656 71.3843 49.7656 72.5156V81.0469C49.7656 82.1782 49.3162 83.2632 48.5163 84.0631C47.7163 84.8631 46.6313 85.3125 45.5 85.3125C44.3687 85.3125 43.2837 84.8631 42.4837 84.0631C41.6838 83.2632 41.2344 82.1782 41.2344 81.0469V72.5156C41.2344 71.3843 41.6838 70.2993 42.4837 69.4994C43.2837 68.6994 44.3687 68.25 45.5 68.25ZM29.4158 67.6244C29.8123 67.2281 30.127 66.7577 30.3418 66.2398C30.5566 65.722 30.6673 65.1669 30.6675 64.6063C30.6678 64.0457 30.5576 63.4905 30.3433 62.9725C30.1291 62.4545 29.8148 61.9837 29.4186 61.5871C29.0224 61.1905 28.5519 60.8758 28.0341 60.661C27.5162 60.4463 26.9612 60.3356 26.4005 60.3353C25.8399 60.335 25.2848 60.4452 24.7667 60.6595C24.2487 60.8738 23.7779 61.188 23.3813 61.5843L17.3469 67.6244C16.9278 68.0149 16.5916 68.4858 16.3585 69.0091C16.1254 69.5323 16 70.0972 15.9899 70.6699C15.9798 71.2426 16.0851 71.8116 16.2997 72.3427C16.5142 72.8739 16.8335 73.3563 17.2386 73.7614C17.6437 74.1665 18.1261 74.4858 18.6573 74.7003C19.1884 74.9149 19.7573 75.0202 20.3301 75.0101C20.9028 75 21.4677 74.8746 21.9909 74.6415C22.5142 74.4084 22.9851 74.0722 23.3756 73.6531L29.4158 67.6244ZM22.75 45.5C22.75 46.6313 22.3006 47.7163 21.5006 48.5163C20.7007 49.3162 19.6157 49.7656 18.4844 49.7656H9.95312C8.82181 49.7656 7.73683 49.3162 6.93687 48.5163C6.13691 47.7163 5.6875 46.6313 5.6875 45.5C5.6875 44.3687 6.13691 43.2837 6.93687 42.4837C7.73683 41.6838 8.82181 41.2344 9.95312 41.2344H18.4844C19.6157 41.2344 20.7007 41.6838 21.5006 42.4837C22.3006 43.2837 22.75 44.3687 22.75 45.5ZM23.3756 29.4158C24.1766 30.2175 25.2632 30.6682 26.3965 30.6687C27.5298 30.6692 28.6169 30.2196 29.4186 29.4186C30.2203 28.6176 30.671 27.531 30.6716 26.3977C30.6721 25.2644 30.2224 24.1774 29.4214 23.3756L23.3756 17.3469C22.9851 16.9278 22.5142 16.5916 21.9909 16.3585C21.4677 16.1254 20.9028 16 20.3301 15.9899C19.7573 15.9798 19.1884 16.0851 18.6573 16.2997C18.1261 16.5142 17.6437 16.8335 17.2386 17.2386C16.8335 17.6437 16.5142 18.1261 16.2997 18.6573C16.0851 19.1884 15.9798 19.7573 15.9899 20.3301C16 20.9028 16.1254 21.4677 16.3585 21.9909C16.5916 22.5142 16.9278 22.9851 17.3469 23.3756L23.3756 29.4158Z"
+                    fill="white" />
+                </svg>Our values</h4>
+            </div>
+            <div class="meteo--value2">
+              <p>/ Boldness</p>
+              <p>/ Drive</p>
+              <p>/ Resilience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+
+    </div>
+  </section>
+  <section class="increment--bx" data-aos="fade-up">
+    <div class="title-primary-sc mb-3">
+      <h2 class="text-center mb-4" data-aos="fade-down">CFC at a Glance</h2>
+    </div>
+    <div class="col-md-11">
+      <div class="row stats-container">
+        <div class="col-md-4 col-sm-6 stat-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="img-counter">
+            <img src="./assets/images/1-1.png" alt="Revenue">
+          </div>
+          <div class="counter--number">
+            <div class="count--inc">
+              <span>$</span>
+              <h3 class="counter" data-target="1.5">0</h3><span>billion</span>
+            </div>
+            <p>Revenue of CFC members</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 stat-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="img-counter">
+            <img src="./assets/images/1-2.png" alt="Financial Center">
+          </div>
+          <div class="counter--number">
+            <h3>1<sup>st</sup></h3>
+            <p>Financial center in Africa</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 stat-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="img-counter">
+            <img src="./assets/images/1-3.png" alt="Members">
+          </div>
+          <div class="counter--number">
+            <h3 class="counter" data-target="225">0</h3>
+            <p>Members</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 stat-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="img-counter">
+            <img src="./assets/images/1-4.png" alt="Countries">
+          </div>
+          <div class="counter--number">
+            <h3 class="counter" data-target="80">0</h3>
+            <p>Countries covered</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 stat-item" data-aos="fade-up" data-aos-delay="500">
+          <div class="img-counter">
+            <img src="./assets/images/1-5.png" alt="Nationalities">
+          </div>
+          <div class="counter--number">
+            <h3 class="counter" data-target="24">0</h3>
+            <p>Nationalities represented by CFC</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 stat-item" data-aos="fade-up" data-aos-delay="600">
+          <div class="img-counter">
+            <img src="./assets/images/1-6.png" alt="Employees">
+          </div>
+          <div class="counter--number">
+            <div class="count--inc">
+              <span>+</span>
+              <h3 class="counter" data-target="5500">0</h3>
+            </div>
+            <p>Employees</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center btn--pls" data-aos="fade-up" data-aos-delay="700">
+      <a href="#" download="">
+        <span>Explore the 2023 activity report</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path
+            d="M6.6665 26.6733V28.3333C6.6665 29.6594 7.19329 30.9312 8.13097 31.8689C9.06865 32.8066 10.3404 33.3333 11.6665 33.3333H28.3332C29.6593 33.3333 30.931 32.8066 31.8687 31.8689C32.8064 30.9312 33.3332 29.6594 33.3332 28.3333V26.6667M19.9998 7.5V25.8333M19.9998 25.8333L25.8332 20M19.9998 25.8333L14.1665 20"
+            stroke="url(#paint0_linear_5283_3067)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+          <defs>
+            <linearGradient id="paint0_linear_5283_3067" x1="6.6665" y1="20.4167" x2="30.8457" y2="17.6486"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="#009681" />
+              <stop offset="1" stop-color="#007565" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </a>
+    </div>
+  </section>
+  <section class="management_team">
+    <div class="title-primary-sc mb-3">
+      <h2 class="text-center mb-4" data-aos="fade-down">CFC management team</h2>
+    </div>
+    <div class="container">
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="./assets/images/Mask group (12).png" alt="Said IBRAHIMI" class="img-fluid">
+            <h5>Said IBRAHIMI</h5>
+            <p>Chief Executive Officer</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="./assets/images/Mask group (13).png" alt="Lamla MERZOUKI" class="img-fluid">
+            <h5>Lamla MERZOUKI</h5>
+            <p>Chief Operating Officer</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="./assets/images/Mask group (14).png" alt="Abdelghni LAKHDAR" class="img-fluid">
+            <h5>Abdelghni LAKHDAR</h5>
+            <p>Secretary General</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="./assets/images/Mask group (15).png" alt="Aïda KSIKES EL BOUANANI" class="img-fluid">
+            <h5>Aïda KSIKES EL BOUANANI</h5>
+            <p>Strategy, Partnerships, Marketing & Communication Director</p>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="./assets/images/Mask group (11).png" alt="Aziz EL KHYARI" class="img-fluid">
+            <h5>Aziz EL KHYARI</h5>
+            <p>Business Development & African Cooperation Director</p>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col-md-4">
+          <div class="team-card">
+            <img src="./assets/images/Mask group (16).png" alt="Mohammed RACHID" class="img-fluid">
+            <h5>Mohammed RACHID</h5>
+            <p>Institutional Affairs Director</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--  -->
+  <section class="team_member">
+    <div class="title-primary-sc mb-3">
+        <h2 class="text-center mb-4" data-aos="fade-down">
+            Looking to reach out to a CFC Team member?
+        </h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- Business Development -->
+            <div class="col-md-4 text-center">
+                <div class="contact-card">
+                    <h5>Business development department</h5>
+                    <p><a href="mailto:business.dev@cfc.ma">business.dev@cfc.ma</a></p>
+                </div>
+            </div>
+            <!-- Assistance -->
+            <div class="col-md-4 text-center">
+                <div class="contact-card">
+                    <h5>Assistance department</h5>
+                    <p><a href="mailto:assistance@cfc.ma">assistance@cfc.ma</a></p>
+                </div>
+            </div>
+            <!-- Africa Assistance -->
+            <div class="col-md-4 text-center">
+                <div class="contact-card">
+                    <h5>Africa assistance department</h5>
+                    <p><a href="mailto:africa.assist@cfc.ma">africa.assist@cfc.ma</a></p>
+                </div>
+            </div>
+            <!-- Marketing -->
+            <div class="col-md-4 text-center">
+                <div class="contact-card">
+                    <h5>Marketing & Communication department</h5>
+                    <p><a href="mailto:comm@cfc.ma">comm@cfc.ma</a></p>
+                </div>
+            </div>
+            <!-- Human Resources -->
+            <div class="col-md-4 text-center">
+                <div class="contact-card">
+                    <h5>Human Resources</h5>
+                    <p><a href="mailto:h.resources@cfc.ma">h.resources@cfc.ma</a></p>
+                </div>
+            </div>
+            <!-- Partnerships -->
+            <div class="col-md-4 text-center">
+                <div class="contact-card">
+                    <h5>Partnerships department</h5>
+                    <p><a href="mailto:partnerships@cfc.ma">partnerships@cfc.ma</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="section---filter-block">
+    <div class="container">
+      <div class="title-primary-sc mb-3">
+        <h2>What’s up in CFC?</h2>
+      </div>
+      <div class="card---filter">
+        <div class="filter" id="filter">
+          <!-- Alphabet buttons will be dynamically generated here -->
+        </div>
+
+        <div class="articles" id="articles">
+          <div class="article" data-title="CFCA and Groupe CDG co-hosted on Nov 13th">
+            <div class="articles-img">
+              <img src="./assets/images/image (2).png" alt="CFCA and Groupe CDG co-hosted on Nov 13th">
+            </div>
+            <div class="article-title">CFCA and Groupe CDG co-hosted on Nov 13th</div>
+            <div class="article-date"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27"
+                fill="none">
+                <g clip-path="url(#clip0_4698_14065)">
+                  <path
+                    d="M7.3749 0.71875C7.61625 0.71875 7.84771 0.814625 8.01837 0.985283C8.18902 1.15594 8.2849 1.3874 8.2849 1.62875V3.33045H18.057V1.64045C18.057 1.3991 18.1529 1.16764 18.3235 0.996983C18.4942 0.826325 18.7257 0.73045 18.967 0.73045C19.2083 0.73045 19.4398 0.826325 19.6105 0.996983C19.7811 1.16764 19.877 1.3991 19.877 1.64045V3.33045H23.4C24.0893 3.33045 24.7505 3.6042 25.238 4.09151C25.7256 4.57883 25.9997 5.23981 26 5.92915V24.12C25.9997 24.8094 25.7256 25.4704 25.238 25.9577C24.7505 26.445 24.0893 26.7188 23.4 26.7188H2.6C1.91066 26.7188 1.24954 26.445 0.761982 25.9577C0.274425 25.4704 0.000344669 24.8094 0 24.12L0 5.92915C0.000344669 5.23981 0.274425 4.57883 0.761982 4.09151C1.24954 3.6042 1.91066 3.33045 2.6 3.33045H6.4649V1.62745C6.46524 1.38633 6.56127 1.1552 6.73189 0.984823C6.90251 0.814446 7.13378 0.71875 7.3749 0.71875ZM1.82 10.7833V24.12C1.82 24.2225 1.84018 24.3239 1.87937 24.4185C1.91857 24.5132 1.97603 24.5992 2.04846 24.6716C2.12089 24.744 2.20687 24.8015 2.30151 24.8407C2.39614 24.8799 2.49757 24.9 2.6 24.9H23.4C23.5024 24.9 23.6039 24.8799 23.6985 24.8407C23.7931 24.8015 23.8791 24.744 23.9515 24.6716C24.024 24.5992 24.0814 24.5132 24.1206 24.4185C24.1598 24.3239 24.18 24.2225 24.18 24.12V10.8015L1.82 10.7833ZM8.6671 19.7234V21.8892H6.5V19.7234H8.6671ZM14.0829 19.7234V21.8892H11.9171V19.7234H14.0829ZM19.5 19.7234V21.8892H17.3329V19.7234H19.5ZM8.6671 14.5533V16.7191H6.5V14.5533H8.6671ZM14.0829 14.5533V16.7191H11.9171V14.5533H14.0829ZM19.5 14.5533V16.7191H17.3329V14.5533H19.5ZM6.4649 5.14915H2.6C2.49757 5.14915 2.39614 5.16932 2.30151 5.20852C2.20687 5.24772 2.12089 5.30518 2.04846 5.37761C1.97603 5.45004 1.91857 5.53602 1.87937 5.63066C1.84018 5.72529 1.82 5.82672 1.82 5.92915V8.96465L24.18 8.98285V5.92915C24.18 5.82672 24.1598 5.72529 24.1206 5.63066C24.0814 5.53602 24.024 5.45004 23.9515 5.37761C23.8791 5.30518 23.7931 5.24772 23.6985 5.20852C23.6039 5.16932 23.5024 5.14915 23.4 5.14915H19.877V6.35685C19.877 6.5982 19.7811 6.82966 19.6105 7.00032C19.4398 7.17098 19.2083 7.26685 18.967 7.26685C18.7257 7.26685 18.4942 7.17098 18.3235 7.00032C18.1529 6.82966 18.057 6.5982 18.057 6.35685V5.14915H8.2849V6.34515C8.2849 6.5865 8.18902 6.81796 8.01837 6.98862C7.84771 7.15928 7.61625 7.25515 7.3749 7.25515C7.13355 7.25515 6.90209 7.15928 6.73143 6.98862C6.56077 6.81796 6.4649 6.5865 6.4649 6.34515V5.14915Z"
+                    fill="#929292" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4698_14065">
+                    <rect width="26" height="26" fill="white" transform="translate(0 0.71875)" />
+                  </clipPath>
+                </defs>
+              </svg>01 Nov 2024</div>
+          </div>
+          <div class="article" data-title="Exploring Africa's Investment Potential">
+            <div class="articles-img">
+              <img src="./assets/images/image (1).png" alt="Exploring Africa's Investment Potential">
+            </div>
+            <div class="article-title">Exploring Africa's Investment Potential</div>
+            <div class="article-date"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27"
+                fill="none">
+                <g clip-path="url(#clip0_4698_14065)">
+                  <path
+                    d="M7.3749 0.71875C7.61625 0.71875 7.84771 0.814625 8.01837 0.985283C8.18902 1.15594 8.2849 1.3874 8.2849 1.62875V3.33045H18.057V1.64045C18.057 1.3991 18.1529 1.16764 18.3235 0.996983C18.4942 0.826325 18.7257 0.73045 18.967 0.73045C19.2083 0.73045 19.4398 0.826325 19.6105 0.996983C19.7811 1.16764 19.877 1.3991 19.877 1.64045V3.33045H23.4C24.0893 3.33045 24.7505 3.6042 25.238 4.09151C25.7256 4.57883 25.9997 5.23981 26 5.92915V24.12C25.9997 24.8094 25.7256 25.4704 25.238 25.9577C24.7505 26.445 24.0893 26.7188 23.4 26.7188H2.6C1.91066 26.7188 1.24954 26.445 0.761982 25.9577C0.274425 25.4704 0.000344669 24.8094 0 24.12L0 5.92915C0.000344669 5.23981 0.274425 4.57883 0.761982 4.09151C1.24954 3.6042 1.91066 3.33045 2.6 3.33045H6.4649V1.62745C6.46524 1.38633 6.56127 1.1552 6.73189 0.984823C6.90251 0.814446 7.13378 0.71875 7.3749 0.71875ZM1.82 10.7833V24.12C1.82 24.2225 1.84018 24.3239 1.87937 24.4185C1.91857 24.5132 1.97603 24.5992 2.04846 24.6716C2.12089 24.744 2.20687 24.8015 2.30151 24.8407C2.39614 24.8799 2.49757 24.9 2.6 24.9H23.4C23.5024 24.9 23.6039 24.8799 23.6985 24.8407C23.7931 24.8015 23.8791 24.744 23.9515 24.6716C24.024 24.5992 24.0814 24.5132 24.1206 24.4185C24.1598 24.3239 24.18 24.2225 24.18 24.12V10.8015L1.82 10.7833ZM8.6671 19.7234V21.8892H6.5V19.7234H8.6671ZM14.0829 19.7234V21.8892H11.9171V19.7234H14.0829ZM19.5 19.7234V21.8892H17.3329V19.7234H19.5ZM8.6671 14.5533V16.7191H6.5V14.5533H8.6671ZM14.0829 14.5533V16.7191H11.9171V14.5533H14.0829ZM19.5 14.5533V16.7191H17.3329V14.5533H19.5ZM6.4649 5.14915H2.6C2.49757 5.14915 2.39614 5.16932 2.30151 5.20852C2.20687 5.24772 2.12089 5.30518 2.04846 5.37761C1.97603 5.45004 1.91857 5.53602 1.87937 5.63066C1.84018 5.72529 1.82 5.82672 1.82 5.92915V8.96465L24.18 8.98285V5.92915C24.18 5.82672 24.1598 5.72529 24.1206 5.63066C24.0814 5.53602 24.024 5.45004 23.9515 5.37761C23.8791 5.30518 23.7931 5.24772 23.6985 5.20852C23.6039 5.16932 23.5024 5.14915 23.4 5.14915H19.877V6.35685C19.877 6.5982 19.7811 6.82966 19.6105 7.00032C19.4398 7.17098 19.2083 7.26685 18.967 7.26685C18.7257 7.26685 18.4942 7.17098 18.3235 7.00032C18.1529 6.82966 18.057 6.5982 18.057 6.35685V5.14915H8.2849V6.34515C8.2849 6.5865 8.18902 6.81796 8.01837 6.98862C7.84771 7.15928 7.61625 7.25515 7.3749 7.25515C7.13355 7.25515 6.90209 7.15928 6.73143 6.98862C6.56077 6.81796 6.4649 6.5865 6.4649 6.34515V5.14915Z"
+                    fill="#929292" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4698_14065">
+                    <rect width="26" height="26" fill="white" transform="translate(0 0.71875)" />
+                  </clipPath>
+                </defs>
+              </svg>01 Nov 2024</div>
+          </div>
+          <div class="article" data-title="Casablanca Finance City (CFC) took part">
+            <div class="articles-img">
+              <img src="./assets/images/image.png" alt="Casablanca Finance City (CFC) took part">
+            </div>
+            <div class="article-title">casablanca Finance City (CFC) took part</div>
+            <div class="article-date"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27"
+                fill="none">
+                <g clip-path="url(#clip0_4698_14065)">
+                  <path
+                    d="M7.3749 0.71875C7.61625 0.71875 7.84771 0.814625 8.01837 0.985283C8.18902 1.15594 8.2849 1.3874 8.2849 1.62875V3.33045H18.057V1.64045C18.057 1.3991 18.1529 1.16764 18.3235 0.996983C18.4942 0.826325 18.7257 0.73045 18.967 0.73045C19.2083 0.73045 19.4398 0.826325 19.6105 0.996983C19.7811 1.16764 19.877 1.3991 19.877 1.64045V3.33045H23.4C24.0893 3.33045 24.7505 3.6042 25.238 4.09151C25.7256 4.57883 25.9997 5.23981 26 5.92915V24.12C25.9997 24.8094 25.7256 25.4704 25.238 25.9577C24.7505 26.445 24.0893 26.7188 23.4 26.7188H2.6C1.91066 26.7188 1.24954 26.445 0.761982 25.9577C0.274425 25.4704 0.000344669 24.8094 0 24.12L0 5.92915C0.000344669 5.23981 0.274425 4.57883 0.761982 4.09151C1.24954 3.6042 1.91066 3.33045 2.6 3.33045H6.4649V1.62745C6.46524 1.38633 6.56127 1.1552 6.73189 0.984823C6.90251 0.814446 7.13378 0.71875 7.3749 0.71875ZM1.82 10.7833V24.12C1.82 24.2225 1.84018 24.3239 1.87937 24.4185C1.91857 24.5132 1.97603 24.5992 2.04846 24.6716C2.12089 24.744 2.20687 24.8015 2.30151 24.8407C2.39614 24.8799 2.49757 24.9 2.6 24.9H23.4C23.5024 24.9 23.6039 24.8799 23.6985 24.8407C23.7931 24.8015 23.8791 24.744 23.9515 24.6716C24.024 24.5992 24.0814 24.5132 24.1206 24.4185C24.1598 24.3239 24.18 24.2225 24.18 24.12V10.8015L1.82 10.7833ZM8.6671 19.7234V21.8892H6.5V19.7234H8.6671ZM14.0829 19.7234V21.8892H11.9171V19.7234H14.0829ZM19.5 19.7234V21.8892H17.3329V19.7234H19.5ZM8.6671 14.5533V16.7191H6.5V14.5533H8.6671ZM14.0829 14.5533V16.7191H11.9171V14.5533H14.0829ZM19.5 14.5533V16.7191H17.3329V14.5533H19.5ZM6.4649 5.14915H2.6C2.49757 5.14915 2.39614 5.16932 2.30151 5.20852C2.20687 5.24772 2.12089 5.30518 2.04846 5.37761C1.97603 5.45004 1.91857 5.53602 1.87937 5.63066C1.84018 5.72529 1.82 5.82672 1.82 5.92915V8.96465L24.18 8.98285V5.92915C24.18 5.82672 24.1598 5.72529 24.1206 5.63066C24.0814 5.53602 24.024 5.45004 23.9515 5.37761C23.8791 5.30518 23.7931 5.24772 23.6985 5.20852C23.6039 5.16932 23.5024 5.14915 23.4 5.14915H19.877V6.35685C19.877 6.5982 19.7811 6.82966 19.6105 7.00032C19.4398 7.17098 19.2083 7.26685 18.967 7.26685C18.7257 7.26685 18.4942 7.17098 18.3235 7.00032C18.1529 6.82966 18.057 6.5982 18.057 6.35685V5.14915H8.2849V6.34515C8.2849 6.5865 8.18902 6.81796 8.01837 6.98862C7.84771 7.15928 7.61625 7.25515 7.3749 7.25515C7.13355 7.25515 6.90209 7.15928 6.73143 6.98862C6.56077 6.81796 6.4649 6.5865 6.4649 6.34515V5.14915Z"
+                    fill="#929292" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4698_14065">
+                    <rect width="26" height="26" fill="white" transform="translate(0 0.71875)" />
+                  </clipPath>
+                </defs>
+              </svg>01 Nov 2024</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Footer-->
+
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Copyright -->
+        <div class="text-center mb-4">
+          <p class="mb-0">&copy; 2024 Casablanca Finance City | All rights reserved.</p>
+        </div>
+        <!-- Logo and Social Links -->
+        <div class="col-md-4 ">
+          <img src="./assets/images/Logo_footer.png" alt="Casablanca Finance City" class="mb-3" width="200">
+
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+
+        </div>
+
+        <!-- Stay Updated -->
+        <div class="col-md-4">
+          <h5>Stay Updated</h5>
+          <p>
+            We will keep you informed on the items that matter to you most.
+            More than a world-class financial centre, CFC is also a vibrant community of retail and lifestyle.
+            Sign up to our mailing list and we will keep you informed on the items that matter to you most.
+          </p>
+          <form class="d-flex mt-3">
+            <input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
+            <button type="submit" class="form--news">Subscribe <i class="fas fa-arrow-right ms-2"></i></button>
+          </form>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Legal Notice</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Downloads</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </footer>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="./assets/js/owl.carousel.min.js"></script>
+
+  <script src="./assets/js/slick.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="./assets/js/aos.js"></script>
+  <!-- <script src="./assets/js/highmaps.js"></script>
+  <script src="./assets/js/jquery.mapRegion.js"></script> -->
+
+  <!-- Your custom JS scripts -->
+  <script src="./assets/js/scripts.js"></script>
+
+  <!--  -->
+
+</body>
+
+</html>
