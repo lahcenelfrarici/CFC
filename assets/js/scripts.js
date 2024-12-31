@@ -134,19 +134,17 @@
       slidesToShow: 7,
       slidesToScroll: 7,
       variableWidth: true,
-      responsive: [
-        {
-          breakpoint: 768, // Define the breakpoint for smaller screens (e.g., tablets and phones)
-          settings: {
-            slidesToShow: 1, // Show only one slide
-            slidesToScroll: 1, // Scroll one slide at a time
-            variableWidth: false,
-            
-          }
+      responsive: [{
+        breakpoint: 768, // Define the breakpoint for smaller screens (e.g., tablets and phones)
+        settings: {
+          slidesToShow: 1, // Show only one slide
+          slidesToScroll: 1, // Scroll one slide at a time
+          variableWidth: false,
+
         }
-      ]
+      }]
     });
-    
+
     // Custom Dropdown Logic
     const $customSelect = $('#country-select');
     const $selectedDiv = $customSelect.find('.select-selected');
@@ -394,6 +392,45 @@
   });
   AOS.init({
     duration: 1000, // Animation duration
-    once: true,     // Animate only once
+    once: true, // Animate only once
   });
+
+  // 
+  const modal = $("#videoModal");
+  const closeBtn = $(".close");
+  const videoContainer = $("#videoContainer");
+
+  // Handle click on video box
+  $(".video-box").on("click", function () {
+    const iframeUrl = $(this).data("iframe");
+
+    // Create iframe dynamically and append it to the modal content
+    const iframe = $('<iframe></iframe>', {
+      src: iframeUrl,
+      width: '100%',
+      height: '400',
+      frameborder: '0',
+      allowfullscreen: true
+    });
+
+    videoContainer.empty().append(iframe); // Clear and append the iframe
+
+    // Show the modal with display flex
+    modal.css('display', 'flex'); // Show modal using flexbox display
+  });
+
+  // Close modal on clicking close button
+  closeBtn.on("click", function () {
+    modal.css('display', 'none'); // Hide modal
+    videoContainer.empty(); // Remove iframe from modal
+  });
+
+  // Close modal when clicking outside modal content
+  $(window).on("click", function (e) {
+    if ($(e.target).is(modal)) {
+      modal.css('display', 'none'); // Hide modal
+      videoContainer.empty(); // Remove iframe from modal
+    }
+  });
+
 })(jQuery);
