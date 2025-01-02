@@ -413,7 +413,7 @@
     }
 
     // When hovering over the path with class "item-wrap"
-    $('.item-wrap-1').on('mouseenter click', function () {
+    $('.img-1-maps .item-wrap-1').on('mouseenter click', function () {
       // const country = $(this).data('country');
       // const factSheet = $(this).data('fact-sheet');
       const factSheet_img_1 = $(this).data('logo'); // Retrieve the image URL for the fact sheet
