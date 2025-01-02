@@ -2642,3 +2642,78 @@ section.emblemes {
 .all-item--service {
   margin-top: 40px;
 }
+/*  */
+.about_maps_1 {
+  width: 579px;
+  padding: 30px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.item-info-content .flag--element {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  top: 10px;
+}
+
+.item-info-content .flag--element img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.item-info-content .wrapper-element-africa {
+  width: 428px;
+}
+
+.item-info-content .wrapper-element-africa form {}
+
+.item-info-content .wrapper-element-africa input {
+  !i;!;
+  border: 1px solid var(--Grey-Grey-20, #E5E7EB);
+  background: var(--Grey-Grey-5, #F9FAFB);
+  display: flex;
+  width: 292px;
+  padding: 19px 216px 18px 29px;
+  align-items: center;
+}
+
+.item-info-content .wrapper-element-africa button {
+  text-align: center;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #007565;
+  font-family: "Averta CY";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px; /* 216.667% */
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrapper--logo-after-maps p {
+  color: #151515;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: 0.32px;
+}
+
+.wrapper--logo-after-maps {
+  padding: 40px;
+  padding-bottom: 0;
+}
+
+.wrapper-2column---logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

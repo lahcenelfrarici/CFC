@@ -322,11 +322,13 @@
     //   $hoverBox.css("display", "none");
     // });
     // 
-    $(document).ready(function () {
-      // Function to show item-info
-      function showItemInfo(item, country, factSheet, factSheet_img) {
-        // Create the content for item-info
-        const content = `
+    // ************* Start MAPS
+
+
+    // Function to show item-info
+    function showItemInfo(item, country, factSheet, factSheet_img) {
+      // Create the content for item-info
+      const content = `
         <div class="item-info-content">
           <div class="flag--element">
             <img src="${factSheet_img}" alt="Fact Sheet Flag">
@@ -338,40 +340,95 @@
         </div>
       `;
 
-        // Find or create the .item-info element and append content
-        let itemInfo = $('.item-info');
-        if (itemInfo.length === 0) {
-          itemInfo = $('<div class="item-info"></div>').appendTo('body');
-        }
-
-        itemInfo.html(content).show();
-
-        // Position the .item-info before the path element
-        const pathOffset = item.offset();
-        itemInfo.css({
-          top: pathOffset.top - itemInfo.outerHeight() - 10, // Adjust the positioning above the path
-          left: pathOffset.left,
-          position: 'absolute',
-        });
+      // Find or create the .item-info element and append content
+      let itemInfo = $('.item-info');
+      if (itemInfo.length === 0) {
+        itemInfo = $('<div class="item-info"></div>').appendTo('body');
       }
 
-      // When hovering over the path with class "item-wrap"
-      $('.item-wrap').on('mouseenter click', function () {
-        const country = $(this).data('country');
-        const factSheet = $(this).data('fact-sheet');
-        const factSheet_img = $(this).data('fact-img'); // Retrieve the image URL for the fact sheet
+      itemInfo.html(content).show();
 
-        // Pass the factSheet_img along with other data to showItemInfo
-        showItemInfo($(this), country, factSheet, factSheet_img);
+      // Position the .item-info before the path element
+      const pathOffset = item.offset();
+      itemInfo.css({
+        top: pathOffset.top - itemInfo.outerHeight() - 10, // Adjust the positioning above the path
+        left: pathOffset.left,
+        position: 'absolute',
       });
+    }
 
-      // When mouse leaves the path or the .item-info element
-      $(document).on('mouseleave', function (event) {
-        if (!$(event.target).closest('.item-info, .item-wrap').length) {
-          $('.item-info').hide();
-        }
-      });
+    // When hovering over the path with class "item-wrap"
+    $('.item-wrap').on('mouseenter click', function () {
+      const country = $(this).data('country');
+      const factSheet = $(this).data('fact-sheet');
+      const factSheet_img = $(this).data('fact-img'); // Retrieve the image URL for the fact sheet
+
+      // Pass the factSheet_img along with other data to showItemInfo
+      showItemInfo($(this), country, factSheet, factSheet_img);
     });
+
+    // When mouse leaves the path or the .item-info element
+    $(document).on('mouseleave', function (event) {
+      if (!$(event.target).closest('.item-info, .item-wrap').length) {
+        $('.item-info').hide();
+      }
+    });
+
+
+    // ************* END MAPS
+    // ************* Start MAPS 2
+    // Function to show item-info
+    function showItemInfo_1(item, factSheet_img_1) {
+      // Create the content for item-info
+      const content = `
+      <div class="item-info-content" id="about_maps_1">
+          <div class="flag--element">
+            <img src="${factSheet_img_1}" alt="Fact Sheet Flag">
+          </div>
+          <div class="wrapper-element-africa">
+            <div>To get in touch with this promotion agency, please enter your email address</div> 
+            <form class="d-flex mt-3">
+            <input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
+            <button type="submit" class="form--news">Subscribe <i class="fas fa-arrow-right ms-2"></i></button>
+          </form>
+          </div>
+        </div>
+          `;
+
+      // Find or create the .item-info element and append content
+      let itemInfo = $('.item-info ');
+      if (itemInfo.length === 0) {
+        itemInfo = $('<div class="item-info about_maps_1"></div>').appendTo('body');
+      }
+
+      itemInfo.html(content).show();
+
+      // Position the .item-info before the path element
+      const pathOffset = item.offset();
+      itemInfo.css({
+        top: pathOffset.top - itemInfo.outerHeight() - 10, // Adjust the positioning above the path
+        left: pathOffset.left,
+        position: 'absolute',
+      });
+    }
+
+    // When hovering over the path with class "item-wrap"
+    $('.item-wrap-1').on('mouseenter click', function () {
+      // const country = $(this).data('country');
+      // const factSheet = $(this).data('fact-sheet');
+      const factSheet_img_1 = $(this).data('logo'); // Retrieve the image URL for the fact sheet
+
+      // Pass the factSheet_img along with other data to showItemInfo
+      showItemInfo_1($(this), factSheet_img_1);
+    });
+
+    // When mouse leaves the path or the .item-info element
+    $(document).on('mouseleave', function (event) {
+      if (!$(event.target).closest('.item-info, .item-wrap-1').length) {
+        $('.item-info').hide();
+      }
+    });
+    // ************* END MAPS 2
     $('a[href*="#"]').on('click', function (event) {
       // Prevent default behavior
       event.preventDefault();
@@ -432,28 +489,28 @@
       videoContainer.empty(); // Remove iframe from modal
     }
   });
-// 
-$('.emblemes .element-sc').first().addClass('active');
-$('.emblemes .tabs--item button').first().addClass('active'); // Add active class to the first tab
-let initialBackgroundImage = $('.emblemes .element-sc.active').data('img');
-$('.emblemes .informations_pratiques').css('background-image', 'url(' + initialBackgroundImage + ')');
+  // 
+  $('.emblemes .element-sc').first().addClass('active');
+  $('.emblemes .tabs--item button').first().addClass('active'); // Add active class to the first tab
+  let initialBackgroundImage = $('.emblemes .element-sc.active').data('img');
+  $('.emblemes .informations_pratiques').css('background-image', 'url(' + initialBackgroundImage + ')');
 
-// Function to handle tab activation based on ID
-function activateTabById(id) {
-  // Remove active class from all tabs and elements
-  $('.emblemes .tabs--item button').removeClass('active');
-  $('.emblemes .element-sc').removeClass('active');
+  // Function to handle tab activation based on ID
+  function activateTabById(id) {
+    // Remove active class from all tabs and elements
+    $('.emblemes .tabs--item button').removeClass('active');
+    $('.emblemes .element-sc').removeClass('active');
 
-  // Add active class to the corresponding tab and content element
-  $('#' + id).addClass('active');
-  $('.emblemes .element-sc').eq($('#' + id).index()).addClass('active');
+    // Add active class to the corresponding tab and content element
+    $('#' + id).addClass('active');
+    $('.emblemes .element-sc').eq($('#' + id).index()).addClass('active');
 
 
-}
+  }
 
-// Handle clicks on tabs
-$('.emblemes .tabs--item button').click(function () {
-  var id = $(this).attr('id');
-  activateTabById(id);
-});
+  // Handle clicks on tabs
+  $('.emblemes .tabs--item button').click(function () {
+    var id = $(this).attr('id');
+    activateTabById(id);
+  });
 })(jQuery);

@@ -1,4 +1,109 @@
 @media (max-width: 1119px) {
+  section#banner-title {
+    height: 300px;
+}
+
+section#banner-title img.slider-video {
+    object-fit: cover;
+}
+
+section.global_investment h3 {
+    font-size: 40px;
+}
+
+section.global_investment p {
+    font-size: 18px;
+}
+
+.custom-card h4 {
+    font-size: 30px;
+}
+
+.values-section {
+    padding: 15px;
+}
+
+.values--meteo h4 {
+    font-size: 35px;
+    gap: 0 1px;
+    line-height: normal;
+}
+
+.values--meteo {
+    width: 50%;
+}
+
+.meteo--value2 {
+    width: 50% !important;
+    padding: 15px;
+}
+
+.stats-container {
+    padding: 30px;
+}
+
+.count--inc span {
+    font-size: 28px;
+}
+
+.img-counter img {
+    object-fit: contain;
+}
+
+.counter--number p {
+    text-align: left;
+    line-height: 34px;
+    margin-top: 10px;
+}
+
+section.emblemes {
+    margin: 40px;
+}
+
+.tabs--item button {
+    width: 48%;
+    font-size: 19px;
+    height: auto;
+    padding: 20px 0;
+}
+
+.img-1-maps svg {
+    width: 100%;
+}
+
+.img-2-maps svg {
+    width: 100%;
+}
+
+.team-card p {
+    line-height: 29px;
+}
+
+.team-card h5 {
+    line-height: 40px;
+}
+
+.team-card {
+    padding-bottom: 20px;
+}
+
+
+
+section.team_member {}
+
+section.team_member .row >div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+section.team_member .row >div >div {
+    padding: 20px;
+}
+
+.contact-card h5 {
+    height: auto;
+}
   #acc-card-6-column .icon-african_pioneericon--card h3 {
     height: 90px;
     align-items: center;
@@ -148,6 +253,100 @@
 }
 
 @media (max-width: 991px) {
+  .values-section {}
+
+.values-section {
+    flex-direction: column;
+}
+
+.values--meteo h4 {
+    gap: 0 12px;
+}
+
+.values-section>div {
+    width: 100% !important;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.tabs--item {
+    flex-direction: column;
+    gap: 30px 0;
+}
+
+.tabs--item button {
+    width: 100%;
+}
+
+.element-sc {
+    padding: 0;
+}
+
+.element--detail.row {
+    padding: 20px;
+}
+
+.width--img-inc .row.stats-container {
+    flex-direction: column;
+}
+
+.stats-container>div {
+    width: 100%;
+}
+
+.width--img-inc .flex--with-img {
+    flex-direction: column;
+}
+
+.width--img-inc .row-column-width--img-inc:first-child {
+    width: 100%;
+}
+
+.width--img-inc .row-column-width--img-inc:first-child .col-md-3 {
+    width: 100%;
+}
+
+.width--img-inc .row-column-width--img-inc:last-child {
+    width: 100%;
+}
+
+section.management_team {}
+
+section.management_team .col-md-4 {
+    width: 100%;
+}
+
+.team-card img {
+    width: 100%;
+}
+
+section.team_member .row >div {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+section.team_member .row >div >div {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-card h5 {
+    text-align: center;
+    text-align: center;
+}
+
+.contact-card p {
+    text-align: center;
+}
   .flag--element img {
     object-fit: contain;
 }
