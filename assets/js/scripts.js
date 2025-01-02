@@ -432,5 +432,28 @@
       videoContainer.empty(); // Remove iframe from modal
     }
   });
+// 
+$('.emblemes .element-sc').first().addClass('active');
+$('.emblemes .tabs--item button').first().addClass('active'); // Add active class to the first tab
+let initialBackgroundImage = $('.emblemes .element-sc.active').data('img');
+$('.emblemes .informations_pratiques').css('background-image', 'url(' + initialBackgroundImage + ')');
 
+// Function to handle tab activation based on ID
+function activateTabById(id) {
+  // Remove active class from all tabs and elements
+  $('.emblemes .tabs--item button').removeClass('active');
+  $('.emblemes .element-sc').removeClass('active');
+
+  // Add active class to the corresponding tab and content element
+  $('#' + id).addClass('active');
+  $('.emblemes .element-sc').eq($('#' + id).index()).addClass('active');
+
+
+}
+
+// Handle clicks on tabs
+$('.emblemes .tabs--item button').click(function () {
+  var id = $(this).attr('id');
+  activateTabById(id);
+});
 })(jQuery);

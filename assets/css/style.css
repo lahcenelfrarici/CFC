@@ -2581,3 +2581,61 @@ html {
 .hidden {
   display: none;
 }
+/*  */
+.element-sc.active {
+  display: flex
+;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  align-items: normal;
+  justify-content: space-between;
+}
+.element-sc {
+  display: none;
+  padding: 30px 15px 30px 15px;
+}
+/*  */
+.tabs--item button {
+  color: #151515;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #151515;
+  font-family: "Averta CY";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px; /* 216.667% */
+  border-radius: 20px;
+  border: 5px solid #F4F4F4;
+  background: #FFF;
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  width: 594px;
+  height: 124px;
+}
+
+.tabs--item {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tabs--item button.active {
+  background: #EEFFFD;
+  border: 5px solid rgba(1, 148, 128, 0.6);
+}
+
+section.emblemes {
+  margin: 40px 64px;
+  border-radius: 20px;
+  background: rgba(245, 249, 255, 0.50);
+}
+
+.element--detail.row {
+  margin: 30px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  background: linear-gradient(0deg, #FFF 0%, #FFF 100%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.all-item--service {
+  margin-top: 40px;
+}
