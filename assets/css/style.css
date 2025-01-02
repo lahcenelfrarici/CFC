@@ -2349,9 +2349,11 @@ section.team_member .row {
 }
 
 .icon-box img {
-  width: auto;
+  width: 130px;
   height: auto;
   margin-bottom: 10px;
+  object-fit: none;
+  /* background: red; */
 }
 
 .video-box video {
@@ -2391,6 +2393,7 @@ section.team_member .row {
 .width--img-inc .row-column-width--img-inc:first-child .col-md-3 .icon-box {
   display: flex;
   align-items: center;
+  gap: 13px;
 }
 
 .width--img-inc .row-column-width--img-inc:first-child .col-md-3 .icon-box p {
