@@ -1656,6 +1656,8 @@ section.filter--pays-elements .owl-stage {
   border: 1px solid #F4F4F4;
   background: #FFF;
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.25), 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  width: 339px;
+  text-transform: capitalize;
 }
 
 .item-info .title {
@@ -2397,7 +2399,10 @@ section.team_member .row {
 }
 
 .width--img-inc .row-column-width--img-inc:first-child .col-md-3 .icon-box p {
-  font-size: 18px;
+  font-size: 30px;
+}
+#about_maps_1 .wrapper-element-africa >div {
+  font-size: 17px;
 }
 
 .video-box img {
@@ -2584,19 +2589,21 @@ html {
 .hidden {
   display: none;
 }
+
 /*  */
 .element-sc.active {
-  display: flex
-;
+  display: flex;
   transition: opacity 0.5s ease;
   opacity: 1;
   align-items: normal;
   justify-content: space-between;
 }
+
 .element-sc {
   display: none;
   padding: 30px 15px 30px 15px;
 }
+
 /*  */
 .tabs--item button {
   color: #151515;
@@ -2606,7 +2613,8 @@ html {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 52px; /* 216.667% */
+  line-height: 52px;
+  /* 216.667% */
   border-radius: 20px;
   border: 5px solid #F4F4F4;
   background: #FFF;
@@ -2642,6 +2650,7 @@ section.emblemes {
 .all-item--service {
   margin-top: 40px;
 }
+
 /*  */
 .about_maps_1 {
   width: 579px;
@@ -2674,7 +2683,8 @@ section.emblemes {
 .item-info-content .wrapper-element-africa form {}
 
 .item-info-content .wrapper-element-africa input {
-  !i;!;
+   !i;
+   !;
   border: 1px solid var(--Grey-Grey-20, #E5E7EB);
   background: var(--Grey-Grey-5, #F9FAFB);
   display: flex;
@@ -2691,19 +2701,22 @@ section.emblemes {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 52px; /* 216.667% */
+  line-height: 52px;
+  /* 216.667% */
   background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .wrapper--logo-after-maps p {
   color: #151515;
   font-family: Inter;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
-  line-height: 120%; /* 38.4px */
+  line-height: 120%;
+  /* 38.4px */
   letter-spacing: 0.32px;
 }
 
@@ -2716,4 +2729,9 @@ section.emblemes {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.african_pioneer ul li {
+  margin-bottom: 15px;
+  line-height: 30px;
 }
