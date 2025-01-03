@@ -2735,3 +2735,20 @@ section.emblemes {
   margin-bottom: 15px;
   line-height: 30px;
 }
+.video--sc-2 .slider-video {
+  border-radius: 40px;
+  width: 100%;
+  height: auto;
+}
+.counter--number p {
+  text-align: left;
+  line-height: normal;
+  margin-top: 10px;
+}
+.element-sc svg {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-2column---logo img {
+  width: 100%;
+}

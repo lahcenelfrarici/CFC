@@ -86,11 +86,13 @@
         0: {
           items: 1,
           stagePadding: null,
+          autoHeight: true,
 
         },
         600: {
           items: 1,
           stagePadding: null,
+          autoHeight: true,
         },
         1000: {
           items: 1,
