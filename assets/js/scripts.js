@@ -381,73 +381,65 @@
     // ************* Start MAPS 2
     // Function to show item-info
     function showItemInfo_1(item, factSheet_img_1) {
-      // إنشاء المحتوى للعنصر item-info
-      const content = `
-        <div class="item-info-content" id="about_maps_1">
-          <div class="flag--element">
-            <img src="${factSheet_img_1}" alt="Fact Sheet Flag">
-          </div>
-          <div class="wrapper-element-africa">
-            <div>To get in touch with this promotion agency, please enter your email address</div> 
-            <form class="d-flex mt-3">
-              <input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
-              <button type="submit" class="form--news">Subscribe <i class="fas fa-arrow-right ms-2"></i></button>
-            </form>
-          </div>
-        </div>
-      `;
-    
-      // إيجاد العنصر .item-info أو إنشاؤه إذا لم يكن موجوداً
+      // Create the content for the item-info modal
+      const content = 
+          `<div class="item-info-content" id="about_maps_1">
+              <div class="flag--element">
+                  <img src="${factSheet_img_1}" alt="Fact Sheet Flag">
+              </div>
+              <div class="wrapper-element-africa">
+                  <div>To get in touch with this promotion agency, please enter your email address</div> 
+                  <form class="d-flex mt-3">
+                      <input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
+                      <button type="submit" class="form--news">Subscribe <i class="fas fa-arrow-right ms-2"></i></button>
+                  </form>
+              </div>
+          </div>`;
+  
+      // Find or create the .item-info modal
       let itemInfo = $('.item-info');
       if (itemInfo.length === 0) {
-        itemInfo = $('<div class="item-info about_maps_1"></div>').appendTo('body');
+          itemInfo = $('<div class="item-info about_maps_1"></div>').appendTo('body');
       }
-    
+  
       itemInfo.html(content).show();
-    
-      // تحديد موقع العنصر .item-info بالنسبة للعنصر الذي يتم التفاعل معه
+  
+      // Get the position of the item relative to the document
       const pathOffset = item.offset();
+      const windowWidth = $(window).width();
+      const itemInfoWidth = itemInfo.outerWidth();
+      const itemInfoHeight = itemInfo.outerHeight();
+  
+      // Position the modal above the item
       itemInfo.css({
-        top: pathOffset.top - itemInfo.outerHeight() - 10, // تحديد مكان العنصر item-info فوق العنصر المتفاعل معه
-        left: pathOffset.left,
-        position: 'absolute',
+          top: pathOffset.top - itemInfoHeight - 10, // Position above the item
+          left: pathOffset.left,
+          position: 'absolute',
       });
-    }
-    
-    // عندما يقوم المستخدم بالمرور فوق العنصر مع الفئة "item-wrap-1"
-    $('.img-1-maps .item-wrap-1').on('mouseenter click', function () {
-      const factSheet_img_1 = $(this).data('logo'); // استرجاع رابط الصورة للورقة
-    
-      // تمرير البيانات إلى دالة showItemInfo_1
+  
+      // Check if the modal is off-screen on the left or right side and adjust position if necessary
+      if (itemInfo.offset().left < 0) {
+          itemInfo.css('left', 10); // Adjust to the left side of the viewport
+      } else if ((itemInfo.offset().left + itemInfoWidth) > windowWidth) {
+          itemInfo.css('left', windowWidth - itemInfoWidth - 10); // Adjust to the right side of the viewport
+      }
+  }
+  
+  // When the user hovers over the item with the class "item-wrap-1"
+  $('.img-1-maps .item-wrap-1').on('mouseenter click', function () {
+      const factSheet_img_1 = $(this).data('logo'); // Retrieve the fact sheet image link
+      // Pass the data to the showItemInfo_1 function
       showItemInfo_1($(this), factSheet_img_1);
-    });
-    
-    // عندما يخرج المؤشر من العنصر .map-container أو .item-info، إخفاء العنصر item-info
-    $(document).on('mouseleave', '.map-container, .item-info', function (event) {
-      // تحقق مما إذا كان الماوس قد خرج فعلاً من العنصر map-container أو item-info
+  });
+  
+  // When the mouse leaves the .map-container or .item-info, hide the modal
+  $(document).on('mouseleave', '.map-container, .item-info', function (event) {
+      // Check if the mouse has really left the map-container or item-info
       if (!$(event.relatedTarget).closest('.item-info').length && !$(event.relatedTarget).closest('.map-container').length) {
-        $('.item-info').hide(); // إخفاء العنصر item-info
+          $('.item-info').hide(); // Hide the item-info modal
       }
-    });
-    
-    // ************* END MAPS 2
-    $('a[href*="#"]').on('click', function (event) {
-      // Prevent default behavior
-      event.preventDefault();
-
-      // Get the target element's ID from the href
-      var targetId = this.hash.substring(1); // Remove the `#` character
-      var $target = $('#' + targetId);
-
-      if ($target.length) {
-        // Scroll to the target element with 101px offset
-        $('html, body').animate({
-            scrollTop: $target.offset().top - 60 // Adjust by offset
-          },
-          600 // Duration in milliseconds
-        );
-      }
-    });
+  });
+  
   });
   AOS.init({
     duration: 1000, // Animation duration
