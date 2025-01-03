@@ -2654,7 +2654,7 @@ section.emblemes {
 /*  */
 .about_maps_1 {
   width: 579px;
-  padding: 30px;
+  padding: 20px;
   /* display: flex; */
   /* align-items: center; */
   /* justify-content: center; */
@@ -2685,12 +2685,12 @@ section.emblemes {
 .item-info-content .wrapper-element-africa input {
    !i;
    !;
-  border: 1px solid var(--Grey-Grey-20, #E5E7EB);
-  background: var(--Grey-Grey-5, #F9FAFB);
-  display: flex;
-  width: 292px;
-  padding: 19px 216px 18px 29px;
-  align-items: center;
+   border: 1px solid var(--Grey-Grey-20, #E5E7EB);
+   background: var(--Grey-Grey-5, #F9FAFB);
+   display: flex;
+   width: 292px;
+   padding: 10px 15px 10px 15px;
+   align-items: center;
 }
 
 .item-info-content .wrapper-element-africa button {

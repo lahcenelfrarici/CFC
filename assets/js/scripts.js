@@ -327,7 +327,7 @@
 
     // Function to show item-info
     function showItemInfo(item, country, factSheet, factSheet_img) {
-      // Create the content for item-info
+      // إنشاء المحتوى للعنصر item-info
       const content = `
         <div class="item-info-content">
           <div class="flag--element">
@@ -340,7 +340,7 @@
         </div>
       `;
 
-      // Find or create the .item-info element and append content
+      // إيجاد العنصر .item-info أو إنشاؤه إذا لم يكن موجوداً
       let itemInfo = $('.item-info');
       if (itemInfo.length === 0) {
         itemInfo = $('<div class="item-info"></div>').appendTo('body');
@@ -348,86 +348,88 @@
 
       itemInfo.html(content).show();
 
-      // Position the .item-info before the path element
+      // تحديد موقع العنصر .item-info بالنسبة للعنصر الذي يتم التفاعل معه
       const pathOffset = item.offset();
       itemInfo.css({
-        top: pathOffset.top - itemInfo.outerHeight() - 10, // Adjust the positioning above the path
+        top: pathOffset.top - itemInfo.outerHeight() - 10, // تحديد مكان العنصر item-info فوق العنصر المتفاعل معه
         left: pathOffset.left,
         position: 'absolute',
       });
     }
 
-    // When hovering over the path with class "item-wrap"
+    // عندما يقوم المستخدم بالمرور فوق العنصر مع الفئة "item-wrap"
     $('.item-wrap').on('mouseenter click', function () {
       const country = $(this).data('country');
       const factSheet = $(this).data('fact-sheet');
-      const factSheet_img = $(this).data('fact-img'); // Retrieve the image URL for the fact sheet
+      const factSheet_img = $(this).data('fact-img'); // استرجاع رابط الصورة لورقة الحقائق
 
-      // Pass the factSheet_img along with other data to showItemInfo
+      // تمرير البيانات إلى دالة showItemInfo
       showItemInfo($(this), country, factSheet, factSheet_img);
     });
 
-    // When mouse leaves the path or the .item-info element
-    $(document).on('mouseleave', function (event) {
-      if (!$(event.target).closest('.item-info, .item-wrap').length) {
-        $('.item-info').hide();
+    // عندما يخرج المؤشر من العنصر .map-container أو .item-info، إخفاء العنصر item-info
+    $(document).on('mouseleave', '.map-container, .item-info', function (event) {
+      // تحقق مما إذا كان الماوس خرج من العنصر map-container أو item-info
+      if (!$(event.relatedTarget).closest('.item-info').length && !$(event.relatedTarget).closest('.map-container').length) {
+        $('.item-info').hide(); // إخفاء العنصر item-info
       }
     });
+
 
 
     // ************* END MAPS
     // ************* Start MAPS 2
     // Function to show item-info
     function showItemInfo_1(item, factSheet_img_1) {
-      // Create the content for item-info
+      // إنشاء المحتوى للعنصر item-info
       const content = `
-      <div class="item-info-content" id="about_maps_1">
+        <div class="item-info-content" id="about_maps_1">
           <div class="flag--element">
             <img src="${factSheet_img_1}" alt="Fact Sheet Flag">
           </div>
           <div class="wrapper-element-africa">
             <div>To get in touch with this promotion agency, please enter your email address</div> 
             <form class="d-flex mt-3">
-            <input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
-            <button type="submit" class="form--news">Subscribe <i class="fas fa-arrow-right ms-2"></i></button>
-          </form>
+              <input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
+              <button type="submit" class="form--news">Subscribe <i class="fas fa-arrow-right ms-2"></i></button>
+            </form>
           </div>
         </div>
-          `;
-
-      // Find or create the .item-info element and append content
-      let itemInfo = $('.item-info ');
+      `;
+    
+      // إيجاد العنصر .item-info أو إنشاؤه إذا لم يكن موجوداً
+      let itemInfo = $('.item-info');
       if (itemInfo.length === 0) {
         itemInfo = $('<div class="item-info about_maps_1"></div>').appendTo('body');
       }
-
+    
       itemInfo.html(content).show();
-
-      // Position the .item-info before the path element
+    
+      // تحديد موقع العنصر .item-info بالنسبة للعنصر الذي يتم التفاعل معه
       const pathOffset = item.offset();
       itemInfo.css({
-        top: pathOffset.top - itemInfo.outerHeight() - 10, // Adjust the positioning above the path
+        top: pathOffset.top - itemInfo.outerHeight() - 10, // تحديد مكان العنصر item-info فوق العنصر المتفاعل معه
         left: pathOffset.left,
         position: 'absolute',
       });
     }
-
-    // When hovering over the path with class "item-wrap"
+    
+    // عندما يقوم المستخدم بالمرور فوق العنصر مع الفئة "item-wrap-1"
     $('.img-1-maps .item-wrap-1').on('mouseenter click', function () {
-      // const country = $(this).data('country');
-      // const factSheet = $(this).data('fact-sheet');
-      const factSheet_img_1 = $(this).data('logo'); // Retrieve the image URL for the fact sheet
-
-      // Pass the factSheet_img along with other data to showItemInfo
+      const factSheet_img_1 = $(this).data('logo'); // استرجاع رابط الصورة للورقة
+    
+      // تمرير البيانات إلى دالة showItemInfo_1
       showItemInfo_1($(this), factSheet_img_1);
     });
-
-    // When mouse leaves the path or the .item-info element
-    $(document).on('mouseleave', function (event) {
-      if (!$(event.target).closest('.item-info, .item-wrap-1').length) {
-        $('.item-info').hide();
+    
+    // عندما يخرج المؤشر من العنصر .map-container أو .item-info، إخفاء العنصر item-info
+    $(document).on('mouseleave', '.map-container, .item-info', function (event) {
+      // تحقق مما إذا كان الماوس قد خرج فعلاً من العنصر map-container أو item-info
+      if (!$(event.relatedTarget).closest('.item-info').length && !$(event.relatedTarget).closest('.map-container').length) {
+        $('.item-info').hide(); // إخفاء العنصر item-info
       }
     });
+    
     // ************* END MAPS 2
     $('a[href*="#"]').on('click', function (event) {
       // Prevent default behavior
