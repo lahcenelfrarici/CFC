@@ -2989,7 +2989,7 @@ section.three_colmun_to_sc {
   align-items: center;
   gap: 10px;
 }
-.map-container .item-wrap {
+section#maps--with-select-pays .map-container .item-wrap {
   fill: #E57E39;
   stroke-width: 0.4px;
   stroke: #CBBDBD;
