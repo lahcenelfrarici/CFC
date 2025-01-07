@@ -58,7 +58,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">About CFC</a>
+            <a class="nav-link" href="/About.html">About CFC</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="whyCfcDropdown" role="button" data-bs-toggle="dropdown"
@@ -185,7 +185,7 @@
       <div class="row">
         <div class="video--sc-2" data-aos="zoom-in">
           <video class="slider-video" autoplay muted loop playsinline preload="metadata">
-            <source src="./assets/video/Video1.mp4" type="video/mp4">
+            <source src="./assets/video/video2.mp4" type="video/mp4">
           </video>
           <!-- <img class="slider-video" src="./assets/images/slider-2.png" alt="Video Placeholder"> -->
         </div>
@@ -346,7 +346,7 @@
       </div>
     </div>
   </section>
-  <section class="filter--pays-elements" data-aos="fade-up">
+  <section class="filter--pays-elements" data-aos="fade-up" id="filter-verticale">
     <div class="title-primary-sc mb-3">
       <h2>Discover our <br>community of members</h2>
     </div>
@@ -355,8 +355,8 @@
 
         <div class="custom-select" id="country-select">
           <div class="select-selected">
-            <img src="https://flagcdn.com/us.svg" alt="US Flag" width="20" height="15" />
-            <span>United States</span>
+            <img src="./assets/images/mdi_world.png" alt="US Flag" />
+            <span>All countries</span>
           </div>
           <div class="select-items">
             <div data-value="United States">
@@ -376,8 +376,43 @@
 
 
 
+
+
+        <!-- <ul>
+          <li><button class="categoryFilter" data-category="all">All Members</button></li>
+          <li><button class="categoryFilter" data-category="banks">Banks & Insurance</button></li>
+          <li><button class="categoryFilter" data-category="multinational">Multinationals</button></li>
+          <li><button class="categoryFilter" data-category="asset">Asset Management</button></li>
+          <li><button class="categoryFilter" data-category="law">Law Consulting</button></li>
+          <li><button class="categoryFilter" data-category="services">Other Services</button></li>
+        </ul> -->
+        <div class="custom-select" id="industry-select">
+          <div class="select-selected">
+            <span>All industries</span>
+          </div>
+          <div class="select-items">
+            <div data-category="all">
+              <span>All industries</span>
+            </div>
+            <div data-category="banks">
+              <span>Banks & Insurance</span>
+            </div>
+            <div data-category="multinational">
+              <span>Multinationals</span>
+            </div>
+            <div data-category="asset">
+              <span>Asset Management</span>
+            </div>
+            <div data-category="law">
+              <span>Law Consulting</span>
+            </div>
+            <div data-category="services">
+              <span>Other Services</span>
+            </div>
+          </div>
+        </div>
         <div class="search--bar-1">
-          <input type="text" id="searchFilter" placeholder="Search by title">
+          <input type="text" id="searchFilter" placeholder="Search by name">
           <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
             <path
               d="M9.93178 2.875C8.53608 2.875 7.17173 3.28887 6.01125 4.06428C4.85076 4.83969 3.94628 5.94181 3.41217 7.23127C2.87806 8.52072 2.73831 9.93961 3.0106 11.3085C3.28288 12.6774 3.95498 13.9348 4.94189 14.9217C5.92879 15.9086 7.18619 16.5807 8.55507 16.853C9.92395 17.1252 11.3428 16.9855 12.6323 16.4514C13.9218 15.9173 15.0239 15.0128 15.7993 13.8523C16.5747 12.6918 16.9886 11.3275 16.9886 9.93178C16.9884 8.06024 16.2449 6.26539 14.9215 4.94201C13.5982 3.61864 11.8033 2.87512 9.93178 2.875Z"
@@ -385,15 +420,6 @@
             <path d="M15.1963 15.1953L20.1247 20.1237" stroke="black" stroke-miterlimit="10" stroke-linecap="round" />
           </svg>
         </div>
-
-        <ul>
-          <li><button class="categoryFilter" data-category="all">All Members</button></li>
-          <li><button class="categoryFilter" data-category="banks">Banks & Insurance</button></li>
-          <li><button class="categoryFilter" data-category="multinational">Multinationals</button></li>
-          <li><button class="categoryFilter" data-category="asset">Asset Management</button></li>
-          <li><button class="categoryFilter" data-category="law">Law Consulting</button></li>
-          <li><button class="categoryFilter" data-category="services">Other Services</button></li>
-        </ul>
       </div>
 
       <div class="members">
@@ -421,9 +447,22 @@
             </div>
           </div>
         </div>
+
         <div class="member" data-country="Africa" data-category="banks">
           <div class="img--pays-el"><img src="./assets/images/l-2.png"></div>
           <div class="parnet--title">Bank of Africa 3<div class="link--arrow-ps">
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38"
+                  fill="none">
+                  <path
+                    d="M7.12477 20.5815H25.4693L18.3443 27.7065L20.5831 29.9453L31.5303 18.9981L20.5831 8.05098L18.3443 10.2898L25.4693 17.4148H7.12477V20.5815Z"
+                    fill="#00677F" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="member" data-country="France" data-category="law">
+          <div class="img--pays-el"><img src="./assets/images/l-2.png"></div>
+          <div class="parnet--title">law dddd<div class="link--arrow-ps">
               <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38"
                   fill="none">
                   <path
@@ -565,6 +604,12 @@
             </div>
           </div>
         </div>
+      </div>
+      <!-- arrows wrapper -->
+      <div class="slider-navigation">
+        <button class="slick-prev">Previous</button>
+        <div class="slick-dots-container"></div>
+        <button class="slick-next">Next</button>
       </div>
 
     </div>

@@ -128,130 +128,273 @@
         }
       });
     }
-    // ****************
-    $('.members').slick({
-      dots: true,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 7,
-      slidesToScroll: 7,
-      variableWidth: true,
-      responsive: [{
-        breakpoint: 768, // Define the breakpoint for smaller screens (e.g., tablets and phones)
-        settings: {
-          slidesToShow: 1, // Show only one slide
-          slidesToScroll: 1, // Scroll one slide at a time
-          variableWidth: false,
+    // **************** 6666666
+    // $('.members').slick({
+    //   dots: true,
+    //   infinite: false,
+    //   speed: 300,
+    //   slidesToShow: 7,
+    //   slidesToScroll: 7,
+    //   variableWidth: true,
+    //   responsive: [{
+    //     breakpoint: 768, // Define the breakpoint for smaller screens (e.g., tablets and phones)
+    //     settings: {
+    //       slidesToShow: 1, // Show only one slide
+    //       slidesToScroll: 1, // Scroll one slide at a time
+    //       variableWidth: false,
 
-        }
-      }]
-    });
+    //     }
+    //   }]
+    // });
 
-    // Custom Dropdown Logic
-    const $customSelect = $('#country-select');
-    const $selectedDiv = $customSelect.find('.select-selected');
-    const $itemsDiv = $customSelect.find('.select-items');
+    // // Custom Dropdown Logic
+    // const $customSelect = $('#country-select');
+    // const $selectedDiv = $customSelect.find('.select-selected');
+    // const $itemsDiv = $customSelect.find('.select-items');
 
-    // Toggle dropdown visibility
-    $selectedDiv.on('click', function () {
-      $customSelect.toggleClass('open');
-    });
+    // // Toggle dropdown visibility
+    // $selectedDiv.on('click', function () {
+    //   $customSelect.toggleClass('open');
+    // });
 
-    // Handle option selection
-    $itemsDiv.on('click', 'div[data-value]', function () {
-      const $option = $(this);
-      const value = $option.data('value');
-      const flagHtml = $option.find('img').prop('outerHTML');
-      const countryName = $option.find('span').text();
+    // // Handle option selection
+    // $itemsDiv.on('click', 'div[data-value]', function () {
+    //   const $option = $(this);
+    //   const value = $option.data('value');
+    //   const flagHtml = $option.find('img').prop('outerHTML');
+    //   const countryName = $option.find('span').text();
 
-      // Update the selected display
-      $selectedDiv.html(`${flagHtml} <span>${countryName}</span>`);
+    //   // Update the selected display
+    //   $selectedDiv.html(`${flagHtml} <span>${countryName}</span>`);
 
-      // Close dropdown
-      $customSelect.removeClass('open');
+    //   // Close dropdown
+    //   $customSelect.removeClass('open');
 
-      // Trigger custom change event
-      $customSelect.trigger('change', {
-        value
-      });
-    });
+    //   // Trigger custom change event
+    //   $customSelect.trigger('change', {
+    //     value
+    //   });
+    // });
 
-    // Close dropdown when clicking outside
-    $(document).on('click', function (e) {
-      if (!$customSelect.is(e.target) && $customSelect.has(e.target).length === 0) {
-        $customSelect.removeClass('open');
-      }
-    });
+    // // Close dropdown when clicking outside
+    // $(document).on('click', function (e) {
+    //   if (!$customSelect.is(e.target) && $customSelect.has(e.target).length === 0) {
+    //     $customSelect.removeClass('open');
+    //   }
+    // });
 
-    // Update filtering logic to use the custom dropdown
-    $customSelect.on('change', function (e, data) {
-      const selectedCountry = data.value;
+    // // Update filtering logic to use the custom dropdown
+    // $customSelect.on('change', function (e, data) {
+    //   const selectedCountry = data.value;
 
-      // Filter members based on selected country
-      $('.member').each(function () {
-        const memberCountry = $(this).data('country');
+    //   // Filter members based on selected country
+    //   $('.member').each(function () {
+    //     const memberCountry = $(this).data('country');
 
-        if (!selectedCountry || memberCountry === selectedCountry) {
-          $(this).removeClass('hidden');
-        } else {
-          $(this).addClass('hidden');
-        }
-      });
+    //     if (!selectedCountry || memberCountry === selectedCountry) {
+    //       $(this).removeClass('hidden');
+    //     } else {
+    //       $(this).addClass('hidden');
+    //     }
+    //   });
 
-      // Update container visibility
-      if ($('.member.hidden').length > 0) {
-        $('.members').addClass('hidden_show');
-      } else {
-        $('.members').removeClass('hidden_show');
-      }
-    });
+    //   // Update container visibility
+    //   if ($('.member.hidden').length > 0) {
+    //     $('.members').addClass('hidden_show');
+    //   } else {
+    //     $('.members').removeClass('hidden_show');
+    //   }
+    // });
 
-    // Additional Filters (Search and Category)
-    $('#searchFilter').on('input', function () {
-      const searchTerm = $(this).val().toLowerCase();
+    // // Additional Filters (Search and Category)
+    // $('#searchFilter').on('input', function () {
+    //   const searchTerm = $(this).val().toLowerCase();
 
-      $('.member').each(function () {
-        const title = $(this).find('.parnet--title').text().toLowerCase();
-        if (title.includes(searchTerm)) {
-          $(this).removeClass('hidden');
-        } else {
-          $(this).addClass('hidden');
-        }
-      });
+    //   $('.member').each(function () {
+    //     const title = $(this).find('.parnet--title').text().toLowerCase();
+    //     if (title.includes(searchTerm)) {
+    //       $(this).removeClass('hidden');
+    //     } else {
+    //       $(this).addClass('hidden');
+    //     }
+    //   });
 
-      if ($('.member.hidden').length > 0) {
-        $('.members').addClass('hidden_show');
-      } else {
-        $('.members').removeClass('hidden_show');
-      }
-    });
+    //   if ($('.member.hidden').length > 0) {
+    //     $('.members').addClass('hidden_show');
+    //   } else {
+    //     $('.members').removeClass('hidden_show');
+    //   }
+    // });
 
-    $('.categoryFilter').on('click', function () {
-      $('.categoryFilter').removeClass('active');
-      $(this).addClass('active');
+    // $('.categoryFilter').on('click', function () {
+    //   $('.categoryFilter').removeClass('active');
+    //   $(this).addClass('active');
 
-      const selectedCategory = $(this).data('category');
+    //   const selectedCategory = $(this).data('category');
 
-      $('.member').each(function () {
-        const memberCategory = $(this).data('category');
+    //   $('.member').each(function () {
+    //     const memberCategory = $(this).data('category');
 
-        if (selectedCategory === 'all' || memberCategory === selectedCategory) {
-          $(this).removeClass('hidden');
-        } else {
-          $(this).addClass('hidden');
-        }
-      });
+    //     if (selectedCategory === 'all' || memberCategory === selectedCategory) {
+    //       $(this).removeClass('hidden');
+    //     } else {
+    //       $(this).addClass('hidden');
+    //     }
+    //   });
 
-      if ($('.member.hidden').length > 0) {
-        $('.members').addClass('hidden_show');
-      } else {
-        $('.members').removeClass('hidden_show');
-      }
-    });
+    //   if ($('.member.hidden').length > 0) {
+    //     $('.members').addClass('hidden_show');
+    //   } else {
+    //     $('.members').removeClass('hidden_show');
+    //   }
+    // });
 
-    // Set default category filter
-    $('.categoryFilter[data-category="all"]').addClass('active');
-    // 66666666
+    // // Set default category filter
+    // $('.categoryFilter[data-category="all"]').addClass('active');
+    // // 66666666
+// Slick Carousel Initialization
+// Initialize Slick Carousel
+$('.members').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 7,
+  slidesToScroll: 7,
+  variableWidth: true,
+  appendDots: $('.slick-dots-container'),
+  appendArrows: $('.slider-navigation'),
+  prevArrow: $('.slick-prev'),
+  nextArrow: $('.slick-next'),
+  responsive: [{
+    breakpoint: 768, // Define the breakpoint for smaller screens
+    settings: {
+      slidesToShow: 1, // Show only one slide
+      slidesToScroll: 1, // Scroll one slide at a time
+      variableWidth: false,
+    }
+  }]
+});
+
+// Unified Filter Function
+function applyFilters() {
+  const selectedCountry = $countrySelect.find('.select-selected').data('value');
+  const selectedCategory = $industrySelect.find('.select-selected').data('category');
+  const searchTerm = $('#searchFilter').val().toLowerCase();
+
+  var count = 0;
+$('.member').each(function () {
+  const memberCountry = $(this).data('country');
+  const memberCategory = $(this).data('category');
+  const title = $(this).find('.parnet--title').text().toLowerCase();
+
+  const matchesCountry = !selectedCountry || selectedCountry === 'all' || memberCountry === selectedCountry;
+  const matchesCategory = !selectedCategory || selectedCategory === 'all' || memberCategory === selectedCategory;
+  const matchesSearch = !searchTerm || title.includes(searchTerm);
+
+  // Reset count class
+  $(this).removeClass(function (index, className) {
+    return (className.match(/(^|\s)count-\S+/g) || []).join(' ');
+  });
+
+  // If "All" is selected for country or category, remove `count-*` and show all members
+  if (selectedCountry === 'all' || selectedCategory === 'all') {
+    $(this).removeClass('hidden');
+  } else {
+    // Show only if all conditions match
+    if (matchesCountry && matchesCategory && matchesSearch) {
+      count++;
+      $(this).removeClass('hidden');
+      $(this).addClass('count-' + count);
+    } else {
+      $(this).addClass('hidden');
+    }
+  }
+});
+
+  // Update container visibility
+  if ($('.member:not(.hidden)').length === 0) {
+    $('.members').addClass('hidden_show');
+  } else {
+    $('.members').removeClass('hidden_show');
+  }
+
+  $('.members').slick('slickGoTo', 0); // Navigate to the first slide (index 0)
+}
+
+// Custom Dropdown Logic for "country-select"
+const $countrySelect = $('#country-select');
+const $countrySelectedDiv = $countrySelect.find('.select-selected');
+const $countryItemsDiv = $countrySelect.find('.select-items');
+
+// Toggle dropdown visibility
+$countrySelectedDiv.on('click', function () {
+  $countrySelect.toggleClass('open');
+});
+
+// Handle option selection
+$countryItemsDiv.on('click', 'div[data-value]', function () {
+  const $option = $(this);
+  const value = $option.data('value');
+  const flagHtml = $option.find('img').prop('outerHTML');
+  const countryName = $option.find('span').text();
+
+  // Update the selected display
+  $countrySelectedDiv.html(`${flagHtml} <span>${countryName}</span>`).data('value', value);
+
+  // Close dropdown
+  $countrySelect.removeClass('open');
+
+  // Trigger filtering
+  applyFilters();
+});
+
+// Close dropdown when clicking outside
+$(document).on('click', function (e) {
+  if (!$countrySelect.is(e.target) && $countrySelect.has(e.target).length === 0) {
+    $countrySelect.removeClass('open');
+  }
+});
+
+// Custom Dropdown Logic for "industry-select"
+const $industrySelect = $('#industry-select');
+const $industrySelectedDiv = $industrySelect.find('.select-selected');
+const $industryItemsDiv = $industrySelect.find('.select-items');
+
+// Toggle dropdown visibility
+$industrySelectedDiv.on('click', function () {
+  $industrySelect.toggleClass('open');
+});
+
+// Handle option selection
+$industryItemsDiv.on('click', 'div[data-category]', function () {
+  const $option = $(this);
+  const category = $option.data('category');
+  const categoryName = $option.find('span').text();
+
+  // Update the selected display
+  $industrySelectedDiv.html(`<span>${categoryName}</span>`).data('category', category);
+
+  // Close dropdown
+  $industrySelect.removeClass('open');
+
+  // Trigger filtering
+  applyFilters();
+});
+
+// Close dropdown when clicking outside
+$(document).on('click', function (e) {
+  if (!$industrySelect.is(e.target) && $industrySelect.has(e.target).length === 0) {
+    $industrySelect.removeClass('open');
+  }
+});
+
+// Search Filter Logic
+$('#searchFilter').on('input', function () {
+  applyFilters();
+});
+
+// Set default category filter
+$industryItemsDiv.find('div[data-category="all"]').addClass('active');
 
     // ****************
     // var memberCount = $('.members .member').length;
@@ -329,51 +472,85 @@
 
     // Function to show item-info
     function showItemInfo(item, country, factSheet, factSheet_img) {
-      // إنشاء المحتوى للعنصر item-info
+      // Create the content for the .item-info modal
       const content = `
         <div class="item-info-content">
           <div class="flag--element">
             <img src="${factSheet_img}" alt="Fact Sheet Flag">
           </div>
           <div class="wrapper-element-africa">
-            <div>${country}</div> 
+            <div>${country}</div>
             <a href="${factSheet}" download>Download country facts sheet</a>
           </div>
         </div>
       `;
-
-      // إيجاد العنصر .item-info أو إنشاؤه إذا لم يكن موجوداً
+  
+      // Find or create the .item-info modal
       let itemInfo = $('.item-info');
       if (itemInfo.length === 0) {
         itemInfo = $('<div class="item-info"></div>').appendTo('body');
       }
-
+  
       itemInfo.html(content).show();
-
-      // تحديد موقع العنصر .item-info بالنسبة للعنصر الذي يتم التفاعل معه
+  
+      // Get the position of the item relative to the document
       const pathOffset = item.offset();
+      const windowWidth = $(window).width();
+      const itemInfoWidth = itemInfo.outerWidth();
+      const itemInfoHeight = itemInfo.outerHeight();
+  
+      // Position the modal above the item
       itemInfo.css({
-        top: pathOffset.top - itemInfo.outerHeight() - 10, // تحديد مكان العنصر item-info فوق العنصر المتفاعل معه
+        top: pathOffset.top - itemInfoHeight - 10, // Position above the item
         left: pathOffset.left,
         position: 'absolute',
       });
+  
+      // Check if the modal is off-screen on the left or right and adjust its position
+      if (itemInfo.offset().left < 0) {
+        itemInfo.css('left', 10); // Adjust to the left side of the viewport
+      } else if (itemInfo.offset().left + itemInfoWidth > windowWidth) {
+        itemInfo.css('left', windowWidth - itemInfoWidth - 10); // Adjust to the right side of the viewport
+      }
     }
-
-    // عندما يقوم المستخدم بالمرور فوق العنصر مع الفئة "item-wrap"
+  
+    // Handle hover or click on .item-wrap elements
     $('.item-wrap').on('mouseenter click', function () {
       const country = $(this).data('country');
       const factSheet = $(this).data('fact-sheet');
-      const factSheet_img = $(this).data('fact-img'); // استرجاع رابط الصورة لورقة الحقائق
-
-      // تمرير البيانات إلى دالة showItemInfo
+      const factSheet_img = $(this).data('fact-img'); // Retrieve the fact sheet image link
+  
       showItemInfo($(this), country, factSheet, factSheet_img);
     });
-
-    // عندما يخرج المؤشر من العنصر .map-container أو .item-info، إخفاء العنصر item-info
+  
+    // Handle the select dropdown interaction
+    $('#country-select .select-items div').on('click', function () {
+      const country = $(this).data('country');
+  
+      // Find the corresponding SVG path for the selected country
+      const path = $(`.map-container [data-country="${country}"]`);
+  
+      if (path.length) {
+        // Extract data from the SVG path
+        const factSheet = path.data('fact-sheet'); // Get the fact sheet link from the path
+        const factSheet_img = path.data('fact-img'); // Get the flag image link from the path
+  
+        // Show the modal positioned relative to the path
+        showItemInfo(path, country, factSheet, factSheet_img);
+      }
+  
+      // Update the selected item display
+      const selectedHtml = $(this).html(); // Get the HTML of the clicked item
+      $('#country-select .select-selected').html(selectedHtml);
+    });
+  
+    // Hide modal on mouse leave
     $(document).on('mouseleave', '.map-container, .item-info', function (event) {
-      // تحقق مما إذا كان الماوس خرج من العنصر map-container أو item-info
-      if (!$(event.relatedTarget).closest('.item-info').length && !$(event.relatedTarget).closest('.map-container').length) {
-        $('.item-info').hide(); // إخفاء العنصر item-info
+      if (
+        !$(event.relatedTarget).closest('.item-info').length &&
+        !$(event.relatedTarget).closest('.map-container').length
+      ) {
+        $('.item-info').hide();
       }
     });
 
