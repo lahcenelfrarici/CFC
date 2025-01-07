@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAROC</title>
+
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="./assets/css/all.min.css" />
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="./assets/css/ayoub.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css" />
+
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="./assets/css/aos.css" />
+
+  <!-- slick CSS -->
+  <link rel="stylesheet" href="./assets/css/slick.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- responsive CSS -->
+  <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+  <!-- Responsive CSS -->
+  <!-- <link rel="stylesheet" href="./assets/css/responsive.css" /> -->
+
+</head>
+
+<body>
+
+  <!-- Preloader -->
+
+  <!-- <div class="preloader"></div> -->
+
+  <!-- Scrolle Top -->
+  <!-- 
+  <button class="back-to-top" type="button"></button> -->
+
+  <!-- Start.Header -->
+
+  <!-- Header Section -->
+  <header class="bg-white shadow-sm header--menu" data-sticky-class="is-sticky">
+    <nav class="navbar navbar-expand-lg navbar-light container">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/Logo.png" alt="CFC Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About CFC</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="whyCfcDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Why CFC?</a>
+            <ul class="dropdown-menu" aria-labelledby="whyCfcDropdown">
+              <li><a class="dropdown-item" href="#">Benefits</a></li>
+              <li><a class="dropdown-item" href="#">Requirements</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Africa Insights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">What's On?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Become a Member</a>
+          </li>
+          <!-- Multi-language Selector -->
+
+        </ul>
+        <ul class="multi--select">
+          <li class="nav-item dropdown">
+            <!-- <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-globe"></i> EN
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#">EN - English</a></li>
+              <li><a class="dropdown-item" href="#">FR - Français</a></li>
+              <li><a class="dropdown-item" href="#">AR - العربية</a></li>
+            </ul> -->
+            <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="./assets/images/flagpack_gb-ukm.png" alt="English Flag"
+                style="width: 20px; height: 15px; margin-right: 5px;">
+              EN
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="./assets/images/flagpack_gb-ukm.png" alt="English Flag"
+                    style="width: 20px; height: 15px; margin-right: 5px;"> ES
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="./assets/images/flagpack_gb-ukm.png" alt="French Flag"
+                    style="width: 20px; height: 15px; margin-right: 5px;"> FR
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <img src="./assets/images/flagpack_gb-ukm.png" alt="Arabic Flag"
+                    style="width: 20px; height: 15px; margin-right: 5px;"> AR
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- Contact Us Button -->
+          <li class="nav-item">
+            <a class="" href="/index.html#contact---us">
+              Contact Us<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <g clip-path="url(#clip0_4948_4128)">
+                  <path
+                    d="M40.7279 22.5873C41.1028 22.9623 41.3135 23.4709 41.3135 24.0013C41.3135 24.5316 41.1028 25.0402 40.7279 25.4153L29.4139 36.7293C29.2294 36.9203 29.0087 37.0727 28.7647 37.1775C28.5207 37.2823 28.2583 37.3375 27.9927 37.3398C27.7271 37.3421 27.4638 37.2915 27.218 37.1909C26.9722 37.0903 26.7489 36.9418 26.5611 36.7541C26.3733 36.5663 26.2248 36.343 26.1243 36.0972C26.0237 35.8514 25.9731 35.588 25.9754 35.3225C25.9777 35.0569 26.0329 34.7945 26.1377 34.5505C26.2425 34.3065 26.3949 34.0858 26.5859 33.9013L34.4859 26.0013H7.9999C7.46947 26.0013 6.96076 25.7906 6.58569 25.4155C6.21062 25.0404 5.9999 24.5317 5.9999 24.0013C5.9999 23.4708 6.21062 22.9621 6.58569 22.5871C6.96076 22.212 7.46947 22.0013 7.9999 22.0013H34.4859L26.5859 14.1013C26.2216 13.7241 26.02 13.2189 26.0246 12.6945C26.0291 12.1701 26.2395 11.6684 26.6103 11.2976C26.9811 10.9268 27.4827 10.7165 28.0071 10.7119C28.5315 10.7074 29.0367 10.9089 29.4139 11.2733L40.7279 22.5873Z"
+                    fill="url(#paint0_linear_4948_4128)" />
+                </g>
+                <defs>
+                  <linearGradient id="paint0_linear_4948_4128" x1="23.6567" y1="37.3398" x2="25.6881" y2="13.0491"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#009681" />
+                    <stop offset="1" stop-color="#007565" />
+                  </linearGradient>
+                  <clipPath id="clip0_4948_4128">
+                    <rect width="48" height="48" fill="white" transform="matrix(0 -1 -1 0 48 48)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- Slider Section -->
+  <section class="slider container-fluid" id="banner-title">
+    <div class="slider-overlay"></div>
+    <!-- <iframe class="slider-video"
+      src="https://www.youtube.com/embed/f97OGCef0FE?autoplay=1&mute=1&loop=1&playlist=f97OGCef0FE" frameborder="0"
+      allow="autoplay; encrypted-media" allowfullscreen>
+    </iframe> -->
+    <img class="slider-video" src="./assets/images/banner-img.png">
+
+    <div class="slider-content">
+      <h2 class="display-4 fw-bold">A compelling regulatory framework</h2>
+    </div>
+    <div class="icon--banner-after">
+      <img class="slider-img--icon" src="./assets/images/icon--banner.png">
+
+    </div>
+  </section>
+
+
+  <section>
+    <div class="doing d-flex justify-content-center flex-column title-primary-sc mb-3">
+      <h2 class="mb-3">Doing business at best cost</h2>
+      <div class="doing">
+        <p>
+          CFC's regulatory framework is designed to provide a competitive advantage for businesses operating within its
+          jurisdiction while ensuring compliance with local and international regulations. The CFC status offers a
+          package of benefits, consisting first and foremost of a favorable tax regime.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+
+    <div class="container py-5">
+      <div class="row g-3">
+        <!-- First Column -->
+        <div class="col-md-4 left-tax">
+          <div class="row">
+            <div class="col-12 mb-3">
+              <div class="custom-card card-doing">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                  <img src="./assets/images/tax.png" width="15%">
+                  <h4 class="section-title mt-3">Corporate income tax</h4>
+                </div>
+                <ul>
+                  <li>Total exemption during the first<b> 5 consecutive fiscal years</b>, starting from the first fiscal year
+                    of granting the status.</li>
+                  <li>Taxation at the specific rate of <b>20%</b> beyond.</li>
+                </ul>
+
+              </div>
+
+            </div>
+            <div class="col-12">
+              <div class="custom-card card-doing">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                  <img src="./assets/images/capital.png" width="15%">
+                  <h4 class="section-title mt-3">Capital mobility</h4>
+                </div>
+                <ul>
+
+                  <li>Opening of a <b>single currency</b> account for all transactions.</li>
+                  <li>Total <b> freedom </b> to manage foreign currency holdings.</li>
+                  <li><b>Unrestricted </b>transfer of management and technical assistance fees within the group.</li>
+                  <li>Additional budget on <b>business trip </b>endowments for CFC companies.</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Column -->
+        <div class="col-md-4">
+          <div class=""><img src="./assets/images/cfc.png" class="img-fluid rounded" alt=""></div>
+        </div>
+
+        <!-- Third Column -->
+        <div class="col-md-4 right-tax">
+          <div class="row">
+            <div class="col-12 mb-3">
+              <div class="custom-card card-doing">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                  <img src="./assets/images/tax2.png" width="15%">
+                  <h4 class="section-title mt-3">Other tax incentives</h4>
+                </div>
+                <ul>
+                  <li><b>Tax dividends:</b> Permanent exemption from withholding tax on dividends and other similar dividend
+                    income paid to residents and non-residents.</li>
+                  <li><b>Registration fees:</b> Exemption from registration fees relating to business creation and capital
+                    increase.</li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="custom-card card-doing">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center">
+                  <img src="./assets/images/tax3.png" width="15%">
+                  <h4 class="section-title mt-3">Personal income tax</h4>
+                </div>
+                <ul>
+                  <li>All CFC employees benefit from a personal income tax at the specific rate of <b>20%</b> granted for a maximum period of <b>10 years.</b></li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+    <div class="doing d-flex justify-content-center flex-column title-primary-sc mb-3">
+      <h2 class="mb-3">Success stories</h2>
+
+    </div>
+
+    <div class="container py-5">
+      <div class="row g-3">
+        <!-- First Column -->
+        <div class="col-md-6">
+
+
+          <div class="success">
+            <div class="d-flex logo-success">
+              <img src="./assets/images/pwc.png" width="15%" class="me-3">
+              <h4 class="h4-success mt-3">PWC</h4>
+            </div>
+            <div class="d-flex flex-column align-items-center ">
+              <img src="./assets/images/pwc1.png" width="80%" class="mb-5">
+
+
+
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-6">
+
+
+          <div class="success">
+            <div class="d-flex logo-success">
+              <img src="./assets/images/orange.png" width="15%" class="me-3">
+              <h4 class="h4-success mt-3">Orange Middle East and Africa Management</h4>
+            </div>
+            <div class="d-flex flex-column align-items-center ">
+              <img src="./assets/images/orange1.png" width="80%" class="mb-5">
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+
+  <section>
+    <div class="doing d-flex justify-content-center flex-column title-primary-sc mb-3">
+      <h2 class="mb-3">Read it from our community</h2>
+
+    </div>
+
+    <div class="container py-5">
+      <div class="row g-3">
+        <!-- First Column -->
+        <div class="col-md-6">
+
+
+          <div class="custom-card card-doing">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center">
+              <img src="./assets/images/onomi.png" width="auto">
+              <h6 class="mt-3"><b>Patrick Grossetete,</b></h6>
+              <p>Deputy CEO, <br> ONOMO HOTELS.</p>
+            </div>
+                 
+            <div class="row g-3">
+              <div class="col-md-2">
+                <center><img class="quoteleft" src="./assets/images/quoteleft.png" alt=""></center>
+              </div>
+              <div class="col-md-8">
+                <p class="text-center text-quote">When you come to a new country, it’s like standing in front of a door with many locks, and CFC says to you “i’ve got the key”.</p></div>
+              <div class="col-md-2">
+                <center><img class="quoteright" src="./assets/images/quoteleft.png" alt=""></center>
+              </div>
+            </div>
+                       
+          </div>
+          
+        </div>
+        <div class="col-md-6">
+
+
+          <div class="custom-card card-doing">
+            <div class="d-flex flex-column align-items-center justify-content-center text-center">
+              <img src="./assets/images/bcg.png" width="auto">
+              <h6 class="mt-3"><b>Patrick Dupoux,</b></h6>
+              <p>Member of BCG’s executive commitee,<br> THE BOSTON CONSULTING GROUP.</p>
+            </div>
+                 
+            <div class="row g-3">
+              <div class="col-md-2">
+                <center><img class="quoteleft" src="./assets/images/quoteleft.png" alt=""></center>
+              </div>
+              <div class="col-md-8">
+                <p class="text-center text-quote">The value proposition of CFC is all about promoting and facilitating investment 
+                  and business between various investors.</p></div>
+              <div class="col-md-2">
+                <center><img class="quoteright" src="./assets/images/quoteleft.png" alt=""></center>
+              </div>
+            </div>
+                       
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact---us" id="contact---us">
+    <div class="contact-container">
+      <!-- Left Form Section -->
+      <div class="contact-form">
+        <h3>I am interested in getting in touch with Casablanca Finance City</h3>
+        <form>
+          <div class="form-group">
+            <input type="text" placeholder="Company">
+            <select>
+              <option>Country</option>
+              <option>Morocco</option>
+              <option>USA</option>
+              <option>France</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Job title">
+            <input type="email" placeholder="Email address">
+          </div>
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Submit<svg xmlns="http://www.w3.org/2000/svg" width="59" height="61" viewBox="0 0 59 61" fill="none">
+              <g clip-path="url(#clip0_4572_16618)">
+                <path d="M50.0615 28.9499C50.5223 29.4187 50.7812 30.0545 50.7812 30.7174C50.7812 31.3803 50.5223 32.0161 50.0615 32.4849L36.1547 46.6274C35.9279 46.8662 35.6567 47.0566 35.3567 47.1877C35.0568 47.3187 34.7342 47.3876 34.4078 47.3905C34.0814 47.3934 33.7577 47.3302 33.4556 47.2045C33.1534 47.0788 32.879 46.8931 32.6481 46.6584C32.4173 46.4237 32.2348 46.1445 32.1112 45.8373C31.9876 45.53 31.9254 45.2008 31.9282 44.8689C31.931 44.537 31.9989 44.2089 32.1277 43.9039C32.2565 43.5989 32.4438 43.323 32.6786 43.0924L42.389 33.2174H9.83332C9.18133 33.2174 8.55604 32.954 8.09501 32.4852C7.63399 32.0163 7.37498 31.3804 7.37498 30.7174C7.37498 30.0544 7.63399 29.4185 8.09501 28.9496C8.55604 28.4808 9.18133 28.2174 9.83332 28.2174L42.389 28.2174L32.6786 18.3424C32.2308 17.8709 31.983 17.2394 31.9886 16.5839C31.9942 15.9284 32.2528 15.3014 32.7086 14.8379C33.1644 14.3743 33.7809 14.1114 34.4255 14.1057C35.0701 14.1 35.691 14.352 36.1547 14.8074L50.0615 28.9499Z" fill="white"></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_4572_16618">
+                  <rect width="60" height="59" fill="white" transform="matrix(0 -1 -1 0 59 60.7188)"></rect>
+                </clipPath>
+              </defs>
+            </svg></button>
+        </form>
+      </div>
+
+      <!-- Right Image Section -->
+      <div class="contact-image">
+        <img src="./assets/images/contatc-img.png" alt="Office">
+      </div>
+    </div>
+  </section>
+  <section class="section---filter-block">
+    <div class="container">
+      <div class="title-primary-sc mb-3">
+        <h2>What’s up in CFC?</h2>
+      </div>
+      <div class="card---filter">
+        <div class="filter" id="filter">
+          <!-- Alphabet buttons will be dynamically generated here -->
+        </div>
+
+        <div class="articles" id="articles">
+          <div class="article" data-title="CFCA and Groupe CDG co-hosted on Nov 13th">
+            <div class="articles-img">
+              <img src="./assets/images/image (2).png" alt="CFCA and Groupe CDG co-hosted on Nov 13th">
+            </div>
+            <div class="article-title">CFCA and Groupe CDG co-hosted on Nov 13th</div>
+            <div class="article-date"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27"
+                fill="none">
+                <g clip-path="url(#clip0_4698_14065)">
+                  <path
+                    d="M7.3749 0.71875C7.61625 0.71875 7.84771 0.814625 8.01837 0.985283C8.18902 1.15594 8.2849 1.3874 8.2849 1.62875V3.33045H18.057V1.64045C18.057 1.3991 18.1529 1.16764 18.3235 0.996983C18.4942 0.826325 18.7257 0.73045 18.967 0.73045C19.2083 0.73045 19.4398 0.826325 19.6105 0.996983C19.7811 1.16764 19.877 1.3991 19.877 1.64045V3.33045H23.4C24.0893 3.33045 24.7505 3.6042 25.238 4.09151C25.7256 4.57883 25.9997 5.23981 26 5.92915V24.12C25.9997 24.8094 25.7256 25.4704 25.238 25.9577C24.7505 26.445 24.0893 26.7188 23.4 26.7188H2.6C1.91066 26.7188 1.24954 26.445 0.761982 25.9577C0.274425 25.4704 0.000344669 24.8094 0 24.12L0 5.92915C0.000344669 5.23981 0.274425 4.57883 0.761982 4.09151C1.24954 3.6042 1.91066 3.33045 2.6 3.33045H6.4649V1.62745C6.46524 1.38633 6.56127 1.1552 6.73189 0.984823C6.90251 0.814446 7.13378 0.71875 7.3749 0.71875ZM1.82 10.7833V24.12C1.82 24.2225 1.84018 24.3239 1.87937 24.4185C1.91857 24.5132 1.97603 24.5992 2.04846 24.6716C2.12089 24.744 2.20687 24.8015 2.30151 24.8407C2.39614 24.8799 2.49757 24.9 2.6 24.9H23.4C23.5024 24.9 23.6039 24.8799 23.6985 24.8407C23.7931 24.8015 23.8791 24.744 23.9515 24.6716C24.024 24.5992 24.0814 24.5132 24.1206 24.4185C24.1598 24.3239 24.18 24.2225 24.18 24.12V10.8015L1.82 10.7833ZM8.6671 19.7234V21.8892H6.5V19.7234H8.6671ZM14.0829 19.7234V21.8892H11.9171V19.7234H14.0829ZM19.5 19.7234V21.8892H17.3329V19.7234H19.5ZM8.6671 14.5533V16.7191H6.5V14.5533H8.6671ZM14.0829 14.5533V16.7191H11.9171V14.5533H14.0829ZM19.5 14.5533V16.7191H17.3329V14.5533H19.5ZM6.4649 5.14915H2.6C2.49757 5.14915 2.39614 5.16932 2.30151 5.20852C2.20687 5.24772 2.12089 5.30518 2.04846 5.37761C1.97603 5.45004 1.91857 5.53602 1.87937 5.63066C1.84018 5.72529 1.82 5.82672 1.82 5.92915V8.96465L24.18 8.98285V5.92915C24.18 5.82672 24.1598 5.72529 24.1206 5.63066C24.0814 5.53602 24.024 5.45004 23.9515 5.37761C23.8791 5.30518 23.7931 5.24772 23.6985 5.20852C23.6039 5.16932 23.5024 5.14915 23.4 5.14915H19.877V6.35685C19.877 6.5982 19.7811 6.82966 19.6105 7.00032C19.4398 7.17098 19.2083 7.26685 18.967 7.26685C18.7257 7.26685 18.4942 7.17098 18.3235 7.00032C18.1529 6.82966 18.057 6.5982 18.057 6.35685V5.14915H8.2849V6.34515C8.2849 6.5865 8.18902 6.81796 8.01837 6.98862C7.84771 7.15928 7.61625 7.25515 7.3749 7.25515C7.13355 7.25515 6.90209 7.15928 6.73143 6.98862C6.56077 6.81796 6.4649 6.5865 6.4649 6.34515V5.14915Z"
+                    fill="#929292" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4698_14065">
+                    <rect width="26" height="26" fill="white" transform="translate(0 0.71875)" />
+                  </clipPath>
+                </defs>
+              </svg>01 Nov 2024</div>
+          </div>
+          <div class="article" data-title="Exploring Africa's Investment Potential">
+            <div class="articles-img">
+              <img src="./assets/images/image (1).png" alt="Exploring Africa's Investment Potential">
+            </div>
+            <div class="article-title">Exploring Africa's Investment Potential</div>
+            <div class="article-date"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27"
+                fill="none">
+                <g clip-path="url(#clip0_4698_14065)">
+                  <path
+                    d="M7.3749 0.71875C7.61625 0.71875 7.84771 0.814625 8.01837 0.985283C8.18902 1.15594 8.2849 1.3874 8.2849 1.62875V3.33045H18.057V1.64045C18.057 1.3991 18.1529 1.16764 18.3235 0.996983C18.4942 0.826325 18.7257 0.73045 18.967 0.73045C19.2083 0.73045 19.4398 0.826325 19.6105 0.996983C19.7811 1.16764 19.877 1.3991 19.877 1.64045V3.33045H23.4C24.0893 3.33045 24.7505 3.6042 25.238 4.09151C25.7256 4.57883 25.9997 5.23981 26 5.92915V24.12C25.9997 24.8094 25.7256 25.4704 25.238 25.9577C24.7505 26.445 24.0893 26.7188 23.4 26.7188H2.6C1.91066 26.7188 1.24954 26.445 0.761982 25.9577C0.274425 25.4704 0.000344669 24.8094 0 24.12L0 5.92915C0.000344669 5.23981 0.274425 4.57883 0.761982 4.09151C1.24954 3.6042 1.91066 3.33045 2.6 3.33045H6.4649V1.62745C6.46524 1.38633 6.56127 1.1552 6.73189 0.984823C6.90251 0.814446 7.13378 0.71875 7.3749 0.71875ZM1.82 10.7833V24.12C1.82 24.2225 1.84018 24.3239 1.87937 24.4185C1.91857 24.5132 1.97603 24.5992 2.04846 24.6716C2.12089 24.744 2.20687 24.8015 2.30151 24.8407C2.39614 24.8799 2.49757 24.9 2.6 24.9H23.4C23.5024 24.9 23.6039 24.8799 23.6985 24.8407C23.7931 24.8015 23.8791 24.744 23.9515 24.6716C24.024 24.5992 24.0814 24.5132 24.1206 24.4185C24.1598 24.3239 24.18 24.2225 24.18 24.12V10.8015L1.82 10.7833ZM8.6671 19.7234V21.8892H6.5V19.7234H8.6671ZM14.0829 19.7234V21.8892H11.9171V19.7234H14.0829ZM19.5 19.7234V21.8892H17.3329V19.7234H19.5ZM8.6671 14.5533V16.7191H6.5V14.5533H8.6671ZM14.0829 14.5533V16.7191H11.9171V14.5533H14.0829ZM19.5 14.5533V16.7191H17.3329V14.5533H19.5ZM6.4649 5.14915H2.6C2.49757 5.14915 2.39614 5.16932 2.30151 5.20852C2.20687 5.24772 2.12089 5.30518 2.04846 5.37761C1.97603 5.45004 1.91857 5.53602 1.87937 5.63066C1.84018 5.72529 1.82 5.82672 1.82 5.92915V8.96465L24.18 8.98285V5.92915C24.18 5.82672 24.1598 5.72529 24.1206 5.63066C24.0814 5.53602 24.024 5.45004 23.9515 5.37761C23.8791 5.30518 23.7931 5.24772 23.6985 5.20852C23.6039 5.16932 23.5024 5.14915 23.4 5.14915H19.877V6.35685C19.877 6.5982 19.7811 6.82966 19.6105 7.00032C19.4398 7.17098 19.2083 7.26685 18.967 7.26685C18.7257 7.26685 18.4942 7.17098 18.3235 7.00032C18.1529 6.82966 18.057 6.5982 18.057 6.35685V5.14915H8.2849V6.34515C8.2849 6.5865 8.18902 6.81796 8.01837 6.98862C7.84771 7.15928 7.61625 7.25515 7.3749 7.25515C7.13355 7.25515 6.90209 7.15928 6.73143 6.98862C6.56077 6.81796 6.4649 6.5865 6.4649 6.34515V5.14915Z"
+                    fill="#929292" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4698_14065">
+                    <rect width="26" height="26" fill="white" transform="translate(0 0.71875)" />
+                  </clipPath>
+                </defs>
+              </svg>01 Nov 2024</div>
+          </div>
+          <div class="article" data-title="Casablanca Finance City (CFC) took part">
+            <div class="articles-img">
+              <img src="./assets/images/image.png" alt="Casablanca Finance City (CFC) took part">
+            </div>
+            <div class="article-title">casablanca Finance City (CFC) took part</div>
+            <div class="article-date"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27"
+                fill="none">
+                <g clip-path="url(#clip0_4698_14065)">
+                  <path
+                    d="M7.3749 0.71875C7.61625 0.71875 7.84771 0.814625 8.01837 0.985283C8.18902 1.15594 8.2849 1.3874 8.2849 1.62875V3.33045H18.057V1.64045C18.057 1.3991 18.1529 1.16764 18.3235 0.996983C18.4942 0.826325 18.7257 0.73045 18.967 0.73045C19.2083 0.73045 19.4398 0.826325 19.6105 0.996983C19.7811 1.16764 19.877 1.3991 19.877 1.64045V3.33045H23.4C24.0893 3.33045 24.7505 3.6042 25.238 4.09151C25.7256 4.57883 25.9997 5.23981 26 5.92915V24.12C25.9997 24.8094 25.7256 25.4704 25.238 25.9577C24.7505 26.445 24.0893 26.7188 23.4 26.7188H2.6C1.91066 26.7188 1.24954 26.445 0.761982 25.9577C0.274425 25.4704 0.000344669 24.8094 0 24.12L0 5.92915C0.000344669 5.23981 0.274425 4.57883 0.761982 4.09151C1.24954 3.6042 1.91066 3.33045 2.6 3.33045H6.4649V1.62745C6.46524 1.38633 6.56127 1.1552 6.73189 0.984823C6.90251 0.814446 7.13378 0.71875 7.3749 0.71875ZM1.82 10.7833V24.12C1.82 24.2225 1.84018 24.3239 1.87937 24.4185C1.91857 24.5132 1.97603 24.5992 2.04846 24.6716C2.12089 24.744 2.20687 24.8015 2.30151 24.8407C2.39614 24.8799 2.49757 24.9 2.6 24.9H23.4C23.5024 24.9 23.6039 24.8799 23.6985 24.8407C23.7931 24.8015 23.8791 24.744 23.9515 24.6716C24.024 24.5992 24.0814 24.5132 24.1206 24.4185C24.1598 24.3239 24.18 24.2225 24.18 24.12V10.8015L1.82 10.7833ZM8.6671 19.7234V21.8892H6.5V19.7234H8.6671ZM14.0829 19.7234V21.8892H11.9171V19.7234H14.0829ZM19.5 19.7234V21.8892H17.3329V19.7234H19.5ZM8.6671 14.5533V16.7191H6.5V14.5533H8.6671ZM14.0829 14.5533V16.7191H11.9171V14.5533H14.0829ZM19.5 14.5533V16.7191H17.3329V14.5533H19.5ZM6.4649 5.14915H2.6C2.49757 5.14915 2.39614 5.16932 2.30151 5.20852C2.20687 5.24772 2.12089 5.30518 2.04846 5.37761C1.97603 5.45004 1.91857 5.53602 1.87937 5.63066C1.84018 5.72529 1.82 5.82672 1.82 5.92915V8.96465L24.18 8.98285V5.92915C24.18 5.82672 24.1598 5.72529 24.1206 5.63066C24.0814 5.53602 24.024 5.45004 23.9515 5.37761C23.8791 5.30518 23.7931 5.24772 23.6985 5.20852C23.6039 5.16932 23.5024 5.14915 23.4 5.14915H19.877V6.35685C19.877 6.5982 19.7811 6.82966 19.6105 7.00032C19.4398 7.17098 19.2083 7.26685 18.967 7.26685C18.7257 7.26685 18.4942 7.17098 18.3235 7.00032C18.1529 6.82966 18.057 6.5982 18.057 6.35685V5.14915H8.2849V6.34515C8.2849 6.5865 8.18902 6.81796 8.01837 6.98862C7.84771 7.15928 7.61625 7.25515 7.3749 7.25515C7.13355 7.25515 6.90209 7.15928 6.73143 6.98862C6.56077 6.81796 6.4649 6.5865 6.4649 6.34515V5.14915Z"
+                    fill="#929292" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4698_14065">
+                    <rect width="26" height="26" fill="white" transform="translate(0 0.71875)" />
+                  </clipPath>
+                </defs>
+              </svg>01 Nov 2024</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Footer-->
+
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Copyright -->
+        <div class="text-center mb-4">
+          <p class="mb-0">&copy; 2024 Casablanca Finance City | All rights reserved.</p>
+        </div>
+        <!-- Logo and Social Links -->
+        <div class="col-md-4 ">
+          <img src="./assets/images/Logo_footer.png" alt="Casablanca Finance City" class="mb-3" width="200">
+
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+
+        </div>
+
+        <!-- Stay Updated -->
+        <div class="col-md-4">
+          <h5>Stay Updated</h5>
+          <p>
+            We will keep you informed on the items that matter to you most.
+            More than a world-class financial centre, CFC is also a vibrant community of retail and lifestyle.
+            Sign up to our mailing list and we will keep you informed on the items that matter to you most.
+          </p>
+          <form class="d-flex mt-3">
+            <input type="email" class="form-control rounded-pill" placeholder="Email.." required="">
+            <button type="submit" class="form--news">Subscribe <i class="fas fa-arrow-right ms-2"></i></button>
+          </form>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Legal Notice</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Downloads</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+  </footer>
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./assets/js/jquery-3.7.1.min.js"></script>
+
+
+  <!-- Bootstrap JS -->
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Owl Carousel JS -->
+  <script src="./assets/js/owl.carousel.min.js"></script>
+
+  <script src="./assets/js/slick.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="./assets/js/aos.js"></script>
+  <!-- <script src="./assets/js/highmaps.js"></script>
+  <script src="./assets/js/jquery.mapRegion.js"></script> -->
+
+  <!-- Your custom JS scripts -->
+  <script src="./assets/js/scripts.js"></script>
+
+  <!--  -->
+
+</body>
+
+</html>

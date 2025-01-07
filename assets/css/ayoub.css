@@ -1,0 +1,241 @@
+@media only screen and (max-width: 600px) {
+    .doing {
+        text-align: center;
+        padding: 0px 20px 0px 20px  !important;
+    }
+    
+  }
+.header--menu .navbar-nav{
+
+    width: auto !important;
+}
+
+.textcontact{
+background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+ul.dropdown-menu.show {
+    text-align: center;
+}
+
+.doing {
+    font-size: 20px!important;
+    text-align: center;
+    padding: 0px 160px 0px 160px !important;
+}
+.card-doing h4{
+   
+    font-size: 30px!important;
+}
+.success  {
+    box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+    border-radius: 20px;
+    background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+}
+.h4-success{
+    color: white;
+}
+.logo-success{
+  
+    padding: 30px 0px 22px 64px;
+ 
+}
+.card-doing h6{
+   color: black;
+    font-size: 30px!important;
+}
+.card-doing{
+background-color: white;
+}
+img.quoteleft {
+    position: relative;
+    top: -30px;
+}
+img.quoteright {
+    position: relative;
+    top:  50px;
+}
+
+#acc-card-3-column .card-header {
+    border-radius: 20px;
+    border: 5px solid #009681;
+    background: #EEFFFD;
+    padding: 30px 0;
+    box-shadow: initial;
+  }
+  
+  #acc-card-3-column .icon-african_pioneericon--card h3 {
+    -webkit-text-stroke-color: #009681;
+    font-family: "Averta CY";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    /* 173.333% */
+    background: #009681;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #007565;
+    text-align: left;
+    -webkit-text-stroke-width: 0.5px;
+     
+  }
+  
+  #acc-card-3-column .icon--african_pioneer {
+    height: 62px;
+    text-align: right;
+    right: 5px;
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  #acc-card-3-column .card-body {
+    border-radius: 20px;
+    border: 5px solid #EDF2F8;
+    background: #FFF;
+    color: #000;
+    -webkit-text-stroke-color: #009681;
+    font-family: "Averta CY";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+  }
+  
+  div#acc-card-3-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px 0;
+  }
+  
+  div#acc-card-3-column .card {
+    border: 0;
+    width: 100%;
+    gap: 15px 0;
+  }
+  #acc-card-3-column .active .icon--african_pioneer {
+    transform: rotate(180deg);
+    display: flex;
+    align-items: end;
+  }
+  
+  #textvert{
+    text-align: center;
+    -webkit-text-stroke-color: #151515;
+    font-family: "Averta CY";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px;
+    font-weight: 600;
+    -webkit-text-stroke-width: initial;
+    background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+    /* background-clip: text; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.para-help{
+    color: #151515;
+    text-align: justify;
+    font-family: "Averta CY";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 142.857% */
+}
+
+.rectangle{
+
+    width: 95px;
+	height: 13px;
+	flex-shrink: 0;
+    border-radius: 10000px;
+    background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+}
+p.font-weight-normal {
+    font-weight: 500 !important;
+}
+
+.cimac-image{
+    background: white;
+    width: 70%;
+    border-radius: 20px;
+    border: 1px solid #C7D4E9;
+}
+.color-vert-section{
+    border-radius: 20px;
+background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+box-shadow: 0px 4px 44.1px 0px rgba(54, 99, 167, 0.25);
+}
+
+h2.text-start.mt-5{
+    
+    color: #FFF;
+    -webkit-text-stroke-width: 0.800000011920929;
+    -webkit-text-stroke-color: #FFF;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 51px; /* 110.87% */
+
+}
+.col-md-6.color-vert-section.p-3 ul li {
+    font-size: 28px;
+    color: white;
+}
+
+.left-tax{
+position: relative;
+left: 40px;
+}
+.right-tax{
+    position: relative;
+    right: 40px;
+}
+.bannertext{
+    font-size: 40px !important;
+}
+ .text-quote{
+    font-size: 20px;
+ }
+ .map-business{
+    max-width: 75% !important;
+ }
+
+ /* Centrer les flèches de navigation */
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+  }
+  
+/* Style des flèches de navigation */
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  font-size: 3rem !important;  /* Agrandit la taille du texte des flèches */
+ 
+  color: #fff !important; 
+  border-radius: 50% !important;
+  width: 50px; /* Largeur des boutons */
+  height: 50px; /* Hauteur des boutons */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer !important;
+}
+
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+  background-color: #ffffff00 !important;
+}
+
+  
