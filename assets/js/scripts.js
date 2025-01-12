@@ -72,16 +72,16 @@
 
       // //   }
       // }
-      stagePadding: 200,
+      stagePadding: 300,
       loop: true,
       items: 1,
       lazyLoad: true,
       autoplay: false,
-      margin: 30,
+      // margin: 30,
       autoplaySpeed: 2000,
       autoplayTimeout: 5000,
       autoplayHoverPause: true,
-      autoHeight: true,
+      autoHeight: false,
       responsive: {
         0: {
           items: 1,
