@@ -3160,6 +3160,7 @@ section#maps--with-select-pays .map-container .item-wrap {
 }
 
 #list--news-all .btn--pls span {
+  text-transform: capitalize;
   text-align: center;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: #007565;
