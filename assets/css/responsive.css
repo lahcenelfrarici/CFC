@@ -341,6 +341,62 @@
 
 }
 @media (max-width: 991px) {
+  .three_colmun_to_sc .tabs--item button, .three_colmun_to_sc .tabs--item a {
+    width: 100%;
+    gap: 0 11px;
+}
+
+.all--select-maps-layout {
+    max-width: 100%;
+}
+
+.three_colmun_to_sc .container-layout {
+    padding: 20px;
+}
+
+.all--select-maps-layout div#country-select {
+    width: 100%;
+}
+
+.three_colmun_to_sc .container-layout .map-container {
+    max-width: 100%;
+}
+  .width--img-inc .row.stats-container {
+    padding: 20px;
+    text-align: center;
+}
+.paginations-list li a {
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+}
+
+.paginations-list .pagination-success {
+  padding: 0;
+}
+
+.filter-wp form {
+  flex-direction: column;
+}
+
+.filter-champs {
+  width: 100%;
+}
+
+.filter-champs.submit-filter {
+  width: 100%;
+}
+
+.filter-wp form {
+  gap: 25px 0;
+}
+
+.wrapper-title-filter {
+  padding-bottom: 30px;
+}
+.width--img-inc .row-column-width--img-inc:first-child .col-md-3 .icon-box p {
+    text-align: center;
+}
   .slider-navigation {
     flex-wrap: wrap;
     position: relative;
@@ -411,8 +467,8 @@
   }
 
   .tabs--item button svg {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     object-fit: inherit;
   }
 
