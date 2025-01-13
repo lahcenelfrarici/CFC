@@ -91,7 +91,9 @@ img.quoteright {
     display: flex;
     align-items: flex-start;
   }
-  
+  a.custom-link {
+    color: white !important;
+}
   #acc-card-3-column .card-body {
     border-radius: 20px;
     border: 5px solid #EDF2F8;
@@ -247,5 +249,7 @@ ul.dropdown-menu {
 header .navbar-expand-lg .navbar-nav .dropdown-menu {
     top: 80px !important;
 } 
-
-   
+section.banner_status_slider .wrapper-slider---img {
+ 
+    width: 20% !important;
+}
