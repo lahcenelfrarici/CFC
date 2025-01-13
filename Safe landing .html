@@ -47,7 +47,7 @@
   <!-- Header Section -->
   <header class="bg-white shadow-sm header--menu" data-sticky-class="is-sticky">
     <nav class="navbar navbar-expand-lg navbar-light container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/index.html">
         <img src="./assets/images/Logo.png" alt="CFC Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -63,19 +63,19 @@
             <a class="nav-link dropdown-toggle" href="#" id="whyCfcDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">Why CFC?</a>
             <ul class="dropdown-menu" aria-labelledby="whyCfcDropdown">
-              <li><a class="dropdown-item" href="#">Doing business at best cost</a></li>
-              <li><a class="dropdown-item" href="#">Safe landing</a></li>
-              <li><a class="dropdown-item" href="#">Effortless business connections</a></li>
+              <li><a class="dropdown-item" href="/Doing businesss.html">Doing business at best cost</a></li>
+              <li><a class="dropdown-item" href="/Safe landing .html">Safe landing</a></li>
+              <li><a class="dropdown-item" href="/Effortless-business-connections.html">Effortless business connections</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Africa Insights</a>
+            <a class="nav-link" href="/africa_insights.html">Africa Insights</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">What's On?</a>
+            <a class="nav-link" href="/whats_on.html">What's On?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Become a Member</a>
+            <a class="nav-link" href="/become_member.html">Become a Member</a>
           </li>
           <!-- Multi-language Selector -->
 
@@ -575,33 +575,57 @@
         </h3>
         <form>
           <div class="form-group">
-            <input type="text" placeholder="Company" />
-            <select>
-              <option>Country</option>
-              <option>Morocco</option>
-              <option>USA</option>
-              <option>France</option>
-            </select>
+            <div class="form-field">
+              <label for="company">Company <span class="required">*</span></label>
+              <input type="text" id="company" placeholder="Company" />
+            </div>
+            <div class="form-field">
+              <label for="country">Country <span class="required">*</span></label>
+              <select id="country">
+                <option>Country</option>
+                <option>Morocco</option>
+                <option>USA</option>
+                <option>France</option>
+              </select>
+            </div>
           </div>
+          
           <div class="form-group">
-            <input type="text" placeholder="First name" />
-            <input type="text" placeholder="Last name" />
+            <div class="form-field">
+              <label for="first-name">First name <span class="required">*</span></label>
+              <input type="text" id="first-name" placeholder="First name" />
+            </div>
+            <div class="form-field">
+              <label for="last-name">Last name <span class="required">*</span></label>
+              <input type="text" id="last-name" placeholder="Last name" />
+            </div>
           </div>
+          
           <div class="form-group">
-            <input type="text" placeholder="Job title" />
-            <input type="email" placeholder="Email address" />
+            <div class="form-field">
+              <label for="job-title">Job title <span class="required">*</span></label>
+              <input type="text" id="job-title" placeholder="Job title" />
+            </div>
+            <div class="form-field">
+              <label for="email">Email address <span class="required">*</span></label>
+              <input type="email" id="email" placeholder="Email address" />
+            </div>
           </div>
-          <textarea placeholder="Message"></textarea>
+          
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Message"></textarea>
+          </div>
+          
           <button type="submit">
-            Submit<svg xmlns="http://www.w3.org/2000/svg" width="59" height="61" viewbox="0 0 59 61" fill="none">
-              <g clip-path="url(#clip0_4572_16618)">
-                <path
-                  d="M50.0615 28.9499C50.5223 29.4187 50.7812 30.0545 50.7812 30.7174C50.7812 31.3803 50.5223 32.0161 50.0615 32.4849L36.1547 46.6274C35.9279 46.8662 35.6567 47.0566 35.3567 47.1877C35.0568 47.3187 34.7342 47.3876 34.4078 47.3905C34.0814 47.3934 33.7577 47.3302 33.4556 47.2045C33.1534 47.0788 32.879 46.8931 32.6481 46.6584C32.4173 46.4237 32.2348 46.1445 32.1112 45.8373C31.9876 45.53 31.9254 45.2008 31.9282 44.8689C31.931 44.537 31.9989 44.2089 32.1277 43.9039C32.2565 43.5989 32.4438 43.323 32.6786 43.0924L42.389 33.2174H9.83332C9.18133 33.2174 8.55604 32.954 8.09501 32.4852C7.63399 32.0163 7.37498 31.3804 7.37498 30.7174C7.37498 30.0544 7.63399 29.4185 8.09501 28.9496C8.55604 28.4808 9.18133 28.2174 9.83332 28.2174L42.389 28.2174L32.6786 18.3424C32.2308 17.8709 31.983 17.2394 31.9886 16.5839C31.9942 15.9284 32.2528 15.3014 32.7086 14.8379C33.1644 14.3743 33.7809 14.1114 34.4255 14.1057C35.0701 14.1 35.691 14.352 36.1547 14.8074L50.0615 28.9499Z"
-                  fill="white"></path>
+            Submit
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <g clip-path="url(#clip0_5733_6151)">
+                <path d="M30.5462 16.9395C30.8274 17.2208 30.9854 17.6022 30.9854 18C30.9854 18.3977 30.8274 18.7792 30.5462 19.0605L22.0607 27.546C21.9223 27.6892 21.7568 27.8035 21.5738 27.8821C21.3908 27.9607 21.1939 28.0021 20.9948 28.0038C20.7956 28.0056 20.5981 27.9676 20.4137 27.8922C20.2294 27.8168 20.0619 27.7054 19.9211 27.5646C19.7802 27.4237 19.6689 27.2562 19.5934 27.0719C19.518 26.8876 19.4801 26.69 19.4818 26.4909C19.4835 26.2917 19.5249 26.0949 19.6035 25.9119C19.6821 25.7289 19.7964 25.5633 19.9397 25.425L25.8647 19.5H6.00017C5.60235 19.5 5.22082 19.3419 4.93951 19.0606C4.65821 18.7793 4.50017 18.3978 4.50017 18C4.50017 17.6021 4.65821 17.2206 4.93951 16.9393C5.22082 16.658 5.60235 16.5 6.00017 16.5H25.8647L19.9397 10.575C19.6664 10.2921 19.5152 9.91317 19.5187 9.51987C19.5221 9.12658 19.6798 8.75036 19.9579 8.47225C20.2361 8.19413 20.6123 8.03638 21.0056 8.03296C21.3989 8.02954 21.7778 8.18074 22.0607 8.45397L30.5462 16.9395Z" fill="white"/>
               </g>
               <defs>
-                <clipPath id="clip0_4572_16618">
-                  <rect width="60" height="59" fill="white" transform="matrix(0 -1 -1 0 59 60.7188)"></rect>
+                <clipPath id="clip0_5733_6151">
+                  <rect width="36" height="36" fill="white" transform="matrix(0 -1 -1 0 36 36)"/>
                 </clipPath>
               </defs>
             </svg>

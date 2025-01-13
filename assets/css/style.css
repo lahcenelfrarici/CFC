@@ -623,7 +623,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .accordion-container {
@@ -1003,14 +1003,13 @@ section.banner_status_slider .sc--mg-slider--wrapper {
   display: flex;
   align-items: center;
   gap: 0 30px;
+  justify-content: space-evenly;
 }
 
 section.banner_status_slider .wrapper-slider---img {
   border-radius: 15px;
-  background: var(--WF-Base-200, #EDF0F7);
   overflow: hidden;
   height: 299px;
-  width: 30%;
 }
 
 section.banner_status_slider .element--slider-item {
@@ -1235,7 +1234,7 @@ ul.multi--select .dropdown>a {
   max-width: 100%;
   border-radius: 5px;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .contact-form select {
@@ -1244,7 +1243,10 @@ ul.multi--select .dropdown>a {
   background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="13" viewBox="0 0 24 13" fill="none"><g clip-path="url(%23clip0_4795_8400)"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7106 10.8757L18.3676 5.21869L16.9536 3.80469L12.0036 8.75469L7.05365 3.80469L5.63965 5.21869L11.2966 10.8757C11.4842 11.0632 11.7385 11.1685 12.0036 11.1685C12.2688 11.1685 12.5231 11.0632 12.7106 10.8757Z" fill=%22black%22/></g><defs><clipPath id=%22clip0_4795_8400%22><rect width=%2212%22 height=%2224%22 fill=%22white%22 transform=%22matrix(0 1 1 0 0 0.71875)%22/></clipPath></defs></svg>') no-repeat right 10px center;
   background-color: #fff;
 }
-
+.contact-form button {
+  display: flex;
+  align-items: center;
+}
 
 
 .header--menu ul .dropdown-toggle::after {
@@ -1584,7 +1586,7 @@ section.filter--pays-elements .container {
 }
 
 .filter--pays-elements .title-primary-sc {
-  margin-bottom: 100px !important;
+  margin-bottom: 30px !important;
 }
 
 .link--arrow-ps {
@@ -2069,13 +2071,14 @@ header {
 
 section#banner-title {
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .custom-card {
   border: none;
   border-radius: 10px;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   fill: #FFF;
   stroke-width: 1px;
   stroke: #F4F4F4;
@@ -2185,20 +2188,34 @@ section.global_investment .row:nth-child(2) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px 40px;
+  padding: 45px 40px;
   margin: auto;
 }
+section.global_investment h3.section-title:after {
+  content: "";
+  height: 17px;
+  position: absolute;
+  top: 0;
+  width: 123px;
+  left: 0;
+  border-radius: 10000px;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+}
 
+
+h3.section-title {
+  position: relative;
+}
+
+section.global_investment h3 {
+  padding-top: 30px;
+}
 .meteo--value2 p {
   color: #FFF !important;
-   !i;
-   !;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #FFF;
   font-family: "Averta CY";
   font-size: 30px !important;
-   !i;
-   !;
   font-style: normal;
   font-weight: 400;
   line-height: 76px;
@@ -2394,7 +2411,8 @@ section.team_member .row {
 .width--img-inc .row-column-width--img-inc:first-child .col-md-3 .icon-box p {
   font-size: 30px;
 }
-#about_maps_1 .wrapper-element-africa >div {
+
+#about_maps_1 .wrapper-element-africa>div {
   font-size: 17px;
 }
 
@@ -2441,7 +2459,7 @@ html {
 
 /*  */
 .breadcrumb-container {
-  z-index: 999;
+  z-index: 6;
   position: absolute;
   display: flex;
   padding: 15.039px 26.463px 15.961px 26.275px;
@@ -2676,12 +2694,12 @@ section.emblemes {
 .item-info-content .wrapper-element-africa form {}
 
 .item-info-content .wrapper-element-africa input {
-   border: 1px solid var(--Grey-Grey-20, #E5E7EB);
-   background: var(--Grey-Grey-5, #F9FAFB);
-   display: flex;
-   width: 292px;
-   padding: 10px 15px 10px 15px;
-   align-items: center;
+  border: 1px solid var(--Grey-Grey-20, #E5E7EB);
+  background: var(--Grey-Grey-5, #F9FAFB);
+  display: flex;
+  width: 292px;
+  padding: 10px 15px 10px 15px;
+  align-items: center;
 }
 
 .item-info-content .wrapper-element-africa button {
@@ -2726,23 +2744,28 @@ section.emblemes {
   margin-bottom: 15px;
   line-height: 30px;
 }
+
 .video--sc-2 .slider-video {
   border-radius: 40px;
   width: 100%;
   height: auto;
 }
+
 .counter--number p {
   text-align: left;
   line-height: normal;
   margin-top: 10px;
 }
+
 .element-sc svg {
   width: 100%;
   height: 100%;
 }
+
 .wrapper-2column---logo img {
   width: 100%;
 }
+
 /*  */
 
 
@@ -2781,31 +2804,36 @@ section.emblemes {
   position: relative;
 }
 
-#filter-verticale .filters >div {
+#filter-verticale .filters>div {
   width: 32%;
   margin-bottom: 0;
 }
 
-#filter-verticale .filters >div  svg {
+#filter-verticale .filters>div svg {
   top: 0;
 }
 
-#filter-verticale .filters >div div {
+#filter-verticale .filters>div div {
   width: 100%;
   background-color: #fff;
 }
+
 /* #filter-verticale .members .member {
   margin-top: 0 !important;
 } */
 
-button , a {
+button,
+a {
   cursor: pointers;
 }
+
 .slider-navigation {
   display: flex;
   align-items: center;
-  justify-content: center; /* Spread out arrows and center the dots */
-  gap: 31px; /* Space between dots and arrows */
+  justify-content: center;
+  /* Spread out arrows and center the dots */
+  gap: 31px;
+  /* Space between dots and arrows */
   align-items: center;
   position: absolute;
   left: 50%;
@@ -2820,8 +2848,10 @@ button , a {
 .slick-next {
   background: none;
   border: none;
-  font-size: 24px; /* Adjust the size of the arrow icons */
-  color: #005f6b; /* Arrow color */
+  font-size: 24px;
+  /* Adjust the size of the arrow icons */
+  color: #005f6b;
+  /* Arrow color */
   cursor: pointer;
   display: flex;
   /* align-items: center; */
@@ -2840,7 +2870,8 @@ button , a {
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 10px; /* Space between dots */
+  gap: 10px;
+  /* Space between dots */
   align-items: center;
   justify-content: center;
 }
@@ -2864,15 +2895,19 @@ button , a {
 }
 
 .slick-dots .slick-active button {
-  background: #005f6b; /* Active dot color */
+  background: #005f6b;
+  /* Active dot color */
 }
+
 section.three_colmun_to_sc {
   background-color: #fff;
   margin: 40px 10px;
 }
+
 .title-primary-sc h2 {
   padding-bottom: 40px;
 }
+
 .three_colmun_to_sc .tabs--item button {
   width: 32%;
   height: auto;
@@ -2885,6 +2920,7 @@ section.three_colmun_to_sc {
 .three_colmun_to_sc .tabs--item button svg {
   height: 44px;
 }
+
 .three_colmun_to_sc .container-layout {
   width: 100%;
   justify-content: space-between;
@@ -2932,13 +2968,15 @@ section.three_colmun_to_sc {
   width: 497px;
   background-color: #fff;
 }
+
 .all--select-maps-layout p {
   color: #FFF;
   font-family: "Averta CY";
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 34px; /* 141.667% */
+  line-height: 34px;
+  /* 141.667% */
 }
 
 .all--select-maps-layout h2 {
@@ -2949,7 +2987,8 @@ section.three_colmun_to_sc {
   font-size: 80px;
   font-style: normal;
   font-weight: 400;
-  line-height: 90px; /* 112.5% */
+  line-height: 90px;
+  /* 112.5% */
   letter-spacing: -2.4px;
 }
 
@@ -2973,6 +3012,7 @@ section.three_colmun_to_sc {
 .all--select-maps-layout div#country-select {
   width: 90%;
 }
+
 .three_colmun_to_sc .element-sc.active {
   padding: 0;
   margin: 0;
@@ -2989,18 +3029,486 @@ section.three_colmun_to_sc {
   align-items: center;
   gap: 10px;
 }
+
 section#maps--with-select-pays .map-container .item-wrap {
   fill: #E57E39;
   stroke-width: 0.4px;
   stroke: #CBBDBD;
 }
+
 .all--select-maps-layout div#country-select span {
   color: var(--WF-Base-800, #2D3648);
-  font-feature-settings: 'calt' off;
+  font-feature-settings: 'calt'off;
   font-family: Inter;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 150%; /* 30px */
+  line-height: 150%;
+  /* 30px */
   letter-spacing: -0.2px;
+}
+
+/* News */
+
+.filter-wp .filter-champs select,
+.filter-wp .filter-champs input {
+  border-radius: 100px;
+  border: 2px solid var(--WF-Base-400, #CBD2E0) !important;
+  display: inline-flex;
+  padding: 21px 22px 21px 33px;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+.filter-champs {
+  width: 40%;
+  border: 0;
+  height: 72px;
+}
+
+.filter-wp form {
+  display: flex;
+  flex-direction: inherit;
+  width: 100%;
+  gap: 0 30px;
+  border: 0;
+}
+
+.filter-champs.submit-filter {
+  width: 20%;
+}
+
+.filter-champs select,
+.filter-champs input {
+  width: 100%;
+}
+
+.all-item--service {
+  margin-bottom: 37px;
+}
+
+#list--news-all .article-date {
+  display: flex;
+  align-content: center;
+  color: #929292;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.2px;
+  height: 27px;
+  color: #929292;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.18px;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+
+#list--news-all .article-date svg {
+  color: #929292;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.18px;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  width: auto;
+}
+
+#list--news-all h5 {
+  color: #151515;
+  -webkit-text-stroke-width: 0.20000000298023224px;
+  -webkit-text-stroke-color: #151515;
+  font-family: Inter;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.42px;
+}
+
+#list--news-all .btn--pls a {
+  text-align: center;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: 009681;
+  font-family: "Averta CY";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+
+}
+
+#list--news-all .btn--pls a {
+  display: flex;
+  flex-direction: inherit;
+  align-content: center;
+  gap: 0 30px;
+  line-height: normal;
+}
+
+#list--news-all .btn--pls span {
+  text-transform: capitalize;
+  text-align: center;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #007565;
+  font-family: "Averta CY";
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  line-height: normal;
+}
+
+#list--news-all .btn--pls a svg {
+  width: auto;
+  height: auto;
+}
+
+#list--news-all {}
+
+#list--news-all .card {
+  border: 0;
+}
+
+#list--news-all .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+  padding: 20px 0;
+}
+
+#list--news-all .btn--pls {
+  margin-top: 0;
+  line-height: normal;
+}
+
+
+.paginations-list .pagination-success {
+  display: flex;
+
+  justify-content: center;
+
+}
+
+.paginations-list .active a {
+  color: #6E0309;
+}
+
+.paginations-list .active a {
+
+  background: linear-gradient(84deg, #009681 4.99%, #007565 87.68%);
+  color: #fff;
+}
+
+.paginations-list .next-page a,
+.paginations-list .last-page a,
+.paginations-list .first-page a,
+.paginations-list .previous-page a {
+  color: #262626;
+  background: linear-gradient(84deg, #009681 4.99%, #007565 87.68%);
+  color: #fff;
+}
+
+.paginations-list li a {
+  color: #787D79;
+}
+
+.paginations-list li a {
+  height: 56px;
+  width: 56px;
+  font-family: "Lato Regular", sans-serif;
+  border-radius: 30px;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.28px;
+  background: #fff;
+  color: #fff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  color: #017968;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.28px;
+}
+
+.paginations-list li {
+  margin: 0 10px;
+  list-style: none;
+
+}
+
+.filter-wp .filter-champs select {
+  color: var(--WF-Base-800, #2D3648);
+  font-feature-settings: 'calt'off;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.2px;
+}
+
+.filter-wp .filter-champs input::placeholder {
+  color: #95A3C0;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: Inter;
+}
+
+.filter-wp .filter-champs [type="submit"] {
+  background: linear-gradient(84deg, #009681 4.99%, #007565 87.68%);
+  color: #fff;
+  font-size: 22px;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: none;
+}
+.filter-champs.submit-filter {
+  border: 0;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+}
+.filter-champs.submit-filter:after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: .4;
+  position: absolute;
+  top: -50px;
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+  transition: all .55s cubic-bezier(.19, 1, .22, 1);
+  width: 50px;
+}
+.filter-champs.submit-filter:hover:after {
+left: 120%;
+  transition: all .55s cubic-bezier(.19, 1, .22, 1);
+}
+
+.paginations-list li a:hover {
+  background-color: #017968;
+  color: #fff;
+}
+a {
+  transition: all .3s ease-in-out;
+}
+
+.wrapper-title-filter {
+  color: #151515;
+  -webkit-text-stroke-width: 0.20000000298023224px;
+  -webkit-text-stroke-color: #151515;
+  font-family: Inter;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0.48px;
+  margin-bottom: 3%;
+}
+.wisiwyg h2 {
+  color: #2D3648;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2D3648;
+  font-family: "Averta CY";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 61px; /* 122% */
+  letter-spacing: -2.4px;
+}
+
+.wisiwyg .article-date {
+  color: #2D3648;
+  font-family: Inter;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 26.4px */
+  letter-spacing: 0.22px;
+  display: flex;
+  align-items: center;
+  height: 27px;
+  display: flex;
+  align-content: center;
+  color: #929292;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.2px;
+  height: 27px;
+  color: #929292;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.18px;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.wisiwyg .container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+}
+
+.wisiwyg .wrapper-description p {
+  color: var(--WF-Base-800, #2D3648);
+  text-align: justify;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: 0.32px;
+}
+
+.img--detail img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.article-date svg {
+  color: #929292;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.18px;
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+  width: auto;
+}
+
+.wrapper-description {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+.wisiwyg {
+  padding-top: 0;
+}
+
+.three_colmun_to_sc .tabs--item button ,.three_colmun_to_sc .tabs--item a {
+  width: 32%;
+  height: auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.three_colmun_to_sc .tabs--item a {
+  color: #151515;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #151515;
+  font-family: "Averta CY";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  border-radius: 20px;
+  border: 5px solid #F4F4F4;
+  background: #FFF;
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+  width: 594px;
+  height: 124px;
+}
+.tabs--item a:hover {
+  background: #EEFFFD;
+  border: 5px solid rgba(1, 148, 128, 0.6);
+}
+.wisiwyg .container .container {
+  border-bottom: 3px solid #E1E6F1;
+  padding-bottom: 40px;
+}
+
+section.three_block_news {
+  padding-top: 0;
+}
+
+.wisiwyg {
+  padding-bottom: 0;
+}
+.path-frontpage #filter-verticale {
+  background: #fff;
+}
+/* #filter-verticale {
+  background: #F5F9FF;
+} */
+.search-icon {
+  position: relative;
+}
+
+.search-icon svg {
+  position: absolute;
+  right: 15px;
+  left: auto;
+  width: 23px;
+  height: 23px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+section.banner_status_slider.content .owl-stage-outer {
+  overflow: initial;
+}
+/*  */
+.contact-form form .form-field {
+  width: 100%;
+}
+
+.contact-form form .form-field label {
+  color: #FFF;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+
+.contact-form form .form-field label span {
+  color: #FF3737;
+  font-family: "Averta CY";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
