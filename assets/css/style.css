@@ -3694,3 +3694,9 @@ html, body {
   height: 100%;
   overflow-x: initial;
 }
+.sugg--btn .btn:hover a {
+  color: #000;
+}
+.sugg--btn .btn a {
+  color: #fff;
+}
