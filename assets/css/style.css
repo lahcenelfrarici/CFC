@@ -3513,3 +3513,184 @@ section.banner_status_slider.content .owl-stage-outer {
   font-weight: 400;
   line-height: 24px;
 }
+#evenement_detail .wrapper-description strong {
+  color: var(--WF-Base-800, #2D3648);
+  text-align: justify;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 38.4px */
+  letter-spacing: 0.32px;
+}
+
+#evenement_detail .wrapper-description p {
+  color: var(--WF-Base-800, #2D3648);
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.32px;
+  text-align: justify;
+}
+
+#evenement_detail .wrapper-description p strong {
+  font-weight: 500;
+}
+
+#evenement_detail .wrapper-description strong {
+  margin-bottom: 10px;
+}
+.wrapper-description ul li,.wrapper-description ul li strong {
+  color: var(--WF-Base-800, #2D3648);
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 500 !important;
+  line-height: 120%;
+  letter-spacing: 0.32px;
+  list-style: none;
+  padding: 0;
+}
+
+.wrapper-description ul {
+  padding: 0;
+}
+.separator { margin: 20px 0; display: block; color: var(--WF-Base-800, #2D3648); text-align: justify; font-family: Inter; font-size: 32px; font-style: normal; font-weight: 700; line-height: 0; /* 38.4px */ letter-spacing: 0.32px; }
+#evenement_detail .wrapper-description .row .col-md-12 { margin-top: 30px; }
+footer .container>.row>.text-center {
+  order: 4;
+  margin-top: 30px;
+  margin-bottom: 0 !important;
+}
+/*  */
+.ledt--sidbar-click {
+  position: sticky;
+  top: 0;
+  padding: 20px;
+  border-radius: 20px;
+  border: 5px solid #F4F4F4;
+  background: #FFF;
+  box-shadow: 0px 4px 44.1px 0px rgba(114, 170, 255, 0.25);
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 5px;
+}
+
+.sidebar a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.element--wrapper-enter {
+  flex: 1;
+  padding: 20px;
+}
+
+.content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+.top-tabs {
+  display: flex;
+  border-bottom: 2px solid #ddd;
+}
+
+.top-tabs button {
+  flex: 1;
+  padding: 10px 20px;
+  background: #f8f9fa;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.top-tabs button.active {
+  border-bottom: 2px solid #007bff;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+#wrapper-item-sidebar-style {
+  display: flex;
+}
+
+.sidebar a {
+  color: #007565;
+  -webkit-text-stroke-width: 0.4000000059604645px;
+  -webkit-text-stroke-color: #007565;
+  font-family: "Averta CY";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  /* 128.571% */
+  letter-spacing: -0.54px;
+  height: 122px;
+  border-radius: 20px;
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sidebar a.active {
+  /* border-radius: 20px; */
+  background: var(--lin, linear-gradient(84deg, #009681 4.99%, #007565 87.68%));
+}
+.element--wrapper-enter {
+  width: 75%;
+}
+
+.sidebar a {
+  padding: 30px;
+  align-items: center;
+  display: flex;
+}
+
+.ledt--sidbar-click {
+  width: 25%;
+}
+
+.ledt--sidbar-click a:active {
+  color: #fff;
+}
+
+.sidebar a.active {
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+/*  */
+
+
+
+#sticky-sidebar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: max-content; /* Full height for the sidebar */
+}
+
+html, body {
+  height: 100%;
+  overflow-x: initial;
+}

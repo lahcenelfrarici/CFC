@@ -1,5 +1,36 @@
 (function ($) {
   $(document).ready(function () {
+         // Sidebar navigation
+         $('.sidebar a').on('click', function (e) {
+          e.preventDefault();
+  
+          // Remove active class from all sidebar links and add to clicked one
+          $('.sidebar a').removeClass('active');
+          $(this).addClass('active');
+  
+          // Show the corresponding content
+          const target = $(this).attr('href');
+          $('.content').removeClass('active');
+          $(target).addClass('active');
+  
+          // Reset top tabs inside the active content
+          $(target).find('.top-tabs button').removeClass('active').first().addClass('active');
+          $(target).find('.tab-content').removeClass('active').first().addClass('active');
+        });
+  
+        // Top tabs navigation
+        $('.top-tabs button').on('click', function () {
+          const parentContent = $(this).closest('.content');
+  
+          // Remove active class from all top tabs and add to clicked one
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+  
+          // Show the corresponding tab content
+          const targetTab = $(this).data('tab');
+          parentContent.find('.tab-content').removeClass('active');
+          parentContent.find('#' + targetTab).addClass('active');
+        });
     // Sticky Header on Scroll
     $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
@@ -686,4 +717,5 @@ $industryItemsDiv.find('div[data-category="all"]').addClass('active');
     var id = $(this).attr('id');
     activateTabById(id);
   });
+  
 })(jQuery);
