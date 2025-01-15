@@ -718,4 +718,36 @@
     activateTabById(id);
   });
 
+  // 
+  var $section = $('.scroll-sticky-tabs');
+  var $header = $('header'); // Adjust this selector to match your header
+  var sectionOffsetTop = $section.offset().top;
+  var sectionOffsetBottom = sectionOffsetTop + $section.outerHeight();
+
+  $(window).on('scroll', function () {
+    var scrollPosition = $(window).scrollTop();
+
+    // Add the class only when scrolling inside the section
+    if (scrollPosition >= sectionOffsetTop && scrollPosition <= sectionOffsetBottom) {
+      $header.addClass('active-header');
+    } else {
+      $header.removeClass('active-header');
+    }
+  });
+  // 
+  function revealSteps() {
+    $('.step').each(function () {
+      var windowBottom = $(window).scrollTop() + $(window).height();
+      var stepTop = $(this).offset().top;
+
+      // If the step is visible in the viewport
+      if (windowBottom > stepTop + 50) {
+        $(this).addClass('show'); // Add the show class for animation
+      }
+    });
+  }
+
+  // Run the function on page load and scroll
+  revealSteps();
+  $(window).on('scroll', revealSteps);
 })(jQuery);
