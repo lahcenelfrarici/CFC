@@ -1,5 +1,36 @@
 (function ($) {
   $(document).ready(function () {
+    // Sidebar navigation
+    $('.sidebar a').on('click', function (e) {
+      e.preventDefault();
+
+      // Remove active class from all sidebar links and add to clicked one
+      $('.sidebar a').removeClass('active');
+      $(this).addClass('active');
+
+      // Show the corresponding content
+      const target = $(this).attr('href');
+      $('.content').removeClass('active');
+      $(target).addClass('active');
+
+      // Reset top tabs inside the active content
+      $(target).find('.top-tabs button').removeClass('active').first().addClass('active');
+      $(target).find('.tab-content').removeClass('active').first().addClass('active');
+    });
+
+    // Top tabs navigation
+    $('.top-tabs button').on('click', function () {
+      const parentContent = $(this).closest('.content');
+
+      // Remove active class from all top tabs and add to clicked one
+      $(this).siblings().removeClass('active');
+      $(this).addClass('active');
+
+      // Show the corresponding tab content
+      const targetTab = $(this).data('tab');
+      parentContent.find('.tab-content').removeClass('active');
+      parentContent.find('#' + targetTab).addClass('active');
+    });
     // Sticky Header on Scroll
     $(window).scroll(function () {
       var scrollTop = $(window).scrollTop();
@@ -252,149 +283,149 @@
     // // Set default category filter
     // $('.categoryFilter[data-category="all"]').addClass('active');
     // // 66666666
-// Slick Carousel Initialization
-// Initialize Slick Carousel
-$('.members').slick({
-  dots: true,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 7,
-  slidesToScroll: 7,
-  variableWidth: true,
-  appendDots: $('.slick-dots-container'),
-  appendArrows: $('.slider-navigation'),
-  prevArrow: $('.slick-prev'),
-  nextArrow: $('.slick-next'),
-  responsive: [{
-    breakpoint: 768, // Define the breakpoint for smaller screens
-    settings: {
-      slidesToShow: 1, // Show only one slide
-      slidesToScroll: 1, // Scroll one slide at a time
-      variableWidth: false,
+    // Slick Carousel Initialization
+    // Initialize Slick Carousel
+    $('.members').slick({
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 7,
+      slidesToScroll: 7,
+      variableWidth: true,
+      appendDots: $('.slick-dots-container'),
+      appendArrows: $('.slider-navigation'),
+      prevArrow: $('.slick-prev'),
+      nextArrow: $('.slick-next'),
+      responsive: [{
+        breakpoint: 768, // Define the breakpoint for smaller screens
+        settings: {
+          slidesToShow: 1, // Show only one slide
+          slidesToScroll: 1, // Scroll one slide at a time
+          variableWidth: false,
+        }
+      }]
+    });
+
+    // Unified Filter Function
+    function applyFilters() {
+      const selectedCountry = $countrySelect.find('.select-selected').data('value');
+      const selectedCategory = $industrySelect.find('.select-selected').data('category');
+      const searchTerm = $('#searchFilter').val().toLowerCase();
+
+      var count = 0;
+      $('.member').each(function () {
+        const memberCountry = $(this).data('country');
+        const memberCategory = $(this).data('category');
+        const title = $(this).find('.parnet--title').text().toLowerCase();
+
+        const matchesCountry = !selectedCountry || selectedCountry === 'all' || memberCountry === selectedCountry;
+        const matchesCategory = !selectedCategory || selectedCategory === 'all' || memberCategory === selectedCategory;
+        const matchesSearch = !searchTerm || title.includes(searchTerm);
+
+        // Reset count class
+        $(this).removeClass(function (index, className) {
+          return (className.match(/(^|\s)count-\S+/g) || []).join(' ');
+        });
+
+        // If "All" is selected for country or category, remove `count-*` and show all members
+        if (selectedCountry === 'all' || selectedCategory === 'all') {
+          $(this).removeClass('hidden');
+        } else {
+          // Show only if all conditions match
+          if (matchesCountry && matchesCategory && matchesSearch) {
+            count++;
+            $(this).removeClass('hidden');
+            $(this).addClass('count-' + count);
+          } else {
+            $(this).addClass('hidden');
+          }
+        }
+      });
+
+      // Update container visibility
+      if ($('.member:not(.hidden)').length === 0) {
+        $('.members').addClass('hidden_show');
+      } else {
+        $('.members').removeClass('hidden_show');
+      }
+
+      $('.members').slick('slickGoTo', 0); // Navigate to the first slide (index 0)
     }
-  }]
-});
 
-// Unified Filter Function
-function applyFilters() {
-  const selectedCountry = $countrySelect.find('.select-selected').data('value');
-  const selectedCategory = $industrySelect.find('.select-selected').data('category');
-  const searchTerm = $('#searchFilter').val().toLowerCase();
+    // Custom Dropdown Logic for "country-select"
+    const $countrySelect = $('#country-select');
+    const $countrySelectedDiv = $countrySelect.find('.select-selected');
+    const $countryItemsDiv = $countrySelect.find('.select-items');
 
-  var count = 0;
-$('.member').each(function () {
-  const memberCountry = $(this).data('country');
-  const memberCategory = $(this).data('category');
-  const title = $(this).find('.parnet--title').text().toLowerCase();
+    // Toggle dropdown visibility
+    $countrySelectedDiv.on('click', function () {
+      $countrySelect.toggleClass('open');
+    });
 
-  const matchesCountry = !selectedCountry || selectedCountry === 'all' || memberCountry === selectedCountry;
-  const matchesCategory = !selectedCategory || selectedCategory === 'all' || memberCategory === selectedCategory;
-  const matchesSearch = !searchTerm || title.includes(searchTerm);
+    // Handle option selection
+    $countryItemsDiv.on('click', 'div[data-value]', function () {
+      const $option = $(this);
+      const value = $option.data('value');
+      const flagHtml = $option.find('img').prop('outerHTML');
+      const countryName = $option.find('span').text();
 
-  // Reset count class
-  $(this).removeClass(function (index, className) {
-    return (className.match(/(^|\s)count-\S+/g) || []).join(' ');
-  });
+      // Update the selected display
+      $countrySelectedDiv.html(`${flagHtml} <span>${countryName}</span>`).data('value', value);
 
-  // If "All" is selected for country or category, remove `count-*` and show all members
-  if (selectedCountry === 'all' || selectedCategory === 'all') {
-    $(this).removeClass('hidden');
-  } else {
-    // Show only if all conditions match
-    if (matchesCountry && matchesCategory && matchesSearch) {
-      count++;
-      $(this).removeClass('hidden');
-      $(this).addClass('count-' + count);
-    } else {
-      $(this).addClass('hidden');
-    }
-  }
-});
+      // Close dropdown
+      $countrySelect.removeClass('open');
 
-  // Update container visibility
-  if ($('.member:not(.hidden)').length === 0) {
-    $('.members').addClass('hidden_show');
-  } else {
-    $('.members').removeClass('hidden_show');
-  }
+      // Trigger filtering
+      applyFilters();
+    });
 
-  $('.members').slick('slickGoTo', 0); // Navigate to the first slide (index 0)
-}
+    // Close dropdown when clicking outside
+    $(document).on('click', function (e) {
+      if (!$countrySelect.is(e.target) && $countrySelect.has(e.target).length === 0) {
+        $countrySelect.removeClass('open');
+      }
+    });
 
-// Custom Dropdown Logic for "country-select"
-const $countrySelect = $('#country-select');
-const $countrySelectedDiv = $countrySelect.find('.select-selected');
-const $countryItemsDiv = $countrySelect.find('.select-items');
+    // Custom Dropdown Logic for "industry-select"
+    const $industrySelect = $('#industry-select');
+    const $industrySelectedDiv = $industrySelect.find('.select-selected');
+    const $industryItemsDiv = $industrySelect.find('.select-items');
 
-// Toggle dropdown visibility
-$countrySelectedDiv.on('click', function () {
-  $countrySelect.toggleClass('open');
-});
+    // Toggle dropdown visibility
+    $industrySelectedDiv.on('click', function () {
+      $industrySelect.toggleClass('open');
+    });
 
-// Handle option selection
-$countryItemsDiv.on('click', 'div[data-value]', function () {
-  const $option = $(this);
-  const value = $option.data('value');
-  const flagHtml = $option.find('img').prop('outerHTML');
-  const countryName = $option.find('span').text();
+    // Handle option selection
+    $industryItemsDiv.on('click', 'div[data-category]', function () {
+      const $option = $(this);
+      const category = $option.data('category');
+      const categoryName = $option.find('span').text();
 
-  // Update the selected display
-  $countrySelectedDiv.html(`${flagHtml} <span>${countryName}</span>`).data('value', value);
+      // Update the selected display
+      $industrySelectedDiv.html(`<span>${categoryName}</span>`).data('category', category);
 
-  // Close dropdown
-  $countrySelect.removeClass('open');
+      // Close dropdown
+      $industrySelect.removeClass('open');
 
-  // Trigger filtering
-  applyFilters();
-});
+      // Trigger filtering
+      applyFilters();
+    });
 
-// Close dropdown when clicking outside
-$(document).on('click', function (e) {
-  if (!$countrySelect.is(e.target) && $countrySelect.has(e.target).length === 0) {
-    $countrySelect.removeClass('open');
-  }
-});
+    // Close dropdown when clicking outside
+    $(document).on('click', function (e) {
+      if (!$industrySelect.is(e.target) && $industrySelect.has(e.target).length === 0) {
+        $industrySelect.removeClass('open');
+      }
+    });
 
-// Custom Dropdown Logic for "industry-select"
-const $industrySelect = $('#industry-select');
-const $industrySelectedDiv = $industrySelect.find('.select-selected');
-const $industryItemsDiv = $industrySelect.find('.select-items');
+    // Search Filter Logic
+    $('#searchFilter').on('input', function () {
+      applyFilters();
+    });
 
-// Toggle dropdown visibility
-$industrySelectedDiv.on('click', function () {
-  $industrySelect.toggleClass('open');
-});
-
-// Handle option selection
-$industryItemsDiv.on('click', 'div[data-category]', function () {
-  const $option = $(this);
-  const category = $option.data('category');
-  const categoryName = $option.find('span').text();
-
-  // Update the selected display
-  $industrySelectedDiv.html(`<span>${categoryName}</span>`).data('category', category);
-
-  // Close dropdown
-  $industrySelect.removeClass('open');
-
-  // Trigger filtering
-  applyFilters();
-});
-
-// Close dropdown when clicking outside
-$(document).on('click', function (e) {
-  if (!$industrySelect.is(e.target) && $industrySelect.has(e.target).length === 0) {
-    $industrySelect.removeClass('open');
-  }
-});
-
-// Search Filter Logic
-$('#searchFilter').on('input', function () {
-  applyFilters();
-});
-
-// Set default category filter
-$industryItemsDiv.find('div[data-category="all"]').addClass('active');
+    // Set default category filter
+    $industryItemsDiv.find('div[data-category="all"]').addClass('active');
 
     // ****************
     // var memberCount = $('.members .member').length;
@@ -484,28 +515,28 @@ $industryItemsDiv.find('div[data-category="all"]').addClass('active');
           </div>
         </div>
       `;
-  
+
       // Find or create the .item-info modal
       let itemInfo = $('.item-info');
       if (itemInfo.length === 0) {
         itemInfo = $('<div class="item-info"></div>').appendTo('body');
       }
-  
+
       itemInfo.html(content).show();
-  
+
       // Get the position of the item relative to the document
       const pathOffset = item.offset();
       const windowWidth = $(window).width();
       const itemInfoWidth = itemInfo.outerWidth();
       const itemInfoHeight = itemInfo.outerHeight();
-  
+
       // Position the modal above the item
       itemInfo.css({
         top: pathOffset.top - itemInfoHeight - 10, // Position above the item
         left: pathOffset.left,
         position: 'absolute',
       });
-  
+
       // Check if the modal is off-screen on the left or right and adjust its position
       if (itemInfo.offset().left < 0) {
         itemInfo.css('left', 10); // Adjust to the left side of the viewport
@@ -513,37 +544,37 @@ $industryItemsDiv.find('div[data-category="all"]').addClass('active');
         itemInfo.css('left', windowWidth - itemInfoWidth - 10); // Adjust to the right side of the viewport
       }
     }
-  
+
     // Handle hover or click on .item-wrap elements
     $('.item-wrap').on('mouseenter click', function () {
       const country = $(this).data('country');
       const factSheet = $(this).data('fact-sheet');
       const factSheet_img = $(this).data('fact-img'); // Retrieve the fact sheet image link
-  
+
       showItemInfo($(this), country, factSheet, factSheet_img);
     });
-  
+
     // Handle the select dropdown interaction
     $('#country-select .select-items div').on('click', function () {
       const country = $(this).data('country');
-  
+
       // Find the corresponding SVG path for the selected country
       const path = $(`.map-container [data-country="${country}"]`);
-  
+
       if (path.length) {
         // Extract data from the SVG path
         const factSheet = path.data('fact-sheet'); // Get the fact sheet link from the path
         const factSheet_img = path.data('fact-img'); // Get the flag image link from the path
-  
+
         // Show the modal positioned relative to the path
         showItemInfo(path, country, factSheet, factSheet_img);
       }
-  
+
       // Update the selected item display
       const selectedHtml = $(this).html(); // Get the HTML of the clicked item
       $('#country-select .select-selected').html(selectedHtml);
     });
-  
+
     // Hide modal on mouse leave
     $(document).on('mouseleave', '.map-container, .item-info', function (event) {
       if (
@@ -561,8 +592,8 @@ $industryItemsDiv.find('div[data-category="all"]').addClass('active');
     // Function to show item-info
     function showItemInfo_1(item, factSheet_img_1) {
       // Create the content for the item-info modal
-      const content = 
-          `<div class="item-info-content" id="about_maps_1">
+      const content =
+        `<div class="item-info-content" id="about_maps_1">
               <div class="flag--element">
                   <img src="${factSheet_img_1}" alt="Fact Sheet Flag">
               </div>
@@ -574,51 +605,51 @@ $industryItemsDiv.find('div[data-category="all"]').addClass('active');
                   </form>
               </div>
           </div>`;
-  
+
       // Find or create the .item-info modal
       let itemInfo = $('.item-info');
       if (itemInfo.length === 0) {
-          itemInfo = $('<div class="item-info about_maps_1"></div>').appendTo('body');
+        itemInfo = $('<div class="item-info about_maps_1"></div>').appendTo('body');
       }
-  
+
       itemInfo.html(content).show();
-  
+
       // Get the position of the item relative to the document
       const pathOffset = item.offset();
       const windowWidth = $(window).width();
       const itemInfoWidth = itemInfo.outerWidth();
       const itemInfoHeight = itemInfo.outerHeight();
-  
+
       // Position the modal above the item
       itemInfo.css({
-          top: pathOffset.top - itemInfoHeight - 10, // Position above the item
-          left: pathOffset.left,
-          position: 'absolute',
+        top: pathOffset.top - itemInfoHeight - 10, // Position above the item
+        left: pathOffset.left,
+        position: 'absolute',
       });
-  
+
       // Check if the modal is off-screen on the left or right side and adjust position if necessary
       if (itemInfo.offset().left < 0) {
-          itemInfo.css('left', 10); // Adjust to the left side of the viewport
+        itemInfo.css('left', 10); // Adjust to the left side of the viewport
       } else if ((itemInfo.offset().left + itemInfoWidth) > windowWidth) {
-          itemInfo.css('left', windowWidth - itemInfoWidth - 10); // Adjust to the right side of the viewport
+        itemInfo.css('left', windowWidth - itemInfoWidth - 10); // Adjust to the right side of the viewport
       }
-  }
-  
-  // When the user hovers over the item with the class "item-wrap-1"
-  $('.img-1-maps .item-wrap-1').on('mouseenter click', function () {
+    }
+
+    // When the user hovers over the item with the class "item-wrap-1"
+    $('.img-1-maps .item-wrap-1').on('mouseenter click', function () {
       const factSheet_img_1 = $(this).data('logo'); // Retrieve the fact sheet image link
       // Pass the data to the showItemInfo_1 function
       showItemInfo_1($(this), factSheet_img_1);
-  });
-  
-  // When the mouse leaves the .map-container or .item-info, hide the modal
-  $(document).on('mouseleave', '.map-container, .item-info', function (event) {
+    });
+
+    // When the mouse leaves the .map-container or .item-info, hide the modal
+    $(document).on('mouseleave', '.map-container, .item-info', function (event) {
       // Check if the mouse has really left the map-container or item-info
       if (!$(event.relatedTarget).closest('.item-info').length && !$(event.relatedTarget).closest('.map-container').length) {
-          $('.item-info').hide(); // Hide the item-info modal
+        $('.item-info').hide(); // Hide the item-info modal
       }
-  });
-  
+    });
+
   });
   AOS.init({
     duration: 1000, // Animation duration
@@ -686,4 +717,37 @@ $industryItemsDiv.find('div[data-category="all"]').addClass('active');
     var id = $(this).attr('id');
     activateTabById(id);
   });
+
+  // 
+  var $section = $('.scroll-sticky-tabs');
+  var $header = $('header'); // Adjust this selector to match your header
+  var sectionOffsetTop = $section.offset().top;
+  var sectionOffsetBottom = sectionOffsetTop + $section.outerHeight();
+
+  $(window).on('scroll', function () {
+    var scrollPosition = $(window).scrollTop();
+
+    // Add the class only when scrolling inside the section
+    if (scrollPosition >= sectionOffsetTop && scrollPosition <= sectionOffsetBottom) {
+      $header.addClass('active-header');
+    } else {
+      $header.removeClass('active-header');
+    }
+  });
+  // 
+  function revealSteps() {
+    $('.step').each(function () {
+      var windowBottom = $(window).scrollTop() + $(window).height();
+      var stepTop = $(this).offset().top;
+
+      // If the step is visible in the viewport
+      if (windowBottom > stepTop + 50) {
+        $(this).addClass('show'); // Add the show class for animation
+      }
+    });
+  }
+
+  // Run the function on page load and scroll
+  revealSteps();
+  $(window).on('scroll', revealSteps);
 })(jQuery);
